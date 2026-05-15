@@ -21,13 +21,17 @@ const PORT = process.env.PORT || 5000;
 const startServer = async () => {
   try {
     // Connect to MongoDB
-    await connectDB();
+    const dbConnection = await connectDB();
 
-    // Start Express server
+    // Start Express server only after DB connection attempt completes
     app.listen(PORT, () => {
       console.log(`\n🌱 AgroCare AI Server running on port ${PORT}`);
       console.log(`📡 API: http://localhost:${PORT}/api/health`);
-      console.log(`🔧 Environment: ${process.env.NODE_ENV}\n`);
+      console.log(`🔧 Environment: ${process.env.NODE_ENV}`);
+      if (!dbConnection) {
+        console.log('⚠️  Server started without MongoDB connection. User persistence will not be available.');
+      }
+      console.log('');
     });
   } catch (error) {
     console.error('❌ Failed to start server:', error.message);

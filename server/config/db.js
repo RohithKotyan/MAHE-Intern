@@ -6,11 +6,14 @@ import mongoose from 'mongoose';
 
 const connectDB = async () => {
   try {
-    const conn = await mongoose.connect(process.env.MONGO_URI, {
-      // Modern Mongoose 8.x doesn't need most options — they're defaults now
-    });
+    if (!process.env.MONGO_URI) {
+      throw new Error('MONGO_URI is not defined. Please set it in your .env file.');
+    }
 
-    console.log(`✅ MongoDB Connected: ${conn.connection.host}`);
+    console.log('🔌 Connecting to MongoDB Atlas...');
+    const conn = await mongoose.connect(process.env.MONGO_URI);
+
+    console.log(`✅ MongoDB Atlas connected successfully: ${conn.connection.host}/${conn.connection.name}`);
 
     // Connection event listeners for monitoring
     mongoose.connection.on('error', (err) => {
@@ -30,10 +33,10 @@ const connectDB = async () => {
     console.error(`❌ MongoDB connection failed: ${error.message}`);
     // Exit process with failure in production, continue in development
     if (process.env.NODE_ENV === 'production') {
+      console.error('❌ Exiting due to database connection failure.');
       process.exit(1);
     }
-    // In development, don't throw — allow server to start without DB
-    console.warn('⚠️  Continuing without database connection...');
+    console.warn('⚠️  Falling back: server will start without MongoDB in development.');
     return null;
   }
 };
