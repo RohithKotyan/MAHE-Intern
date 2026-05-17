@@ -1,0 +1,402 @@
+{
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\eslint.config.js": {
+    "mtime": 1778656130.5471466,
+    "ast_hash": "3aa4b57d7f08181d86bde52a4dcb7f22",
+    "semantic_hash": "3aa4b57d7f08181d86bde52a4dcb7f22"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\package.json": {
+    "mtime": 1778664369.758665,
+    "ast_hash": "88ba7c35d589d03820c405a66541da02",
+    "semantic_hash": "88ba7c35d589d03820c405a66541da02"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\vite.config.js": {
+    "mtime": 1778656997.1514492,
+    "ast_hash": "ff4a32360a6244dc2695a37c5857a5c1",
+    "semantic_hash": "ff4a32360a6244dc2695a37c5857a5c1"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\App.jsx": {
+    "mtime": 1778690569.9672375,
+    "ast_hash": "32161fd28b333f57078016ed69cce349",
+    "semantic_hash": "32161fd28b333f57078016ed69cce349"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\main.jsx": {
+    "mtime": 1778690569.9688306,
+    "ast_hash": "af7070e915db7366eb1eaa4ee791ae4f",
+    "semantic_hash": "af7070e915db7366eb1eaa4ee791ae4f"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\auth\\ProtectedRoute.jsx": {
+    "mtime": 1778657227.4011717,
+    "ast_hash": "b8defc05f491735df42a4a64237e8d92",
+    "semantic_hash": "b8defc05f491735df42a4a64237e8d92"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\common\\Avatar.jsx": {
+    "mtime": 1778657148.0169153,
+    "ast_hash": "4a19146675724b362242a8e1b2470cc3",
+    "semantic_hash": "4a19146675724b362242a8e1b2470cc3"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\common\\Badge.jsx": {
+    "mtime": 1778657150.8582377,
+    "ast_hash": "1a94ba8ac4691fd9c06d4f029c8f17f8",
+    "semantic_hash": "1a94ba8ac4691fd9c06d4f029c8f17f8"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\common\\Button.jsx": {
+    "mtime": 1778657119.520847,
+    "ast_hash": "c9ad4d9493c0f5f16f3f704214d19e00",
+    "semantic_hash": "c9ad4d9493c0f5f16f3f704214d19e00"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\common\\Card.jsx": {
+    "mtime": 1778657154.854453,
+    "ast_hash": "b28eb540922fcb02b600a71fb46668e4",
+    "semantic_hash": "b28eb540922fcb02b600a71fb46668e4"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\common\\EmptyState.jsx": {
+    "mtime": 1778657158.847873,
+    "ast_hash": "3f10b30f62ac126d94d8b5c908479edd",
+    "semantic_hash": "3f10b30f62ac126d94d8b5c908479edd"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\common\\Input.jsx": {
+    "mtime": 1778657126.765452,
+    "ast_hash": "dbb26b6062f69741a273f1ed444cb8a4",
+    "semantic_hash": "dbb26b6062f69741a273f1ed444cb8a4"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\common\\Logo.jsx": {
+    "mtime": 1778657166.5860486,
+    "ast_hash": "1fd07a41bbc141f12a274018723e05c5",
+    "semantic_hash": "1fd07a41bbc141f12a274018723e05c5"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\common\\Modal.jsx": {
+    "mtime": 1778657134.2638443,
+    "ast_hash": "cbf8b41146d89260f39c57e35ec0edd7",
+    "semantic_hash": "cbf8b41146d89260f39c57e35ec0edd7"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\common\\Skeleton.jsx": {
+    "mtime": 1778657145.325686,
+    "ast_hash": "e9f0374bad7d904c39c46add9a5ea70e",
+    "semantic_hash": "e9f0374bad7d904c39c46add9a5ea70e"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\common\\ThemeToggle.jsx": {
+    "mtime": 1778657164.5783038,
+    "ast_hash": "c5f381dbc003c4c626b64d8c549d69de",
+    "semantic_hash": "c5f381dbc003c4c626b64d8c549d69de"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\common\\Toast.jsx": {
+    "mtime": 1778657140.4947627,
+    "ast_hash": "5e3b7ffdae20cc8d9605d352469db00f",
+    "semantic_hash": "5e3b7ffdae20cc8d9605d352469db00f"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\layout\\DashboardLayout.jsx": {
+    "mtime": 1778657222.3721905,
+    "ast_hash": "e81bd780d69e024282b0cfcfeeff9b2e",
+    "semantic_hash": "e81bd780d69e024282b0cfcfeeff9b2e"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\layout\\Footer.jsx": {
+    "mtime": 1778657220.285755,
+    "ast_hash": "530c991cd72644b715ff92dfda4ac1df",
+    "semantic_hash": "530c991cd72644b715ff92dfda4ac1df"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\layout\\Navbar.jsx": {
+    "mtime": 1778657207.7530613,
+    "ast_hash": "19773675aa9f8c58b85bb163dac53239",
+    "semantic_hash": "19773675aa9f8c58b85bb163dac53239"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\layout\\PublicLayout.jsx": {
+    "mtime": 1778657224.6982808,
+    "ast_hash": "8d79aba568e35a43d5904fa4b19a132b",
+    "semantic_hash": "8d79aba568e35a43d5904fa4b19a132b"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\layout\\Sidebar.jsx": {
+    "mtime": 1778657216.4729118,
+    "ast_hash": "c259685d24d5882e432ab98481128f05",
+    "semantic_hash": "c259685d24d5882e432ab98481128f05"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\context\\AuthContext.jsx": {
+    "mtime": 1778657064.8360186,
+    "ast_hash": "1e0bc505426801aec39627af28243fb5",
+    "semantic_hash": "1e0bc505426801aec39627af28243fb5"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\context\\ThemeContext.jsx": {
+    "mtime": 1779022404.3632731,
+    "ast_hash": "4c686179b8518de64bf174ade4f66b32",
+    "semantic_hash": "4c686179b8518de64bf174ade4f66b32"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\context\\ToastContext.jsx": {
+    "mtime": 1778657067.8880107,
+    "ast_hash": "6c16be15e92d1446b95a89787bd927c7",
+    "semantic_hash": "6c16be15e92d1446b95a89787bd927c7"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\pages\\About.jsx": {
+    "mtime": 1778657298.8234317,
+    "ast_hash": "d471c8c559eadf51eb3ebf45ebd1b9ba",
+    "semantic_hash": "d471c8c559eadf51eb3ebf45ebd1b9ba"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\pages\\Contact.jsx": {
+    "mtime": 1778657313.3086255,
+    "ast_hash": "e95313bf89857f61cf37e074c2e7b685",
+    "semantic_hash": "e95313bf89857f61cf37e074c2e7b685"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\pages\\Dashboard.jsx": {
+    "mtime": 1778690569.9672375,
+    "ast_hash": "e65178873b2ff670841bc15840edf749",
+    "semantic_hash": "e65178873b2ff670841bc15840edf749"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\pages\\Features.jsx": {
+    "mtime": 1778657311.2878468,
+    "ast_hash": "480a465be997f74314c650dea390e2a2",
+    "semantic_hash": "480a465be997f74314c650dea390e2a2"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\pages\\Home.jsx": {
+    "mtime": 1778657276.104247,
+    "ast_hash": "36f59ded0a9863956c23b66d0bb52861",
+    "semantic_hash": "36f59ded0a9863956c23b66d0bb52861"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\pages\\Login.jsx": {
+    "mtime": 1778657394.5463648,
+    "ast_hash": "78df1e3518bb16d3c3f7d4c4071be422",
+    "semantic_hash": "78df1e3518bb16d3c3f7d4c4071be422"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\pages\\NotFound.jsx": {
+    "mtime": 1778690569.9672375,
+    "ast_hash": "df059ce1e99225868b443ca092b2f567",
+    "semantic_hash": "df059ce1e99225868b443ca092b2f567"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\pages\\Signup.jsx": {
+    "mtime": 1778657401.844673,
+    "ast_hash": "f3071dddf65342a3ed94c6d09c1342e3",
+    "semantic_hash": "f3071dddf65342a3ed94c6d09c1342e3"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\services\\api.js": {
+    "mtime": 1778657078.475091,
+    "ast_hash": "e72ce319efeb78dd7f1a82e464de7118",
+    "semantic_hash": "e72ce319efeb78dd7f1a82e464de7118"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\services\\services.js": {
+    "mtime": 1778657080.8128796,
+    "ast_hash": "c24d9bdb6d6b2a51aebe1e7d19f2fa46",
+    "semantic_hash": "c24d9bdb6d6b2a51aebe1e7d19f2fa46"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\utils\\helpers.js": {
+    "mtime": 1778690569.9688306,
+    "ast_hash": "a82f77bf2efee3e6fe2f03e5f0cb7333",
+    "semantic_hash": "a82f77bf2efee3e6fe2f03e5f0cb7333"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\app.js": {
+    "mtime": 1778690569.966475,
+    "ast_hash": "8d53591cb3ac23748d570c98b49caa58",
+    "semantic_hash": "8d53591cb3ac23748d570c98b49caa58"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\package.json": {
+    "mtime": 1778656598.4766765,
+    "ast_hash": "bedbfc71bde8452619aa62a4737a7088",
+    "semantic_hash": "bedbfc71bde8452619aa62a4737a7088"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\server.js": {
+    "mtime": 1778851545.4831367,
+    "ast_hash": "50d771549ebf1dc8c001eb814caf111a",
+    "semantic_hash": "50d771549ebf1dc8c001eb814caf111a"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\config\\cloudinary.js": {
+    "mtime": 1778656612.8351724,
+    "ast_hash": "dc8afaf567c3a13becbdd37f5ac90f1a",
+    "semantic_hash": "dc8afaf567c3a13becbdd37f5ac90f1a"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\config\\db.js": {
+    "mtime": 1778851545.5028,
+    "ast_hash": "4e35e5088a429ad7e1058aa9e777d499",
+    "semantic_hash": "4e35e5088a429ad7e1058aa9e777d499"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\config\\env.js": {
+    "mtime": 1778690569.9637358,
+    "ast_hash": "17a9e63fac557e9addae29ccb1966253",
+    "semantic_hash": "17a9e63fac557e9addae29ccb1966253"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\controllers\\auth.controller.js": {
+    "mtime": 1778656790.6893325,
+    "ast_hash": "8d8ef596d17449966c978686ca57512c",
+    "semantic_hash": "8d8ef596d17449966c978686ca57512c"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\controllers\\community.controller.js": {
+    "mtime": 1778656837.7964468,
+    "ast_hash": "978cadbf10b863297d2e450b8d4eb172",
+    "semantic_hash": "978cadbf10b863297d2e450b8d4eb172"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\controllers\\notification.controller.js": {
+    "mtime": 1778656888.0963361,
+    "ast_hash": "4c32b44bc373bb24cef80c3db9740a75",
+    "semantic_hash": "4c32b44bc373bb24cef80c3db9740a75"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\controllers\\scan.controller.js": {
+    "mtime": 1778656813.0517845,
+    "ast_hash": "3e77db7517cee251cbbca0fafdf19c83",
+    "semantic_hash": "3e77db7517cee251cbbca0fafdf19c83"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\controllers\\user.controller.js": {
+    "mtime": 1778656798.6039655,
+    "ast_hash": "46b8b49394d7402de08c7930fdb94fc8",
+    "semantic_hash": "46b8b49394d7402de08c7930fdb94fc8"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\middleware\\auth.middleware.js": {
+    "mtime": 1778656701.5254364,
+    "ast_hash": "dccea4d34c7319836cf7e5d5fc307c1e",
+    "semantic_hash": "dccea4d34c7319836cf7e5d5fc307c1e"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\middleware\\error.middleware.js": {
+    "mtime": 1778656706.4058597,
+    "ast_hash": "914dbe5ee16386db03d474025b64f8a0",
+    "semantic_hash": "914dbe5ee16386db03d474025b64f8a0"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\middleware\\upload.middleware.js": {
+    "mtime": 1778656714.016315,
+    "ast_hash": "5dbe73f6f9019eb3a076b76652faa255",
+    "semantic_hash": "5dbe73f6f9019eb3a076b76652faa255"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\middleware\\validate.middleware.js": {
+    "mtime": 1778656716.0294337,
+    "ast_hash": "cd27561ae81176eee2d49680830d24e8",
+    "semantic_hash": "cd27561ae81176eee2d49680830d24e8"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\models\\Comment.js": {
+    "mtime": 1778656652.3836524,
+    "ast_hash": "73d0b3cc50d115be5d88e4f102d2d3de",
+    "semantic_hash": "73d0b3cc50d115be5d88e4f102d2d3de"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\models\\CommunityPost.js": {
+    "mtime": 1778656647.87477,
+    "ast_hash": "972930c1ce959270dc4fffbbe72e3682",
+    "semantic_hash": "972930c1ce959270dc4fffbbe72e3682"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\models\\Notification.js": {
+    "mtime": 1778656654.389469,
+    "ast_hash": "69bb5eda6b3c84eb0459e7aa980b31f4",
+    "semantic_hash": "69bb5eda6b3c84eb0459e7aa980b31f4"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\models\\PlantScan.js": {
+    "mtime": 1778656643.688547,
+    "ast_hash": "cc2077db7b8fe10be0d1963ecb3d4b5e",
+    "semantic_hash": "cc2077db7b8fe10be0d1963ecb3d4b5e"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\models\\User.js": {
+    "mtime": 1778851996.900785,
+    "ast_hash": "897a4f4746b84db839f2db80f672a484",
+    "semantic_hash": "897a4f4746b84db839f2db80f672a484"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\routes\\auth.routes.js": {
+    "mtime": 1778656891.6971693,
+    "ast_hash": "9e398235bf7d594720f3c86f58744ddf",
+    "semantic_hash": "9e398235bf7d594720f3c86f58744ddf"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\routes\\community.routes.js": {
+    "mtime": 1778656900.0141575,
+    "ast_hash": "c6ca0069ad3993a39d68514979996a0c",
+    "semantic_hash": "c6ca0069ad3993a39d68514979996a0c"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\routes\\notification.routes.js": {
+    "mtime": 1778656907.4238353,
+    "ast_hash": "4a03e0d5dda10d768e4cf315fc2c08c6",
+    "semantic_hash": "4a03e0d5dda10d768e4cf315fc2c08c6"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\routes\\scan.routes.js": {
+    "mtime": 1778656898.0060804,
+    "ast_hash": "02da6afce98c7e9a6c4d7deb11b0f09a",
+    "semantic_hash": "02da6afce98c7e9a6c4d7deb11b0f09a"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\routes\\user.routes.js": {
+    "mtime": 1778656893.9606347,
+    "ast_hash": "3fe219dd9cd930a632dc0f07a9a9c093",
+    "semantic_hash": "3fe219dd9cd930a632dc0f07a9a9c093"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\services\\auth.service.js": {
+    "mtime": 1778656749.86129,
+    "ast_hash": "6e4f88fc4a56a93c638d4ef63d33ac1a",
+    "semantic_hash": "6e4f88fc4a56a93c638d4ef63d33ac1a"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\services\\cloudinary.service.js": {
+    "mtime": 1778656760.7213457,
+    "ast_hash": "da69a9d8c0efced91c8c6a8d53c8d4a6",
+    "semantic_hash": "da69a9d8c0efced91c8c6a8d53c8d4a6"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\services\\email.service.js": {
+    "mtime": 1778656774.195669,
+    "ast_hash": "1b7d28f596a3fcce2f129a755cf88604",
+    "semantic_hash": "1b7d28f596a3fcce2f129a755cf88604"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\utils\\ApiError.js": {
+    "mtime": 1778656680.7140884,
+    "ast_hash": "461f8eea17dec382e09a537b07f827ab",
+    "semantic_hash": "461f8eea17dec382e09a537b07f827ab"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\utils\\ApiResponse.js": {
+    "mtime": 1778656682.8966117,
+    "ast_hash": "39f846047ccab6c56f1da70f6ab19b94",
+    "semantic_hash": "39f846047ccab6c56f1da70f6ab19b94"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\utils\\asyncHandler.js": {
+    "mtime": 1778656687.46558,
+    "ast_hash": "e44b07d57ba5a1ce2e0dbd3ca3c76e62",
+    "semantic_hash": "e44b07d57ba5a1ce2e0dbd3ca3c76e62"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\utils\\constants.js": {
+    "mtime": 1778656694.7351794,
+    "ast_hash": "1991e50846b7225324159c993c164a26",
+    "semantic_hash": "1991e50846b7225324159c993c164a26"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\graph.html": {
+    "mtime": 1779021299.8449464,
+    "ast_hash": "cb3f9217dc1e21a77b7fdef176426e30",
+    "semantic_hash": "cb3f9217dc1e21a77b7fdef176426e30"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\PROJECT_STATUS.md": {
+    "mtime": 1778690570.0019288,
+    "ast_hash": "e52306c31285bab8e7e70d52d1ec38c8",
+    "semantic_hash": "e52306c31285bab8e7e70d52d1ec38c8"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\SETUP.md": {
+    "mtime": 1778690569.976205,
+    "ast_hash": "560114066b8046d74b6c565420eb7bfd",
+    "semantic_hash": "560114066b8046d74b6c565420eb7bfd"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\.agents\\rules\\graphify.md": {
+    "mtime": 1779022750.4012296,
+    "ast_hash": "a0e4d192b9e2e17256124dbfc8e24e6a",
+    "semantic_hash": "a0e4d192b9e2e17256124dbfc8e24e6a"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\.agents\\workflows\\graphify.md": {
+    "mtime": 1779022750.4012296,
+    "ast_hash": "84de69efd46ab0b8430393bd4188f8f2",
+    "semantic_hash": "84de69efd46ab0b8430393bd4188f8f2"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\index.html": {
+    "mtime": 1778657008.7879918,
+    "ast_hash": "2bbb0aedb9702eb40fefca6cabfadab8",
+    "semantic_hash": "2bbb0aedb9702eb40fefca6cabfadab8"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\README.md": {
+    "mtime": 1778656130.6330135,
+    "ast_hash": "a28dc4cb878325f3e9e5649f3e1469ac",
+    "semantic_hash": "a28dc4cb878325f3e9e5649f3e1469ac"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\public\\favicon.svg": {
+    "mtime": 1778657010.7969525,
+    "ast_hash": "fe6d0eb8395f78cabf856d8e040e6bf3",
+    "semantic_hash": "fe6d0eb8395f78cabf856d8e040e6bf3"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\public\\icons.svg": {
+    "mtime": 1778656130.706711,
+    "ast_hash": "3b4fcfcf393eca4d264dca4a4663bc37",
+    "semantic_hash": "3b4fcfcf393eca4d264dca4a4663bc37"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\assets\\hero.png": {
+    "mtime": 1778656130.6523838,
+    "ast_hash": "aead493361b27e7510691c5d7072dfc1",
+    "semantic_hash": "aead493361b27e7510691c5d7072dfc1"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\assets\\react.svg": {
+    "mtime": 1778656130.7265234,
+    "ast_hash": "f0402b67b6ce880f65666bb49e841696",
+    "semantic_hash": "f0402b67b6ce880f65666bb49e841696"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\assets\\vite.svg": {
+    "mtime": 1778656130.7476134,
+    "ast_hash": "9960a24288958394ac50e57ff638b036",
+    "semantic_hash": "9960a24288958394ac50e57ff638b036"
+  }
+}
