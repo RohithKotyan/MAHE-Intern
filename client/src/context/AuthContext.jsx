@@ -1,4 +1,6 @@
 import { createContext, useContext, useState, useEffect, useCallback } from 'react';
+import { signInWithPopup } from 'firebase/auth';
+import { auth, googleProvider } from '../config/firebase';
 import api from '../services/api';
 
 const AuthContext = createContext();
@@ -50,6 +52,29 @@ export const AuthProvider = ({ children }) => {
     return res.data;
   }, []);
 
+  const continueWithGoogle = useCallback(async () => {
+    try {
+      const result = await signInWithPopup(auth, googleProvider);
+      const user = result.user;
+      
+      const res = await api.post('/auth/google', {
+        email: user.email,
+        name: user.displayName,
+        avatar: user.photoURL,
+        uid: user.uid
+      });
+      
+      const { user: userData, token } = res.data.data;
+      localStorage.setItem('agrocare-token', token);
+      setUser(userData);
+      setIsAuthenticated(true);
+      return res.data;
+    } catch (error) {
+      console.error("Google Auth Error", error);
+      throw error;
+    }
+  }, []);
+
   const logout = useCallback(async () => {
     try { await api.post('/auth/logout'); } catch {}
     localStorage.removeItem('agrocare-token');
@@ -62,7 +87,7 @@ export const AuthProvider = ({ children }) => {
   }, []);
 
   return (
-    <AuthContext.Provider value={{ user, loading, isAuthenticated, login, register, logout, updateUser, fetchUser }}>
+    <AuthContext.Provider value={{ user, loading, isAuthenticated, login, register, continueWithGoogle, logout, updateUser, fetchUser }}>
       {children}
     </AuthContext.Provider>
   );

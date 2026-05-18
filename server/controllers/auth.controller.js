@@ -41,7 +41,7 @@ export const login = asyncHandler(async (req, res) => {
   // Find user and include password for comparison
   const user = await User.findOne({ email }).select('+password');
 
-  if (!user) {
+  if (!user || user.provider !== 'local') {
     throw ApiError.unauthorized('Invalid email or password');
   }
 
@@ -56,6 +56,52 @@ export const login = asyncHandler(async (req, res) => {
   await user.save({ validateBeforeSave: false });
 
   sendTokenResponse(user, 200, res, 'Logged in successfully');
+});
+
+// ─── Google OAuth Login ──────────────────────────────────────────
+// POST /api/auth/google
+export const googleLogin = asyncHandler(async (req, res) => {
+  const { email, name, avatar, uid } = req.body;
+
+  if (!email || !uid) {
+    throw ApiError.badRequest('Missing required Google authentication data');
+  }
+
+  let user = await User.findOne({ email });
+
+  if (user) {
+    // Update existing user with Google details if they don't have them
+    if (!user.googleId || !user.avatar || user.provider !== 'google') {
+      user.googleId = uid;
+      user.provider = 'google';
+      if (!user.avatar && avatar) {
+        user.avatar = avatar;
+      }
+      if (!user.name && name) {
+        user.name = name;
+      }
+      await user.save({ validateBeforeSave: false });
+    }
+  } else {
+    // Create new Google user
+    user = await User.create({
+      name: name || 'Google User',
+      email,
+      provider: 'google',
+      googleId: uid,
+      avatar: avatar || '',
+      role: 'farmer', // Default role
+    });
+    
+    // Send welcome email (non-blocking)
+    sendWelcomeEmail(email, name || 'User').catch(console.error);
+  }
+
+  // Update last login timestamp
+  user.lastLogin = Date.now();
+  await user.save({ validateBeforeSave: false });
+
+  sendTokenResponse(user, 200, res, 'Logged in successfully with Google');
 });
 
 // ─── Logout user ─────────────────────────────────────────────────
