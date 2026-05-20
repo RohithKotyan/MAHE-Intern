@@ -1,9 +1,11 @@
-import { Routes, Route, Link } from 'react-router-dom';
-import { motion } from 'motion/react';
+import { Routes, Route } from 'react-router-dom';
+import ScrollToTop from './components/common/ScrollToTop';
+import PublicLayout from './components/layout/PublicLayout';
 import Home from './pages/Home';
 import About from './pages/About';
 import Features from './pages/Features';
 import Contact from './pages/Contact';
+import Community from './pages/Community';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
@@ -13,32 +15,26 @@ import ToastContainer from './components/common/Toast';
 
 function App() {
   return (
-    <div className="min-h-screen bg-[var(--bg-primary)] text-[var(--text-primary)]">
-      <header className="border-b border-[var(--border-color)] bg-[var(--bg-secondary)]">
-        <div className="max-w-7xl mx-auto flex flex-wrap items-center justify-between gap-4 px-4 py-4 sm:px-6 lg:px-8">
-          <Link to="/" className="text-xl font-bold text-[var(--text-primary)]">AgroCare AI</Link>
-          <nav className="flex flex-wrap gap-3 text-sm text-[var(--text-secondary)]">
-            <Link to="/features" className="hover:text-primary-500">Features</Link>
-            <Link to="/about" className="hover:text-primary-500">About</Link>
-            <Link to="/contact" className="hover:text-primary-500">Contact</Link>
-            <Link to="/login" className="hover:text-primary-500">Login</Link>
-            <Link to="/signup" className="text-primary-500 font-medium hover:text-primary-600">Sign Up</Link>
-          </nav>
-        </div>
-      </header>
-
-      <main>
-        <Routes>
+    <div className="min-h-screen bg-eo-bg text-[var(--text-primary)]">
+      <ScrollToTop />
+      <Routes>
+        {/* Public pages with floating Navbar + Footer */}
+        <Route element={<PublicLayout />}>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/features" element={<Features />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/community" element={<Community />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
-          <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </main>
+        </Route>
+
+        {/* Protected dashboard */}
+        <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+
+        {/* 404 */}
+        <Route path="*" element={<NotFound />} />
+      </Routes>
 
       <ToastContainer />
     </div>

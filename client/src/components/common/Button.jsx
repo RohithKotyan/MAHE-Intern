@@ -1,24 +1,26 @@
 import { cn } from '../../utils/helpers';
 
 const variants = {
-  primary: 'bg-primary-500 hover:bg-primary-600 text-white shadow-md hover:shadow-lg',
-  secondary: 'bg-[var(--bg-tertiary)] hover:bg-[var(--border-color)] text-[var(--text-primary)]',
-  outline: 'border border-primary-500 text-primary-500 hover:bg-primary-500 hover:text-white',
-  ghost: 'text-[var(--text-secondary)] hover:bg-[var(--bg-tertiary)] hover:text-[var(--text-primary)]',
+  primary: 'bg-primary-500 hover:bg-primary-600 text-white shadow-md glow-button',
+  secondary: 'bg-eo-surface-container-high hover:bg-eo-surface-container-highest text-[var(--text-primary)] border border-eo-outline-variant',
+  outline: 'border border-eo-outline-variant text-[var(--text-primary)] hover:bg-eo-surface-container-high',
+  ghost: 'text-[var(--text-secondary)] hover:bg-eo-surface-container-high hover:text-[var(--text-primary)]',
   danger: 'bg-danger-500 hover:bg-danger-600 text-white',
+  glow: 'bg-primary-500 text-white emerald-glow hover:scale-105 active:scale-95',
 };
 
 const sizes = {
   sm: 'px-3 py-1.5 text-sm',
   md: 'px-5 py-2.5 text-sm',
-  lg: 'px-7 py-3 text-base',
+  lg: 'px-7 py-3.5 text-base',
+  xl: 'px-8 py-4 text-base font-bold',
 };
 
 export default function Button({ children, variant = 'primary', size = 'md', className, loading, disabled, icon: Icon, ...props }) {
   return (
     <button
       className={cn(
-        'inline-flex items-center justify-center gap-2 font-medium rounded-xl transition-all duration-200 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed',
+        'inline-flex items-center justify-center gap-2 font-medium rounded-xl transition-all duration-300 cursor-pointer disabled:opacity-50 disabled:cursor-not-allowed',
         variants[variant], sizes[size], className
       )}
       disabled={disabled || loading}
