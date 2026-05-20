@@ -1,16 +1,16 @@
-# Graph Report - MAHE internship - 2  (2026-05-18)
+# Graph Report - MAHE internship - 2  (2026-05-20)
 
 ## Corpus Check
-- 76 files · ~16,469 words
+- 78 files · ~19,639 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 342 nodes · 477 edges · 22 communities (20 shown, 2 thin omitted)
+- 364 nodes · 536 edges · 24 communities (21 shown, 3 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `53422b65`
+- Built from commit: `ba68a863`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -34,11 +34,13 @@
 - [[_COMMUNITY_Public Layout & Footer|Public Layout & Footer]]
 - [[_COMMUNITY_Community 17|Community 17]]
 - [[_COMMUNITY_Community 21|Community 21]]
+- [[_COMMUNITY_Community 22|Community 22]]
+- [[_COMMUNITY_Community 23|Community 23]]
 
 ## God Nodes (most connected - your core abstractions)
-1. `cn()` - 18 edges
-2. `useAuth()` - 11 edges
-3. `useToast()` - 9 edges
+1. `cn()` - 21 edges
+2. `useAuth()` - 14 edges
+3. `useToast()` - 12 edges
 4. `AgroCare AI — Development Setup Guide` - 8 edges
 5. `AgroCare AI - Project Status & Analysis` - 7 edges
 6. `ApiError` - 7 edges
@@ -48,46 +50,46 @@
 10. `AgroCare AI` - 5 edges
 
 ## Surprising Connections (you probably didn't know these)
+- `Button()` --calls--> `cn()`  [EXTRACTED]
+  components/common/Button.jsx → client/src/utils/helpers.js
+- `Input()` --calls--> `cn()`  [EXTRACTED]
+  components/common/Input.jsx → client/src/utils/helpers.js
 - `cn()` --calls--> `clsx`  [INFERRED]
   client/src/utils/helpers.js → client/package.json
+- `Card()` --calls--> `cn()`  [EXTRACTED]
+  components/common/Card.jsx → client/src/utils/helpers.js
 - `ThemeToggle()` --calls--> `useTheme()`  [EXTRACTED]
-  client/src/components/common/ThemeToggle.jsx → ThemeContext.jsx
-- `ProtectedRoute()` --calls--> `useAuth()`  [EXTRACTED]
-  client/src/components/auth/ProtectedRoute.jsx → client/src/context/AuthContext.jsx
-- `Navbar()` --calls--> `useAuth()`  [EXTRACTED]
-  client/src/components/layout/Navbar.jsx → client/src/context/AuthContext.jsx
-- `Dashboard()` --calls--> `useAuth()`  [EXTRACTED]
-  client/src/pages/Dashboard.jsx → client/src/context/AuthContext.jsx
+  components/common/ThemeToggle.jsx → ThemeContext.jsx
 
-## Communities (22 total, 2 thin omitted)
+## Communities (24 total, 3 thin omitted)
 
 ### Community 0 - "React UI & Routing Core"
 Cohesion: 0.07
-Nodes (25): ProtectedRoute(), icons, ToastContainer(), app, auth, firebaseConfig, googleProvider, AuthContext (+17 more)
+Nodes (28): ProtectedRoute(), Button(), sizes, variants, Input(), Logo(), icons, ToastContainer() (+20 more)
 
 ### Community 1 - "Server Core API & Models"
-Cohesion: 0.08
-Nodes (26): createScan, deleteScan, getMyScans, getScanById, changePassword, getProfile, getUsers, updateAvatar (+18 more)
+Cohesion: 0.07
+Nodes (35): addComment, createPost, deletePost, getComments, getPostById, getPosts, toggleLike, createScan (+27 more)
 
 ### Community 2 - "Server Package Config"
 Cohesion: 0.07
 Nodes (27): author, dependencies, bcryptjs, cloudinary, cookie-parser, cors, dotenv, express (+19 more)
 
 ### Community 3 - "UI Components & Helpers"
-Cohesion: 0.1
-Nodes (19): Avatar(), Badge(), colors, Button(), sizes, variants, Card(), EmptyState() (+11 more)
+Cohesion: 0.17
+Nodes (12): Avatar(), Badge(), colors, Card(), EmptyState(), SkeletonAvatar(), SkeletonCard(), SkeletonLine() (+4 more)
 
 ### Community 4 - "Auth Services & Validation"
-Cohesion: 0.16
-Nodes (17): forgotPassword, getMe, googleLogin, login, logout, register, resetPassword, loginValidation (+9 more)
+Cohesion: 0.13
+Nodes (20): forgotPassword, getMe, googleLogin, login, logout, register, resetPassword, loginValidation (+12 more)
 
 ### Community 5 - "Client Package Config"
 Cohesion: 0.06
 Nodes (33): dependencies, axios, clsx, firebase, lucide-react, motion, react, react-dom (+25 more)
 
 ### Community 6 - "Community Forum API"
-Cohesion: 0.18
-Nodes (12): addComment, createPost, deletePost, getComments, getPostById, getPosts, toggleLike, Comment (+4 more)
+Cohesion: 0.43
+Nodes (5): About(), fadeUp, team, timeline, values
 
 ### Community 7 - "Client External Dependencies"
 Cohesion: 0.1
@@ -114,12 +116,12 @@ Cohesion: 0.11
 Nodes (17): AgroCare AI - Project Status & Analysis, Architecture Overview, Authentication & Security, Backend Community Features, Backend (http://localhost:5000/api), 🟢 Completed Features, Core Infrastructure, Current Working Routes/Pages (+9 more)
 
 ### Community 15 - "Home Page Components"
-Cohesion: 0.4
-Nodes (3): fadeUp, features, stats
+Cohesion: 0.33
+Nodes (4): fadeUp, features, Home(), stats
 
 ### Community 16 - "Public Layout & Footer"
-Cohesion: 0.48
-Nodes (4): ThemeToggle(), ThemeContext, ThemeProvider(), useTheme()
+Cohesion: 0.29
+Nodes (6): ThemeToggle(), AuthProvider(), ThemeContext, ThemeProvider(), useTheme(), ToastProvider()
 
 ### Community 17 - "Community 17"
 Cohesion: 0.22
@@ -129,25 +131,29 @@ Nodes (8): AgroCare AI, 🏗️ Architecture Overview, code:bash (# Terminal 1: 
 Cohesion: 0.29
 Nodes (6): AgroCare AI Roadmap & TODO, Phase 1: Core Foundation (✅ COMPLETED), Phase 2: Dashboard & Core UX (🚧 IN PROGRESS), Phase 3: AI Integration & Scanning (🔴 PENDING), Phase 4: Data & Tracking (🔴 PENDING), Phase 5: Community Platform (🔴 PENDING)
 
+### Community 22 - "Community 22"
+Cohesion: 0.4
+Nodes (4): fadeUp, features, plans, workflow
+
 ## Knowledge Gaps
-- **139 isolated node(s):** `Architecture Overview`, `Core Infrastructure`, `Authentication & Security`, `Dashboard UI`, `Backend Community Features` (+134 more)
+- **132 isolated node(s):** `navLinks`, `team`, `workflow`, `Architecture Overview`, `Core Infrastructure` (+127 more)
   These have ≤1 connection - possible missing edges or undocumented components.
-- **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
+- **3 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
 ## Suggested Questions
 _Questions this graph is uniquely positioned to answer:_
 
-- **Why does `cn()` connect `UI Components & Helpers` to `Client Package Config`?**
-  _High betweenness centrality (0.076) - this node is a cross-community bridge._
+- **Why does `cn()` connect `UI Components & Helpers` to `React UI & Routing Core`, `Client Package Config`?**
+  _High betweenness centrality (0.086) - this node is a cross-community bridge._
 - **Why does `clsx` connect `Client Package Config` to `UI Components & Helpers`?**
-  _High betweenness centrality (0.059) - this node is a cross-community bridge._
-- **What connects `Architecture Overview`, `Core Infrastructure`, `Authentication & Security` to the rest of the system?**
-  _139 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.063) - this node is a cross-community bridge._
+- **What connects `navLinks`, `team`, `workflow` to the rest of the system?**
+  _132 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `React UI & Routing Core` be split into smaller, more focused modules?**
   _Cohesion score 0.07 - nodes in this community are weakly interconnected._
 - **Should `Server Core API & Models` be split into smaller, more focused modules?**
-  _Cohesion score 0.08 - nodes in this community are weakly interconnected._
+  _Cohesion score 0.07 - nodes in this community are weakly interconnected._
 - **Should `Server Package Config` be split into smaller, more focused modules?**
   _Cohesion score 0.07 - nodes in this community are weakly interconnected._
-- **Should `UI Components & Helpers` be split into smaller, more focused modules?**
-  _Cohesion score 0.1 - nodes in this community are weakly interconnected._
+- **Should `Auth Services & Validation` be split into smaller, more focused modules?**
+  _Cohesion score 0.13 - nodes in this community are weakly interconnected._
