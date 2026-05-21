@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import AnimatedStat from '../components/common/AnimatedStat';
 
 export default function Home() {
   useEffect(() => {
@@ -97,19 +98,27 @@ export default function Home() {
       <section className="py-20 bg-eo-surface-container-lowest border-y border-eo-outline-variant/20">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
           <div>
-            <div className="text-primary-500 text-4xl md:text-5xl font-bold mb-2">12k+</div>
+            <div className="text-primary-500 text-4xl md:text-5xl font-bold mb-2">
+              <AnimatedStat value={12} suffix="k+" />
+            </div>
             <div className="text-[var(--text-muted)] text-xs uppercase tracking-widest font-medium">Active Farmers</div>
           </div>
           <div>
-            <div className="text-primary-500 text-4xl md:text-5xl font-bold mb-2">99.8%</div>
+            <div className="text-primary-500 text-4xl md:text-5xl font-bold mb-2">
+              <AnimatedStat value={99.8} suffix="%" decimals={1} />
+            </div>
             <div className="text-[var(--text-muted)] text-xs uppercase tracking-widest font-medium">Accuracy Rate</div>
           </div>
           <div>
-            <div className="text-primary-500 text-4xl md:text-5xl font-bold mb-2">50m+</div>
+            <div className="text-primary-500 text-4xl md:text-5xl font-bold mb-2">
+              <AnimatedStat value={50} suffix="m+" />
+            </div>
             <div className="text-[var(--text-muted)] text-xs uppercase tracking-widest font-medium">Crops Scanned</div>
           </div>
           <div>
-            <div className="text-primary-500 text-4xl md:text-5xl font-bold mb-2">24/7</div>
+            <div className="text-primary-500 text-4xl md:text-5xl font-bold mb-2">
+              <AnimatedStat value="24/7" />
+            </div>
             <div className="text-[var(--text-muted)] text-xs uppercase tracking-widest font-medium">Expert Support</div>
           </div>
         </div>

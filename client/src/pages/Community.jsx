@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { Link } from 'react-router-dom';
+import AnimatedStat from '../components/common/AnimatedStat';
 
 export default function Community() {
   useEffect(() => {
@@ -46,22 +47,30 @@ export default function Community() {
       <section className="max-w-7xl mx-auto px-6 -mt-12 relative z-20">
         <div className="glass-card rounded-2xl p-8 flex flex-wrap justify-around items-center gap-8 shadow-2xl">
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary-500 mb-1">12k+</div>
+            <div className="text-4xl font-bold text-primary-500 mb-1">
+              <AnimatedStat value={12} suffix="k+" />
+            </div>
             <div className="text-[10px] md:text-xs text-[var(--text-secondary)] uppercase tracking-widest font-semibold">Active Farmers</div>
           </div>
           <div className="h-12 w-[1px] bg-eo-outline-variant/30 hidden md:block"></div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary-500 mb-1">500+</div>
+            <div className="text-4xl font-bold text-primary-500 mb-1">
+              <AnimatedStat value={500} suffix="+" />
+            </div>
             <div className="text-[10px] md:text-xs text-[var(--text-secondary)] uppercase tracking-widest font-semibold">Certified Agronomists</div>
           </div>
           <div className="h-12 w-[1px] bg-eo-outline-variant/30 hidden md:block"></div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary-500 mb-1">85%</div>
+            <div className="text-4xl font-bold text-primary-500 mb-1">
+              <AnimatedStat value={85} suffix="%" />
+            </div>
             <div className="text-[10px] md:text-xs text-[var(--text-secondary)] uppercase tracking-widest font-semibold">Yield Improvement</div>
           </div>
           <div className="h-12 w-[1px] bg-eo-outline-variant/30 hidden md:block"></div>
           <div className="text-center">
-            <div className="text-4xl font-bold text-primary-500 mb-1">24/7</div>
+            <div className="text-4xl font-bold text-primary-500 mb-1">
+              <AnimatedStat value="24/7" />
+            </div>
             <div className="text-[10px] md:text-xs text-[var(--text-secondary)] uppercase tracking-widest font-semibold">AI Expert Support</div>
           </div>
         </div>

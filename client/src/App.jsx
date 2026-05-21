@@ -9,6 +9,8 @@ import Community from './pages/Community';
 import Login from './pages/Login';
 import Signup from './pages/Signup';
 import Dashboard from './pages/Dashboard';
+import CropTracking from './pages/CropTracking';
+import TreatmentProtocol from './pages/TreatmentProtocol';
 import NotFound from './pages/NotFound';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import ToastContainer from './components/common/Toast';
@@ -31,6 +33,8 @@ function App() {
 
         {/* Protected dashboard */}
         <Route path="/dashboard" element={<ProtectedRoute><Dashboard /></ProtectedRoute>} />
+        <Route path="/dashboard/crops" element={<ProtectedRoute><CropTracking /></ProtectedRoute>} />
+        <Route path="/dashboard/crops/:cropId/treatment" element={<ProtectedRoute><TreatmentProtocol /></ProtectedRoute>} />
 
         {/* 404 */}
         <Route path="*" element={<NotFound />} />
