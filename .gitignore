@@ -27,3 +27,8 @@ yarn-error.log*
 # OS System Files
 .DS_Store
 Thumbs.db
+
+# Internal Project Documents
+PROJECT_STATUS.md
+SETUP.md
+TODO.md
