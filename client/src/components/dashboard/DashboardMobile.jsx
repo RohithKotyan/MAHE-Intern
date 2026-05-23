@@ -1,31 +1,6 @@
-import React from 'react';
-
 export default function DashboardMobile() {
   return (
-    <div className="flex flex-col h-full w-full">
-      {/* TopAppBar (Mobile) */}
-      <header className="fixed top-0 w-full z-50 flex justify-between items-center px-4 h-16 bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-md">
-        <div className="flex items-center gap-2 py-2">
-          <img alt="AgroCare AI Logo" className="h-14 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuClnDcMcUuNAkANX6gg8CUBE9SwrpKT8SkzlhFOrnZzCaNRPnGthoITR7QKASN2nOlHjxspbAJ3HUqkDJeUKInuxFb8b6U14rt84XYTgwoNB9D7lJWxR2a2p_7TLCE1KkR7KbiiTM9kp2LpWhHdKKa7g_JKM382YEQyuATrcGasTsa-TXW3NkaCJGtHDFmFn6ui9BR-dwjdEe4SFlKmk-Klfg909U1Cb86YNpAYUKPmpqWHS8cXffejOik30HCm3fAubdKbrJ6-uw" />
-        </div>
-        <div className="flex items-center gap-3">
-          <button className="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors bg-surface-container-high/50 hover:bg-surface-container-high">
-            <span className="material-symbols-outlined">search</span>
-          </button>
-          <button className="w-10 h-10 rounded-full flex items-center justify-center text-on-surface-variant hover:text-primary transition-colors bg-surface-container-high/50 hover:bg-surface-container-high relative">
-            <span className="material-symbols-outlined">notifications</span>
-            <span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-error animate-pulse"></span>
-          </button>
-          <div className="w-8 h-8 rounded-full border border-primary/30 overflow-hidden bg-surface-container-high flex items-center justify-center cursor-pointer hover:border-primary transition-colors">
-            <img alt="User profile photo" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF534OOD6MQtE1HdOyBiNkKycRZA0RzZNRRjIZ89YH-Wdh5XAWoyOIuPclMb87uWpT40cd-zm90r-BMMPHlVpidBTddGR9y5aRv5le0pxg0UXBypn_BjvOS5D2KC7OK1U-wL-2h_Dc0HhXpbCNyYkDg9UO4m54pZpfMt8M3V8RFv0PCfh3yRlCFCybiblJhU14fMYB7A7-mwE5PLmTRYzylceFwTAn-3mEuhlGJwSiaw6tRxEYFla544qe8o7EcCWd99T8daL5NQ" />
-          </div>
-        </div>
-      </header>
-
-      {/* Main Content Area */}
-      <main className="flex-1 w-full h-full overflow-y-auto bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] relative pt-16 pb-24 bg-surface">
-        {/* Content Canvas */}
-        <div className="px-4 py-6 max-w-7xl mx-auto space-y-6 flex flex-col gap-4">
+    <div className="px-4 py-6 max-w-7xl mx-auto space-y-6 flex flex-col gap-4 h-full">
           {/* Page Header */}
           <header className="mb-2">
             <div>
@@ -204,40 +179,6 @@ export default function DashboardMobile() {
               </div>
             </section>
           </div>
-        </div>
-      </main>
-
-      {/* Bottom Navigation Bar (Mobile) */}
-      <nav className="fixed bottom-0 left-0 w-full z-50 px-4 pb-4 pointer-events-none">
-        <div className="bg-surface-container-low/95 backdrop-blur-xl border border-outline-variant/30 rounded-[2rem] px-6 h-[72px] flex justify-between items-center shadow-lg relative pointer-events-auto">
-          
-          <a href="#" className="flex flex-col items-center gap-1 text-primary relative">
-            <span className="absolute -top-2 w-1 h-1 rounded-full bg-primary"></span>
-            <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>home</span>
-            <span className="text-[10px] font-medium">Home</span>
-          </a>
-          
-          <a href="/dashboard/crops" className="flex flex-col items-center text-on-surface-variant hover:text-on-surface transition-colors mr-6">
-            <span className="material-symbols-outlined text-[24px]">potted_plant</span>
-          </a>
-          
-          {/* Center Floating Action Button */}
-          <div className="absolute left-1/2 -translate-x-1/2 -top-5">
-            <button className="w-[68px] h-[68px] rounded-full bg-primary flex items-center justify-center text-[#003825] shadow-[0_0_20px_rgba(78,222,163,0.3)] border-[6px] border-surface hover:scale-105 transition-transform">
-              <span className="material-symbols-outlined text-[28px]">qr_code_scanner</span>
-            </button>
-          </div>
-
-          <a href="#" className="flex flex-col items-center text-on-surface-variant hover:text-on-surface transition-colors ml-6">
-            <span className="material-symbols-outlined text-[24px]">groups</span>
-          </a>
-          
-          <a href="#" className="flex flex-col items-center text-on-surface-variant hover:text-on-surface transition-colors">
-            <span className="material-symbols-outlined text-[24px]">person</span>
-          </a>
-
-        </div>
-      </nav>
     </div>
   );
 }

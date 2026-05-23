@@ -24,10 +24,10 @@ export default function CropTrackingContent() {
           {/* Search & Filters */}
           <div className="flex flex-col xl:flex-row gap-4 xl:items-center">
             {/* Search Bar */}
-            <div className="relative flex-1 max-w-2xl">
-              <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-on-surface-variant">search</span>
+            <div className="relative flex-1 max-w-2xl group">
+              <span className="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-white/50 group-focus-within:text-white transition-colors">search</span>
               <input 
-                className="w-full pl-12 pr-4 py-3 bg-[#05070A] border border-[#30363D] rounded-xl text-on-surface font-body-md placeholder:text-on-surface-variant/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary focus:shadow-[0_0_20px_rgba(16,185,129,0.15)] transition-all duration-300" 
+                className="w-full pl-12 pr-4 py-3 bg-[#05070A] border border-white/10 rounded-xl text-white font-body-md placeholder:text-white/50 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary focus:shadow-[0_0_20px_rgba(16,185,129,0.15)] transition-all duration-300" 
                 placeholder="Search crops, batches, or species..." 
                 type="text" 
               />

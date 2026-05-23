@@ -51,53 +51,29 @@
   --color-danger-600: #dc2626;
 
   /* ─── Material Design 3 Tokens ───────────────────────── */
-  --color-surface-dim: #0e1511;
-  --color-surface: #0e1511;
-  --color-on-tertiary: #003825;
-  --color-surface-bright: #343b36;
-  --color-surface-variant: #2f3632;
-  --color-on-tertiary-fixed: #002114;
-  --color-on-background: #dde4dd;
-  --color-surface-container-lowest: #09100c;
-  --color-secondary-container: #00bd85;
-  --color-outline: #86948a;
-  --color-tertiary-fixed-dim: #68dba9;
-  --color-surface-tint: #4edea3;
-  --color-primary-fixed-dim: #4edea3;
-  --color-secondary-fixed: #68fcbf;
-  --color-on-surface: #dde4dd;
-  --color-secondary: #45dfa4;
-  --color-on-tertiary-fixed-variant: #005137;
-  --color-on-error-container: #ffdad6;
-  --color-tertiary: #68dba9;
-  --color-secondary-fixed-dim: #45dfa4;
-  --color-on-surface-variant: #bbcabf;
-  --color-inverse-on-surface: #2b322d;
-  --color-inverse-primary: #006c49;
-  --color-surface-container: #1a211d;
-  --color-on-primary-fixed: #002113;
-  --color-background: #0e1511;
-  --color-surface-container-low: #161d19;
-  --color-on-error: #690005;
-  --color-tertiary-fixed: #85f8c4;
-  --color-outline-variant: #3c4a42;
-  --color-on-tertiary-container: #00422c;
-  --color-tertiary-container: #3eb686;
-  --color-surface-container-high: #242c27;
-  --color-on-secondary-fixed: #002114;
-  --color-primary: #4edea3;
-  --color-primary-fixed: #6ffbbe;
-  --color-primary-container: #10b981;
-  --color-surface-container-highest: #2f3632;
-  --color-on-secondary-fixed-variant: #005137;
-  --color-on-primary-fixed-variant: #005236;
-  --color-on-primary: #003824;
-  --color-on-primary-container: #00422b;
-  --color-error: #ffb4ab;
-  --color-on-secondary-container: #00452e;
-  --color-on-secondary: #003825;
-  --color-inverse-surface: #dde4dd;
-  --color-error-container: #93000a;
+  --color-surface-dim: var(--md-surface-dim);
+  --color-surface: var(--md-surface);
+  --color-surface-bright: var(--md-surface-bright);
+  --color-surface-container-lowest: var(--md-surface-container-lowest);
+  --color-surface-container-low: var(--md-surface-container-low);
+  --color-surface-container: var(--md-surface-container);
+  --color-surface-container-high: var(--md-surface-container-high);
+  --color-surface-container-highest: var(--md-surface-container-highest);
+  --color-surface-variant: var(--md-surface-variant);
+  --color-on-surface: var(--md-on-surface);
+  --color-on-surface-variant: var(--md-on-surface-variant);
+  --color-outline: var(--md-outline);
+  --color-outline-variant: var(--md-outline-variant);
+
+  --color-primary: var(--md-primary);
+  --color-on-primary: var(--md-on-primary);
+  --color-primary-container: var(--md-primary-container);
+  --color-on-primary-container: var(--md-on-primary-container);
+
+  --color-error: var(--md-error);
+  --color-on-error: var(--md-on-error);
+  --color-error-container: var(--md-error-container);
+  --color-on-error-container: var(--md-on-error-container);
 
   --spacing-gutter: 16px;
   --spacing-container-margin: 24px;
@@ -145,36 +121,73 @@
 
 @layer base {
   :root {
-    /* Legacy compat variables — dark only */
-    --bg-primary: #0e1511;
-    --bg-secondary: #161d19;
-    --bg-tertiary: #1a211d;
-    --bg-card: rgba(26, 33, 29, 0.7);
-    --bg-sidebar: #09100c;
-    --border-color: #3c4a42;
-    --text-primary: #dde4dd;
-    --text-secondary: #bbcabf;
-    --text-muted: #86948a;
-    --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
-    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.4);
-    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.5);
-    --shadow-glow: 0 0 30px rgba(16, 185, 129, 0.15);
+    /* Legacy compat */
+    --shadow-sm: 0 1px 2px rgba(0,0,0,0.1);
+    --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
+    --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
+    --shadow-glow: 0 0 30px rgba(22, 163, 74, 0.15);
+
+    /* Light Theme - Soft Agricultural Tones */
+    --md-surface-dim: #e4e7e4;
+    --md-surface: #F8FAF7;
+    --md-surface-bright: #F8FAF7;
+    --md-surface-container-lowest: #FFFFFF;
+    --md-surface-container-low: #f4f6f3;
+    --md-surface-container: #ecefec;
+    --md-surface-container-high: #e5e8e4;
+    --md-surface-container-highest: #dfe3dd;
+    --md-surface-variant: #dee4e0;
+    --md-on-surface: #191c1a;
+    --md-on-surface-variant: #404944;
+    --md-outline: #707973;
+    --md-outline-variant: #bfc9c1;
+
+    --md-primary: #16A34A;
+    --md-on-primary: #FFFFFF;
+    --md-primary-container: #a6f5b7;
+    --md-on-primary-container: #00210b;
+
+    --md-error: #ba1a1a;
+    --md-on-error: #ffffff;
+    --md-error-container: #ffdad6;
+    --md-on-error-container: #410002;
+
+    color-scheme: light;
   }
 
   .dark {
-    --bg-primary: #0e1511;
-    --bg-secondary: #161d19;
-    --bg-tertiary: #1a211d;
-    --bg-card: rgba(26, 33, 29, 0.7);
-    --bg-sidebar: #09100c;
-    --border-color: #3c4a42;
-    --text-primary: #dde4dd;
-    --text-secondary: #bbcabf;
-    --text-muted: #86948a;
+    /* Legacy compat */
     --shadow-sm: 0 1px 2px rgba(0,0,0,0.3);
     --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.4);
     --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.5);
     --shadow-glow: 0 0 30px rgba(16, 185, 129, 0.15);
+
+    /* Premium Dark Theme */
+    --md-surface-dim: #0e1511;
+    --md-surface: #0e1511;
+    --md-surface-bright: #343b36;
+    --md-surface-container-lowest: #09100c;
+    --md-surface-container-low: #161d19;
+    --md-surface-container: #1a211d;
+    --md-surface-container-high: #242c27;
+    --md-surface-container-highest: #2f3632;
+    --md-surface-variant: #2f3632;
+    --md-on-surface: #dde4dd;
+    --md-on-surface-variant: #bbcabf;
+    --md-outline: #86948a;
+    --md-outline-variant: #3c4a42;
+
+    --md-primary: #4edea3;
+    --md-on-primary: #003824;
+    --md-primary-container: #10b981;
+    --md-on-primary-container: #00422b;
+
+    --md-error: #ffb4ab;
+    --md-on-error: #690005;
+    --md-error-container: #93000a;
+    --md-on-error-container: #ffdad6;
+
+    color-scheme: dark;
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -183,11 +196,16 @@
 
   body {
     font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-    background-color: #0e1511;
-    color: #dde4dd;
+    background-color: var(--md-surface);
+    color: var(--md-on-surface);
+    transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     overflow-x: hidden;
+  }
+
+  * {
+    transition: border-color 0.3s ease;
   }
 
   /* Material Symbols base */
@@ -213,28 +231,28 @@
 @layer utilities {
   /* ─── Glass Effects ─────────────────────────────────────── */
   .glass {
-    background: rgba(26, 33, 29, 0.4);
+    background: color-mix(in srgb, var(--md-surface-container) 40%, transparent);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(60, 74, 66, 0.3);
+    border: 1px solid color-mix(in srgb, var(--md-outline-variant) 30%, transparent);
   }
 
   .glass-panel {
-    background: rgba(26, 33, 29, 0.7);
+    background: color-mix(in srgb, var(--md-surface-container) 70%, transparent);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(134, 148, 138, 0.2);
+    border: 1px solid color-mix(in srgb, var(--md-outline-variant) 30%, transparent);
   }
 
   .glass-card {
-    background: rgba(26, 33, 29, 0.4);
+    background: color-mix(in srgb, var(--md-surface-container) 40%, transparent);
     backdrop-filter: blur(12px);
-    border: 1px solid rgba(60, 74, 66, 0.3);
+    border: 1px solid color-mix(in srgb, var(--md-outline-variant) 30%, transparent);
     box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.05);
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .glass-card:hover {
-    border-color: rgba(78, 222, 163, 0.4);
-    box-shadow: 0 0 30px rgba(78, 222, 163, 0.08);
+    border-color: color-mix(in srgb, var(--md-primary) 40%, transparent);
+    box-shadow: 0 0 30px color-mix(in srgb, var(--md-primary) 8%, transparent);
     transform: translateY(-4px);
   }
 
@@ -373,7 +391,7 @@
 }
 
 .skeleton {
-  background: linear-gradient(90deg, #1a211d 25%, #242c27 50%, #1a211d 75%);
+  background: linear-gradient(90deg, var(--md-surface-container) 25%, var(--md-surface-container-high) 50%, var(--md-surface-container) 75%);
   background-size: 200% 100%;
   animation: shimmer 1.5s ease-in-out infinite;
   border-radius: 8px;
