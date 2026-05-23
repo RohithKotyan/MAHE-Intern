@@ -33,20 +33,16 @@ const AI_RESPONSES = {
 };
 
 const QUICK_PROMPTS = [
-  { label: 'Soil Health Check', icon: 'compost', category: 'soil' },
-  { label: 'Pest Identification', icon: 'pest_control', category: 'pest' },
-  { label: 'Weather Impact', icon: 'partly_cloudy_day', category: 'weather' },
-  { label: 'Crop Growth Tips', icon: 'potted_plant', category: 'crop' },
-  { label: 'Fertilizer Plan', icon: 'science', category: 'soil' },
-  { label: 'Irrigation Schedule', icon: 'water_drop', category: 'soil' },
+  { label: 'Soil Health', icon: 'compost', category: 'soil' },
+  { label: 'Pest ID', icon: 'pest_control', category: 'pest' },
+  { label: 'Weather', icon: 'partly_cloudy_day', category: 'weather' },
+  { label: 'Growth Tips', icon: 'potted_plant', category: 'crop' },
 ];
 
 const SUGGESTED_QUESTIONS = [
   'Best crop rotation practices for my farm?',
   'How do I treat early blight on tomatoes?',
   'When should I harvest my current crops?',
-  'Optimal fertilizer for clay soil?',
-  'How to increase yield by 20%?',
 ];
 
 // ─── Sub-components ─────────────────────────────────────────────────────────
@@ -54,16 +50,16 @@ const SUGGESTED_QUESTIONS = [
 function TypingIndicator() {
   return (
     <div className="flex items-end gap-3 px-4 md:px-6">
-      <div className="w-9 h-9 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center shadow-md shrink-0">
-        <span className="material-symbols-outlined text-white text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>eco</span>
+      <div className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center shadow-sm shrink-0">
+        <span className="material-symbols-outlined text-white text-[16px]" style={{ fontVariationSettings: "'FILL' 1" }}>eco</span>
       </div>
-      <div className="bg-surface-container border border-outline-variant/30 rounded-2xl rounded-bl-sm px-5 py-4 shadow-sm">
-        <div className="flex gap-1.5 items-center h-5">
+      <div className="bg-surface-container border border-outline-variant/30 rounded-2xl rounded-bl-sm px-4 py-3 shadow-sm">
+        <div className="flex gap-1.5 items-center h-4">
           {[0, 1, 2].map(i => (
             <motion.div
               key={i}
-              className="w-2 h-2 rounded-full bg-primary"
-              animate={{ y: [0, -6, 0] }}
+              className="w-1.5 h-1.5 rounded-full bg-primary"
+              animate={{ y: [0, -4, 0] }}
               transition={{ duration: 0.8, repeat: Infinity, delay: i * 0.15 }}
             />
           ))}
@@ -77,14 +73,14 @@ function MessageBubble({ msg }) {
   const isUser = msg.role === 'user';
   return (
     <motion.div
-      initial={{ opacity: 0, y: 16 }}
+      initial={{ opacity: 0, y: 10 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.3, ease: 'easeOut' }}
+      transition={{ duration: 0.25, ease: 'easeOut' }}
       className={`flex items-end gap-3 px-4 md:px-6 ${isUser ? 'flex-row-reverse' : 'flex-row'}`}
     >
       {/* Avatar */}
       {isUser ? (
-        <div className="w-9 h-9 rounded-full border-2 border-primary/30 overflow-hidden shrink-0 shadow-md">
+        <div className="w-8 h-8 rounded-full border border-primary/30 overflow-hidden shrink-0 shadow-sm">
           <img
             src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF534OOD6MQtE1HdOyBiNkKycRZA0RzZNRRjIZ89YH-Wdh5XAWoyOIuPclMb87uWpT40cd-zm90r-BMMPHlVpidBTddGR9y5aRv5le0pxg0UXBypn_BjvOS5D2KC7OK1U-wL-2h_Dc0HhXpbCNyYkDg9UO4m54pZpfMt8M3V8RFv0PCfh3yRlCFCybiblJhU14fMYB7A7-mwE5PLmTRYzylceFwTAn-3mEuhlGJwSiaw6tRxEYFla544qe8o7EcCWd99T8daL5NQ"
             alt="You"
@@ -92,21 +88,21 @@ function MessageBubble({ msg }) {
           />
         </div>
       ) : (
-        <div className="w-9 h-9 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center shadow-md shrink-0">
-          <span className="material-symbols-outlined text-white text-[18px]" style={{ fontVariationSettings: "'FILL' 1" }}>eco</span>
+        <div className="w-8 h-8 rounded-full bg-gradient-to-br from-emerald-500 to-emerald-700 flex items-center justify-center shadow-sm shrink-0">
+          <span className="material-symbols-outlined text-white text-[16px]" style={{ fontVariationSettings: "'FILL' 1" }}>eco</span>
         </div>
       )}
 
       {/* Bubble */}
-      <div className={`max-w-[75%] md:max-w-[60%] ${isUser ? 'items-end' : 'items-start'} flex flex-col gap-1`}>
-        <div className={`px-5 py-3.5 rounded-2xl shadow-sm text-sm leading-relaxed ${
+      <div className={`max-w-[80%] md:max-w-[65%] ${isUser ? 'items-end' : 'items-start'} flex flex-col gap-1`}>
+        <div className={`px-4 py-2.5 rounded-2xl shadow-sm text-[13.5px] leading-relaxed ${
           isUser
             ? 'bg-gradient-to-br from-emerald-600 to-emerald-500 text-white rounded-br-sm'
             : 'bg-surface-container border border-outline-variant/30 text-on-surface rounded-bl-sm'
         }`}>
           {msg.text}
         </div>
-        <span className="text-[10px] text-on-surface-variant px-1">{msg.time}</span>
+        <span className="text-[9px] text-on-surface-variant/80 px-1">{msg.time}</span>
       </div>
     </motion.div>
   );
@@ -119,7 +115,7 @@ export default function AIChatContent() {
     {
       id: 1,
       role: 'ai',
-      text: "👋 Welcome back, Rohith! I'm AgroBrain, your AI farming assistant. Ask me anything about your crops, soil, weather, pests, or farm management. I have real-time access to your farm data!",
+      text: "👋 Hi Rohith! I'm AgroBrain. Ask me anything about your crops, soil, or farm management.",
       time: 'Now',
     },
   ]);
@@ -194,65 +190,51 @@ export default function AIChatContent() {
   };
 
   return (
-    <div className="flex flex-col h-full overflow-hidden">
+    <div className="flex flex-col flex-1 w-full overflow-hidden bg-surface">
 
-      {/* ── Header ─────────────────────────────────────────────────────────── */}
-      <div className="shrink-0 pt-16">
-        <div className="relative bg-gradient-to-r from-emerald-700 via-emerald-600 to-emerald-500 overflow-hidden">
-          {/* Decorative blobs */}
-          <div className="absolute top-0 right-0 w-48 h-48 bg-white/10 rounded-full blur-3xl -translate-y-1/2 translate-x-1/4 pointer-events-none" />
-          <div className="absolute bottom-0 left-1/3 w-32 h-32 bg-emerald-900/20 rounded-full blur-2xl translate-y-1/2 pointer-events-none" />
-
-          <div className="relative z-10 px-4 md:px-8 py-5 flex items-center gap-4">
-            {/* AI Avatar */}
-            <div className="relative shrink-0">
-              <div className="w-14 h-14 rounded-2xl bg-white/15 backdrop-blur-sm border border-white/20 flex items-center justify-center shadow-lg">
-                <span className="material-symbols-outlined text-white text-[32px]" style={{ fontVariationSettings: "'FILL' 1" }}>eco</span>
+      {/* ── Sleek Compact Header ────────────────────────────────────────────── */}
+      <div className="shrink-0 z-10">
+        <div className="relative bg-gradient-to-r from-emerald-700 via-emerald-600 to-emerald-500 overflow-hidden px-4 py-3 flex items-center justify-between shadow-md">
+          {/* Subtle background glow */}
+          <div className="absolute top-0 right-0 w-32 h-32 bg-white/10 rounded-full blur-2xl -translate-y-1/2 translate-x-1/4 pointer-events-none" />
+          
+          <div className="flex items-center gap-3 relative z-10">
+            <div className="w-10 h-10 rounded-xl bg-white/20 backdrop-blur-sm border border-white/20 flex items-center justify-center shadow-sm">
+              <span className="material-symbols-outlined text-white text-[24px]" style={{ fontVariationSettings: "'FILL' 1" }}>eco</span>
+            </div>
+            <div className="flex flex-col justify-center">
+              <h1 className="text-white font-bold text-base leading-tight tracking-tight">AgroBrain AI</h1>
+              <div className="flex items-center gap-1.5 mt-0.5">
+                <span className="w-1.5 h-1.5 rounded-full bg-emerald-300 animate-pulse" />
+                <p className="text-emerald-100 text-[10px] font-medium tracking-wide uppercase">Online · Syncing Data</p>
               </div>
-              <span className="absolute -bottom-1 -right-1 w-4 h-4 rounded-full bg-emerald-300 border-2 border-emerald-700 animate-pulse" />
-            </div>
-            <div>
-              <h1 className="text-white font-bold text-[22px] leading-tight tracking-tight">AgroBrain</h1>
-              <p className="text-emerald-100 text-[13px] font-medium">Your AI Farming Intelligence · Always learning</p>
-            </div>
-            <div className="ml-auto flex items-center gap-2">
-              <button className="w-10 h-10 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/25 transition-colors">
-                <span className="material-symbols-outlined text-[20px]">history</span>
-              </button>
-              <button className="w-10 h-10 rounded-full bg-white/15 backdrop-blur-sm border border-white/20 flex items-center justify-center text-white hover:bg-white/25 transition-colors">
-                <span className="material-symbols-outlined text-[20px]">more_vert</span>
-              </button>
             </div>
           </div>
-
-          {/* Status bar */}
-          <div className="relative z-10 px-4 md:px-8 pb-4 flex items-center gap-3">
-            <div className="flex items-center gap-1.5 bg-white/15 backdrop-blur-sm rounded-full px-3 py-1 border border-white/20">
-              <span className="w-1.5 h-1.5 rounded-full bg-emerald-300 animate-pulse" />
-              <span className="text-white text-[11px] font-medium">Farm data connected</span>
-            </div>
-            <div className="flex items-center gap-1.5 bg-white/15 backdrop-blur-sm rounded-full px-3 py-1 border border-white/20">
-              <span className="material-symbols-outlined text-emerald-200 text-[12px]">model_training</span>
-              <span className="text-white text-[11px] font-medium">Gemini 2.0 Agri</span>
-            </div>
+          <div className="relative z-10 flex items-center gap-1">
+            <button className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 transition-colors flex items-center justify-center text-white">
+              <span className="material-symbols-outlined text-[18px]">history</span>
+            </button>
+            <button className="w-8 h-8 rounded-full bg-white/10 hover:bg-white/20 transition-colors flex items-center justify-center text-white">
+              <span className="material-symbols-outlined text-[18px]">more_vert</span>
+            </button>
           </div>
         </div>
       </div>
 
       {/* ── Quick Topic Chips ───────────────────────────────────────────────── */}
-      <div className="shrink-0 px-4 md:px-6 py-3 bg-surface/80 backdrop-blur-sm border-b border-outline-variant/20">
-        <div className="flex gap-2 overflow-x-auto hide-scrollbar pb-1">
+      <div className="shrink-0 px-4 md:px-6 py-2.5 bg-surface/80 backdrop-blur-sm border-b border-outline-variant/10 z-10 shadow-sm">
+        <div className="flex gap-2 overflow-x-auto hide-scrollbar pb-0.5">
           {QUICK_PROMPTS.map((p) => (
             <button
               key={p.label}
               onClick={() => handleQuickPrompt(p)}
-              className={`shrink-0 flex items-center gap-2 px-3 py-2 rounded-full text-[12px] font-semibold border transition-all duration-300 ${
+              className={`shrink-0 flex items-center gap-1.5 px-3 py-1.5 rounded-full text-[11px] font-medium border transition-all duration-300 ${
                 activeCategory === p.category
-                  ? 'bg-primary text-white border-primary shadow-[0_0_12px_rgba(16,185,129,0.4)]'
-                  : 'bg-surface-container border-outline-variant/40 text-on-surface hover:border-primary/60 hover:text-primary hover:bg-primary/5'
+                  ? 'bg-primary text-white border-primary shadow-[0_0_10px_rgba(16,185,129,0.3)]'
+                  : 'bg-surface-container border-outline-variant/40 text-on-surface hover:border-primary/50 hover:text-primary hover:bg-primary/5'
               }`}
             >
-              <span className="material-symbols-outlined text-[16px]" style={{ fontVariationSettings: "'FILL' 1" }}>{p.icon}</span>
+              <span className="material-symbols-outlined text-[14px]" style={{ fontVariationSettings: "'FILL' 1" }}>{p.icon}</span>
               {p.label}
             </button>
           ))}
@@ -260,26 +242,28 @@ export default function AIChatContent() {
       </div>
 
       {/* ── Messages Area ───────────────────────────────────────────────────── */}
-      <div className="flex-1 overflow-y-auto py-6 space-y-4 bg-surface/50">
+      <div className="flex-1 overflow-y-auto py-5 space-y-4 bg-surface/30">
 
         {/* Suggested questions - show only when no user messages */}
         {messages.length === 1 && (
           <motion.div
             initial={{ opacity: 0, y: 10 }}
             animate={{ opacity: 1, y: 0 }}
-            className="px-4 md:px-6 pb-2"
+            className="px-4 md:px-6 pb-2 mt-2"
           >
-            <p className="text-[11px] text-on-surface-variant uppercase tracking-widest font-semibold mb-3 px-1">Suggested Questions</p>
+            <p className="text-[10px] text-on-surface-variant uppercase tracking-wider font-semibold mb-2.5 px-1 flex items-center gap-2">
+              <span className="material-symbols-outlined text-[14px]">tips_and_updates</span>
+              Suggested Prompts
+            </p>
             <div className="flex flex-col gap-2">
               {SUGGESTED_QUESTIONS.map((q) => (
                 <button
                   key={q}
                   onClick={() => handleSuggestion(q)}
-                  className="flex items-center gap-3 p-3.5 rounded-xl bg-surface-container border border-outline-variant/30 text-on-surface text-sm text-left hover:border-primary/50 hover:bg-primary/5 hover:text-primary transition-all duration-200 group"
+                  className="flex items-center gap-3 p-3 rounded-xl bg-surface-container-lowest border border-outline-variant/30 text-on-surface text-[13px] text-left hover:border-primary/40 hover:bg-primary/5 hover:text-primary transition-all duration-200 shadow-sm"
                 >
-                  <span className="material-symbols-outlined text-[18px] text-primary shrink-0 group-hover:scale-110 transition-transform">lightbulb</span>
-                  <span>{q}</span>
-                  <span className="material-symbols-outlined text-[16px] text-on-surface-variant ml-auto opacity-0 group-hover:opacity-100 transition-opacity">arrow_forward</span>
+                  <span className="flex-1">{q}</span>
+                  <span className="material-symbols-outlined text-[16px] text-primary/50">arrow_forward</span>
                 </button>
               ))}
             </div>
@@ -309,17 +293,13 @@ export default function AIChatContent() {
         <div ref={messagesEndRef} />
       </div>
 
-      {/* ── Disclaimer ─────────────────────────────────────────────────────── */}
-      <div className="shrink-0 text-center py-1.5">
-        <p className="text-[10px] text-on-surface-variant">AgroBrain learns from your farm data · Responses may vary · Always verify critical decisions</p>
-      </div>
-
       {/* ── Input Bar ──────────────────────────────────────────────────────── */}
-      <div className="shrink-0 px-3 md:px-6 pb-4 md:pb-6 pt-2 bg-surface border-t border-outline-variant/20">
-        <div className="flex items-end gap-3">
-          {/* Voice button */}
-          <button className="w-11 h-11 rounded-full bg-surface-container border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary/60 hover:bg-primary/5 transition-all shrink-0">
-            <span className="material-symbols-outlined text-[22px]">mic</span>
+      <div className="shrink-0 px-3 md:px-6 pb-6 md:pb-6 pt-2 bg-surface border-t border-outline-variant/20 shadow-[0_-10px_20px_rgba(0,0,0,0.02)]">
+        
+        <div className="flex items-center gap-2">
+          {/* Camera / scan button */}
+          <button className="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary/50 hover:bg-primary/5 transition-all shrink-0 shadow-sm">
+            <span className="material-symbols-outlined text-[20px]">photo_camera</span>
           </button>
 
           {/* Input field */}
@@ -329,31 +309,33 @@ export default function AIChatContent() {
               value={input}
               onChange={e => setInput(e.target.value)}
               onKeyDown={handleKeyDown}
-              placeholder="Ask AgroBrain anything about your farm…"
+              onBlur={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+              placeholder="Ask AgroBrain anything..."
               rows={1}
-              className="w-full bg-surface-container border border-outline-variant/40 rounded-2xl px-5 py-3.5 pr-14 text-sm text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 resize-none transition-all leading-relaxed max-h-32 overflow-y-auto"
-              style={{ minHeight: '48px' }}
+              className="w-full bg-surface-container-lowest border border-outline-variant/40 rounded-2xl pl-4 pr-12 py-2.5 text-[13px] text-on-surface placeholder:text-on-surface-variant/60 focus:outline-none focus:border-primary focus:ring-1 focus:ring-primary/30 resize-none transition-all max-h-24 overflow-y-auto shadow-inner"
+              style={{ minHeight: '40px' }}
             />
             {/* Send button inside field */}
             <button
               onClick={() => sendMessage()}
               disabled={!input.trim()}
-              className={`absolute right-2 bottom-2 w-9 h-9 rounded-xl flex items-center justify-center transition-all duration-200 ${
+              className={`absolute right-1.5 bottom-[7px] w-7 h-7 rounded-full flex items-center justify-center transition-all duration-200 ${
                 input.trim()
-                  ? 'bg-primary text-white shadow-[0_2px_12px_rgba(16,185,129,0.4)] hover:scale-105'
-                  : 'bg-surface-variant text-on-surface-variant/40 cursor-not-allowed'
+                  ? 'bg-primary text-white shadow-md hover:scale-105'
+                  : 'bg-transparent text-on-surface-variant/30 cursor-not-allowed'
               }`}
             >
-              <span className="material-symbols-outlined text-[20px]">send</span>
+              <span className="material-symbols-outlined text-[16px] pl-0.5">send</span>
             </button>
           </div>
-
-          {/* Camera / scan button */}
-          <button className="w-11 h-11 rounded-full bg-surface-container border border-outline-variant/40 flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary/60 hover:bg-primary/5 transition-all shrink-0">
-            <span className="material-symbols-outlined text-[22px]">photo_camera</span>
+          
+          {/* Voice button */}
+          <button className="w-10 h-10 rounded-full bg-surface-container-high border border-outline-variant/30 flex items-center justify-center text-on-surface-variant hover:text-primary hover:border-primary/50 hover:bg-primary/5 transition-all shrink-0 shadow-sm">
+            <span className="material-symbols-outlined text-[20px]">mic</span>
           </button>
         </div>
       </div>
     </div>
   );
 }
+

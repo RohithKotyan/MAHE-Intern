@@ -124,7 +124,7 @@ export default function NotificationsContent() {
   });
 
   return (
-    <div className="pt-20 pb-12 px-container-margin max-w-4xl mx-auto flex flex-col gap-6 animate-in fade-in slide-in-from-bottom-4 duration-500 ease-out">
+    <div className="pt-6 pb-24 px-container-margin max-w-3xl mx-auto flex flex-col gap-6 h-full relative animate-in fade-in slide-in-from-bottom-4 duration-500 ease-out">
       
       {/* Page Header */}
       <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4">

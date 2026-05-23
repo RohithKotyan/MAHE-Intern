@@ -11,7 +11,7 @@ export default function PageTransition({ children, className = "" }) {
         duration: 0.22, 
         ease: [0.4, 0, 0.2, 1]
       }}
-      className={`h-full w-full ${className}`}
+      className={`h-full w-full flex flex-col flex-1 ${className}`}
       style={{ willChange: 'opacity, transform' }}
     >
       {children}

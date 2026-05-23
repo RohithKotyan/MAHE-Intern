@@ -54,7 +54,7 @@ export default function ProfileContent() {
   };
 
   return (
-    <div className="pt-20 pb-12 px-container-margin max-w-6xl mx-auto flex flex-col gap-8">
+    <div className="pt-6 pb-20 px-4 max-w-7xl mx-auto flex flex-col gap-6">
       
       {/* Dev Toggle - Remove in production */}
       <div className="flex justify-end mb-[-20px] relative z-20">

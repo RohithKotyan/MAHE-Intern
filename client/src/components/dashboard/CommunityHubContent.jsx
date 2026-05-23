@@ -100,7 +100,7 @@ export default function CommunityHubContent() {
   const tabs = ['All', 'My Region', 'Diseases', 'Expert Advice', 'Trending'];
 
   return (
-    <div className="pt-20 pb-12 px-container-margin max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 lg:gap-8">
+    <div className="pt-6 pb-12 px-container-margin max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 lg:gap-8">
       
       {/* Main Feed Column */}
       <div className="flex-1 w-full max-w-3xl mx-auto lg:mx-0 flex flex-col gap-6">

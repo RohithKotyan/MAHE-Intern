@@ -28,7 +28,7 @@ export default function DashboardShell({ fullHeight = false }) {
   };
 
   return (
-    <div className="h-screen w-full bg-background overflow-hidden selection:bg-primary-container selection:text-white">
+    <div className="fixed inset-0 w-full bg-background overflow-hidden selection:bg-primary-container selection:text-white">
       {/* Desktop Layout - visible only on md screens and up */}
       <div className="hidden md:flex h-full w-full">
         {/* SideNavBar */}
@@ -84,7 +84,7 @@ export default function DashboardShell({ fullHeight = false }) {
         </nav>
 
         {/* Main Content Area */}
-        <main className={`flex-1 ml-[280px] h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] relative bg-surface ${fullHeight ? 'overflow-hidden flex flex-col' : 'overflow-y-auto'}`}>
+        <main className={`flex-1 ml-[280px] h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] relative bg-surface ${fullHeight || activeRoute === 'chat' ? 'overflow-hidden flex flex-col' : 'overflow-y-auto'}`}>
           {/* TopAppBar (Web) */}
           <header className="fixed top-0 right-0 w-[calc(100%-280px)] z-50 flex justify-between items-center px-container-margin h-16 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-md">
             <div className="flex items-center gap-4">
@@ -148,7 +148,7 @@ export default function DashboardShell({ fullHeight = false }) {
         </header>
 
         {/* Main Content Area */}
-        <main className={`flex-1 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] relative pt-16 pb-24 bg-surface ${fullHeight ? 'overflow-hidden flex flex-col' : 'overflow-y-auto'}`}>
+        <main className={`flex-1 w-full h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] relative pt-16 ${activeRoute === 'chat' ? 'pb-[72px]' : 'pb-24'} bg-surface ${fullHeight || activeRoute === 'chat' ? 'overflow-hidden flex flex-col' : 'overflow-y-auto'}`}>
           <AnimatePresence mode="wait">
             <PageTransition key={location.pathname}>
               <Outlet />

@@ -9,7 +9,7 @@ export default function CropTrackingContent() {
   };
 
   return (
-    <div className="pt-24 pb-32 md:pb-12 px-gutter md:px-container-margin">
+    <div className="pt-6 pb-32 md:pb-12 px-gutter md:px-container-margin">
       <div className="max-w-7xl mx-auto space-y-section-gap">
         {/* Section: Tracking Controls & Search */}
         <section className="space-y-6">

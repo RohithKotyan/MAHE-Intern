@@ -5,7 +5,7 @@ export default function TreatmentProtocolContent() {
   const { cropId } = useParams();
 
   return (
-    <div className="pt-24 pb-32 md:pb-12 px-container-margin max-w-7xl mx-auto space-y-6">
+    <div className="pt-6 pb-32 md:pb-12 px-container-margin max-w-7xl mx-auto space-y-6">
       {/* Header Section */}
       <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 gap-4">
         <div>
