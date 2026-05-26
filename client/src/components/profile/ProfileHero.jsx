@@ -1,6 +1,7 @@
 import React from 'react';
+import { motion } from 'motion/react';
 
-export default function ProfileHero({ user, isExpert }) {
+export default function ProfileHero({ user, isExpert, onEditProfile }) {
   // SVG properties for the circular score gauge
   const radius = 40;
   const circumference = 2 * Math.PI * radius;
@@ -16,14 +17,44 @@ export default function ProfileHero({ user, isExpert }) {
         
         {/* Left Side: Avatar & Info */}
         <div className="flex flex-col md:flex-row items-center md:items-start gap-6 text-center md:text-left">
+          {/* Avatar with Edit Badge */}
           <div className="relative shrink-0">
             <img 
               src={user.avatar} 
               alt={user.name} 
               className={`w-28 h-28 rounded-full object-cover border-4 shadow-xl ${isExpert ? 'border-amber-500/50' : 'border-outline-variant/30'}`} 
             />
+
+            {/* Discord-style Edit Badge */}
+            <motion.button
+              onClick={onEditProfile}
+              whileHover={{ scale: 1.15 }}
+              whileTap={{ scale: 0.92 }}
+              title="Edit Profile"
+              className={`absolute -bottom-1 -right-1 w-9 h-9 rounded-full flex items-center justify-center shadow-lg border-2 border-surface z-10
+                backdrop-blur-md transition-colors duration-200
+                ${isExpert
+                  ? 'bg-amber-500/90 hover:bg-amber-400'
+                  : 'bg-surface-container-high hover:bg-primary group'
+                }`}
+            >
+              <span
+                className={`material-symbols-outlined text-[17px] transition-colors ${
+                  isExpert ? 'text-[#1a0e00]' : 'text-on-surface-variant group-hover:text-primary'
+                }`}
+                style={{ fontVariationSettings: "'FILL' 1, 'wght' 600" }}
+              >
+                edit
+              </span>
+            </motion.button>
+
             {isExpert && (
-              <span className="absolute bottom-0 right-0 material-symbols-outlined text-amber-500 text-[32px] bg-surface rounded-full shadow-lg" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
+              <span
+                className="absolute -top-1 -right-1 material-symbols-outlined text-amber-500 text-[28px] bg-surface rounded-full shadow-lg z-20"
+                style={{ fontVariationSettings: "'FILL' 1" }}
+              >
+                verified
+              </span>
             )}
           </div>
           

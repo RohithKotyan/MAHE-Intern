@@ -1,42 +1,44 @@
 import React, { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import { motion, AnimatePresence } from 'motion/react';
 import ProfileHero from './ProfileHero';
 import TabOverview from './TabOverview';
 import TabFarm from './TabFarm';
 import TabCommunity from './TabCommunity';
 
-// --- MOCK DATA ---
-const currentUser = {
-  name: 'Rohith Kotyan',
-  avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAF534OOD6MQtE1HdOyBiNkKycRZA0RzZNRRjIZ89YH-Wdh5XAWoyOIuPclMb87uWpT40cd-zm90r-BMMPHlVpidBTddGR9y5aRv5le0pxg0UXBypn_BjvOS5D2KC7OK1U-wL-2h_Dc0HhXpbCNyYkDg9UO4m54pZpfMt8M3V8RFv0PCfh3yRlCFCybiblJhU14fMYB7A7-mwE5PLmTRYzylceFwTAn-3mEuhlGJwSiaw6tRxEYFla544qe8o7EcCWd99T8daL5NQ',
-  location: 'Udupi, Karnataka',
-  rank: 'Growing Farmer',
-  bio: 'Growing smarter with AI farming. Specializing in greenhouse tomatoes and organic pest control.',
-  followers: 240,
-  following: 92,
-  aiScore: 84, // Out of 100
-  isExpert: false
-};
-
-const expertUser = {
-  name: 'Dr. Aris Thorne',
-  avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAD06ebSFYCOZmbIJGg0Ugo9pwHtbJ2CEtzN5pmx7pR82iz2Sz1ThMVXoPhYSKVvlxZZAMI45bDZi7cAklEgmBu2yJGf1_X1EOxODgea5RLa-6E9vXj2e2tiJWb_joBeq2YwbLIPA-s3PndPNxfsiVIQo1mz009s81iDXDis6JaIsOxwPk51NVSE9Hn07zIL5vqiUnic5ehcN8l5GMaOLGFJdVuR2Z3cT3r0sfcK8HvmTQRdNHDlEkzDFvgWAOjtWwAIAOEP7TvQg',
-  location: 'Bangalore, Karnataka',
-  rank: 'Verified Pathologist',
-  bio: 'Plant pathologist focusing on nightshade crops. Dedicated to helping farmers transition to biological control methods.',
-  followers: '12.4k',
-  following: 15, // Years of experience for experts
-  trustScore: 96,
-  accuracy: '94%',
-  isExpert: true
-};
+import { useAuth } from '../../context/AuthContext';
 
 export default function ProfileContent() {
+  const { user, loading } = useAuth();
   const [activeTab, setActiveTab] = useState('Overview');
-  // Toggle this to see the expert view!
-  const [isExpertView, setIsExpertView] = useState(false); 
+  const navigate = useNavigate();
 
-  const activeUser = isExpertView ? expertUser : currentUser;
+  if (loading || !user) {
+    return (
+      <div className="flex items-center justify-center min-h-[60vh]">
+        <div className="flex flex-col items-center gap-3">
+          <div className="w-10 h-10 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
+          <p className="text-on-surface-variant font-body-md text-sm">Loading Profile...</p>
+        </div>
+      </div>
+    );
+  }
+
+  const isExpert = user.role === 'expert';
+
+  // --- FALLBACK DATA FOR PHASE 1 ---
+  // We merge the real DB fields with fallback stats so the UI doesn't break
+  const activeUser = {
+    ...user,
+    avatar: user.avatar || 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y',
+    rank: isExpert ? 'Verified Pathologist' : 'Growing Farmer',
+    followers: isExpert ? '12.4k' : 0,
+    following: isExpert ? 15 : 0, // Years of exp for experts, following for farmers
+    aiScore: 84,
+    trustScore: 96,
+    accuracy: '94%',
+    isExpert: isExpert
+  };
 
   const tabs = [
     { id: 'Overview', icon: 'dashboard' },
@@ -56,19 +58,8 @@ export default function ProfileContent() {
   return (
     <div className="pt-6 pb-20 px-4 max-w-7xl mx-auto flex flex-col gap-6">
       
-      {/* Dev Toggle - Remove in production */}
-      <div className="flex justify-end mb-[-20px] relative z-20">
-        <button 
-          onClick={() => setIsExpertView(!isExpertView)}
-          className="text-[10px] bg-surface-container-high px-3 py-1 rounded-full border border-outline-variant/30 text-on-surface-variant hover:text-primary transition-colors flex items-center gap-1"
-        >
-          <span className="material-symbols-outlined text-[12px]">swap_horiz</span>
-          Preview as {isExpertView ? 'Farmer' : 'Expert'}
-        </button>
-      </div>
-
       {/* Main Profile Header */}
-      <ProfileHero user={activeUser} isExpert={activeUser.isExpert} />
+      <ProfileHero user={activeUser} isExpert={activeUser.isExpert} onEditProfile={() => navigate('/dashboard/settings')} />
 
       {/* Tab Navigation */}
       <div className="glass-panel rounded-2xl p-2 flex overflow-x-auto hide-scrollbar gap-2 sticky top-[72px] z-40 relative">
