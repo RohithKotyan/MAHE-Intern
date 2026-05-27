@@ -1,9 +1,9 @@
 import React from 'react';
 
 const contributors = [
-  { name: 'Dr. Aris Thorne', role: 'Expert', avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAD06ebSFYCOZmbIJGg0Ugo9pwHtbJ2CEtzN5pmx7pR82iz2Sz1ThMVXoPhYSKVvlxZZAMI45bDZi7cAklEgmBu2yJGf1_X1EOxODgea5RLa-6E9vXj2e2tiJWb_joBeq2YwbLIPA-s3PndPNxfsiVIQo1mz009s81iDXDis6JaIsOxwPk51NVSE9Hn07zIL5vqiUnic5ehcN8l5GMaOLGFJdVuR2Z3cT3r0sfcK8HvmTQRdNHDlEkzDFvgWAOjtWwAIAOEP7TvQg', helpful: 48 },
-  { name: 'Rohith Kotyan', role: 'Advanced Farmer', avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuAF534OOD6MQtE1HdOyBiNkKycRZA0RzZNRRjIZ89YH-Wdh5XAWoyOIuPclMb87uWpT40cd-zm90r-BMMPHlVpidBTddGR9y5aRv5le0pxg0UXBypn_BjvOS5D2KC7OK1U-wL-2h_Dc0HhXpbCNyYkDg9UO4m54pZpfMt8M3V8RFv0PCfh3yRlCFCybiblJhU14fMYB7A7-mwE5PLmTRYzylceFwTAn-3mEuhlGJwSiaw6tRxEYFla544qe8o7EcCWd99T8daL5NQ', helpful: 36 },
-  { name: 'Sarah Jenkins', role: 'Expert', avatar: 'https://lh3.googleusercontent.com/aida-public/AB6AXuDUgCi8obCg6CrWuESZXaIGCyHgTW-gAUIGVHP80hfMRI4IROWOCJN7O6FcDAXMU1ol4OTNGrYrOHXtfiN0FxenU4mImFayt-sSyli7xGm-sVjHhNlhTEB-wau7nb8C4ZZHW2mqkjmuLrDGQtnoOe2_MPYK7P1Mlg0YoFCRJcHD8qo6izbsbeMZslI_OdR-9mCUTWN9zHwrC7BgFjqvmzFa12Z_xsCn82oYr34QtWRAE71SW4yFIYClhoD8Y3n3JZPJy6rLOgmFIQ', helpful: 29 },
+  { name: 'Community Member 1', role: 'Expert', avatar: 'https://ui-avatars.com/api/?name=C1&background=random', helpful: 48 },
+  { name: 'Community Member 2', role: 'Advanced Farmer', avatar: 'https://ui-avatars.com/api/?name=C2&background=random', helpful: 36 },
+  { name: 'Community Member 3', role: 'Expert', avatar: 'https://ui-avatars.com/api/?name=C3&background=random', helpful: 29 },
 ];
 
 export default function TopContributors() {

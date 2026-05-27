@@ -84,7 +84,7 @@ export default function DashboardShell({ fullHeight = false }) {
         </nav>
 
         {/* Main Content Area */}
-        <main className={`flex-1 ml-[280px] h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] relative bg-surface ${fullHeight || activeRoute === 'chat' ? 'overflow-hidden flex flex-col' : 'overflow-y-auto'}`}>
+        <main className={`flex-1 ml-[280px] h-full bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] relative bg-surface pt-16 ${fullHeight || activeRoute === 'chat' ? 'overflow-hidden flex flex-col' : 'overflow-y-auto'}`}>
           {/* TopAppBar (Web) */}
           <header className="fixed top-0 right-0 w-[calc(100%-280px)] z-50 flex justify-between items-center px-container-margin h-16 bg-surface/80 dark:bg-surface/80 backdrop-blur-xl border-b border-outline-variant/30 shadow-md">
             <div className="flex items-center gap-4">
@@ -99,7 +99,7 @@ export default function DashboardShell({ fullHeight = false }) {
                 <span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-error animate-pulse"></span>
               </Link>
               <Link to="/dashboard/profile" className={`w-8 h-8 rounded-full border overflow-hidden bg-surface-container-high flex items-center justify-center cursor-pointer transition-colors ${activeRoute === 'profile' ? 'border-primary shadow-[0_0_10px_rgba(16,185,129,0.3)]' : 'border-primary/30 hover:border-primary'}`}>
-                <img alt="User profile photo" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF534OOD6MQtE1HdOyBiNkKycRZA0RzZNRRjIZ89YH-Wdh5XAWoyOIuPclMb87uWpT40cd-zm90r-BMMPHlVpidBTddGR9y5aRv5le0pxg0UXBypn_BjvOS5D2KC7OK1U-wL-2h_Dc0HhXpbCNyYkDg9UO4m54pZpfMt8M3V8RFv0PCfh3yRlCFCybiblJhU14fMYB7A7-mwE5PLmTRYzylceFwTAn-3mEuhlGJwSiaw6tRxEYFla544qe8o7EcCWd99T8daL5NQ" />
+                <img alt="User profile photo" className="w-full h-full object-cover" src={user?.avatar || 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y'} />
               </Link>
             </div>
           </header>
@@ -142,7 +142,7 @@ export default function DashboardShell({ fullHeight = false }) {
               <span className="absolute top-2 right-2 w-2 h-2 rounded-full bg-error animate-pulse"></span>
             </Link>
             <Link to="/dashboard/profile" className={`w-8 h-8 rounded-full border overflow-hidden bg-surface-container-high flex items-center justify-center cursor-pointer transition-colors ${activeRoute === 'profile' ? 'border-primary shadow-[0_0_10px_rgba(16,185,129,0.3)]' : 'border-primary/30 hover:border-primary'}`}>
-              <img alt="User profile photo" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF534OOD6MQtE1HdOyBiNkKycRZA0RzZNRRjIZ89YH-Wdh5XAWoyOIuPclMb87uWpT40cd-zm90r-BMMPHlVpidBTddGR9y5aRv5le0pxg0UXBypn_BjvOS5D2KC7OK1U-wL-2h_Dc0HhXpbCNyYkDg9UO4m54pZpfMt8M3V8RFv0PCfh3yRlCFCybiblJhU14fMYB7A7-mwE5PLmTRYzylceFwTAn-3mEuhlGJwSiaw6tRxEYFla544qe8o7EcCWd99T8daL5NQ" />
+              <img alt="User profile photo" className="w-full h-full object-cover" src={user?.avatar || 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y'} />
             </Link>
           </div>
         </header>

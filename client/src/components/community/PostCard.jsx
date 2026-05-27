@@ -1,5 +1,8 @@
 import React, { useState } from 'react';
 import ScanResultEmbed from './ScanResultEmbed';
+import CommentSection from './CommentSection';
+import { communityService } from '../../services/services';
+import toast from 'react-hot-toast';
 
 const rankColors = {
   'Beginner Farmer': 'bg-gray-500/10 text-gray-400 border-gray-500/20',
@@ -8,36 +11,64 @@ const rankColors = {
   'Advanced Farmer': 'bg-amber-900/20 text-amber-400 border-amber-500/20',
   'Community Mentor': 'bg-purple-900/20 text-purple-400 border-purple-500/20',
   'Farmer': 'bg-surface-container-high text-on-surface-variant border-outline-variant/30',
+  'expert': 'bg-primary/10 text-primary border-primary/30',
+  'admin': 'bg-error/10 text-error border-error/30'
 };
 
-const typeConfig = {
-  disease_question: { label: 'Disease Help', color: 'bg-error/10 text-error border-error/20', icon: 'help' },
-  scan_result: { label: 'Scan Result', color: 'bg-primary/10 text-primary border-primary/20', icon: 'center_focus_strong' },
-  farming_tip: { label: 'Farming Tip', color: 'bg-green-500/10 text-green-400 border-green-500/20', icon: 'lightbulb' },
-  success_story: { label: 'Success Story', color: 'bg-amber-500/10 text-amber-500 border-amber-500/20', icon: 'celebration' },
-  expert_advice: { label: 'Expert Advice', color: 'bg-primary/10 text-primary border-primary/20', icon: 'school' },
+const CATEGORY_CONFIG = {
+  question:   { label: 'Question',    color: 'bg-error/10 text-error border-error/20',       icon: 'help' },
+  discussion: { label: 'Discussion',  color: 'bg-blue-500/10 text-blue-400 border-blue-500/20', icon: 'forum' },
+  tip:        { label: 'Farming Tip', color: 'bg-green-500/10 text-green-400 border-green-500/20', icon: 'lightbulb' },
+  showcase:   { label: 'Showcase',    color: 'bg-amber-500/10 text-amber-500 border-amber-500/20', icon: 'celebration' },
+  alert:      { label: 'Alert',       color: 'bg-error/10 text-error border-error/20',       icon: 'warning' },
 };
 
-export default function PostCard({ post }) {
-  const [liked, setLiked] = useState(false);
-  const [helpful, setHelpful] = useState(false);
-  const [saved, setSaved] = useState(false);
-  const [likeCount, setLikeCount] = useState(post.likes || 0);
-  const [helpfulCount, setHelpfulCount] = useState(post.helpfulVotes || 0);
+export default function PostCard({ post, currentUserId, onDeleted }) {
+  // Optimistic like state
+  const isLikedByMe = post.likes.includes(currentUserId);
+  const [optimisticLiked, setOptimisticLiked] = useState(null);
+  const [optimisticCount, setOptimisticCount] = useState(null);
+  
+  const liked = optimisticLiked ?? isLikedByMe;
+  const likeCount = optimisticCount ?? post.likeCount;
+
+  // Comments toggle
   const [showComments, setShowComments] = useState(false);
 
-  const isExpert = post.author?.isExpert;
-  const type = typeConfig[post.type] || typeConfig.farming_tip;
-  const rankStyle = rankColors[post.author?.rank] || rankColors['Farmer'];
+  // Delete state
+  const [showDeleteConfirm, setShowDeleteConfirm] = useState(false);
+  const [isDeleting, setIsDeleting] = useState(false);
 
-  const handleLike = () => {
-    setLiked(!liked);
-    setLikeCount(prev => liked ? prev - 1 : prev + 1);
+  const isExpert = post.author?.role === 'expert' || post.author?.isExpert;
+  const type = CATEGORY_CONFIG[post.category] || CATEGORY_CONFIG.discussion;
+  const rankStyle = rankColors[post.author?.role] || rankColors[post.author?.rank] || rankColors['Farmer'];
+
+  const handleLike = async () => {
+    if (!currentUserId) { toast.error('You must be logged in to like posts'); return; }
+    const prevLiked = liked;
+    const prevCount = likeCount;
+    setOptimisticLiked(!prevLiked);
+    setOptimisticCount(prevLiked ? prevCount - 1 : prevCount + 1);
+    try {
+      await communityService.toggleLike(post.id);
+    } catch {
+      setOptimisticLiked(prevLiked);
+      setOptimisticCount(prevCount);
+      toast.error('Could not update like. Try again.');
+    }
   };
 
-  const handleHelpful = () => {
-    setHelpful(!helpful);
-    setHelpfulCount(prev => helpful ? prev - 1 : prev + 1);
+  const handleDelete = async () => {
+    setIsDeleting(true);
+    try {
+      await communityService.deletePost(post.id);
+      toast.success('Post deleted successfully');
+      onDeleted(post.id);
+    } catch {
+      toast.error('Failed to delete post');
+      setIsDeleting(false);
+      setShowDeleteConfirm(false);
+    }
   };
 
   return (
@@ -71,9 +102,29 @@ export default function PostCard({ post }) {
               <div className="text-on-surface-variant font-label-sm text-[10px] mt-0.5">{post.timestamp}</div>
             </div>
           </div>
-          <button className="text-on-surface-variant hover:text-primary transition-colors p-1">
-            <span className="material-symbols-outlined text-[20px]">more_horiz</span>
-          </button>
+          <div className="relative">
+            {currentUserId === post.author?.id && (
+              <button 
+                onClick={() => setShowDeleteConfirm(true)}
+                className="text-on-surface-variant hover:text-error hover:bg-error/10 rounded-full transition-colors p-1"
+                title="Delete Post"
+              >
+                <span className="material-symbols-outlined text-[20px]">delete</span>
+              </button>
+            )}
+            
+            {showDeleteConfirm && (
+              <div className="absolute right-0 top-10 w-48 bg-surface-container-high border border-outline-variant/30 rounded-xl shadow-lg p-3 z-10 flex flex-col gap-2">
+                <span className="text-sm font-semibold text-on-surface">Delete post?</span>
+                <div className="flex gap-2">
+                  <button onClick={() => setShowDeleteConfirm(false)} className="flex-1 px-2 py-1.5 text-xs font-semibold text-on-surface hover:bg-surface-variant rounded-lg transition-colors">Cancel</button>
+                  <button onClick={handleDelete} disabled={isDeleting} className="flex-1 px-2 py-1.5 text-xs font-bold text-white bg-error hover:bg-error/90 rounded-lg transition-colors disabled:opacity-50">
+                    {isDeleting ? '...' : 'Delete'}
+                  </button>
+                </div>
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Post Type Badge */}
@@ -116,86 +167,41 @@ export default function PostCard({ post }) {
             ))}
           </div>
         )}
-      </div>
-
-      {/* Engagement Stats */}
-      <div className="px-5 py-2 mt-2 flex items-center justify-between text-on-surface-variant font-label-sm text-[11px]">
-        <div className="flex items-center gap-3">
-          {likeCount > 0 && (
-            <span className="flex items-center gap-1">
-              <span className="w-4 h-4 rounded-full bg-primary/20 flex items-center justify-center">
-                <span className="material-symbols-outlined text-[10px] text-primary" style={{ fontVariationSettings: "'FILL' 1" }}>thumb_up</span>
-              </span>
-              {likeCount}
-            </span>
-          )}
-          {helpfulCount > 0 && (
-            <span className="flex items-center gap-1">
-              <span className="w-4 h-4 rounded-full bg-amber-500/20 flex items-center justify-center">
-                <span className="material-symbols-outlined text-[10px] text-amber-500" style={{ fontVariationSettings: "'FILL' 1" }}>handshake</span>
-              </span>
-              {helpfulCount} helpful
-            </span>
-          )}
-        </div>
-        <span>{post.comments || 0} comments</span>
+        {post.category === 'alert' && <div className="mt-3 bg-error/10 border border-error/20 rounded-xl p-3"><p className="text-error font-body-sm text-[12px]"><span className="font-bold">Important:</span> This alert was verified by the AgroCare Team.</p></div>}
       </div>
 
       {/* Divider */}
-      <div className="h-px bg-outline-variant/20 mx-5"></div>
+      <div className="h-px bg-outline-variant/20 mx-5 my-2"></div>
 
       {/* Action Bar */}
-      <div className="px-3 py-1.5 flex items-center justify-between">
-        <button onClick={handleLike} className={`flex items-center gap-1.5 px-3 py-2 rounded-lg transition-all text-sm ${liked ? 'text-primary bg-primary/10' : 'text-on-surface-variant hover:bg-surface-container-high/50 hover:text-on-surface'}`}>
-          <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: liked ? "'FILL' 1" : "'FILL' 0" }}>thumb_up</span>
-          <span className="font-label-sm text-[11px] hidden sm:inline">Like</span>
+      <div className="px-3 py-1.5 flex items-center justify-between mb-1">
+        
+        <button onClick={handleLike} className={`group flex items-center justify-center flex-1 gap-2 py-2.5 mx-1 rounded-xl transition-all duration-300 ${liked ? 'bg-primary/10 text-primary' : 'text-on-surface-variant hover:bg-surface-variant/50 hover:text-on-surface'}`}>
+          <span className={`material-symbols-outlined text-[20px] transition-transform duration-300 ${liked ? 'scale-110' : 'group-hover:scale-110'}`} style={{ fontVariationSettings: liked ? "'FILL' 1" : "'FILL' 0" }}>thumb_up</span>
+          <span className="font-body-sm font-semibold text-[13px] hidden sm:block">Like</span>
+          {likeCount > 0 && (
+            <span className={`ml-0.5 font-bold text-[13px] ${liked ? 'text-primary' : 'text-on-surface-variant'}`}>{likeCount}</span>
+          )}
         </button>
-        <button onClick={() => setShowComments(!showComments)} className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high/50 hover:text-on-surface transition-all text-sm">
-          <span className="material-symbols-outlined text-[18px]">chat_bubble_outline</span>
-          <span className="font-label-sm text-[11px] hidden sm:inline">Comment</span>
+
+        <button onClick={() => setShowComments(!showComments)} className={`group flex items-center justify-center flex-1 gap-2 py-2.5 mx-1 rounded-xl transition-all duration-300 ${showComments ? 'bg-blue-500/10 text-blue-500' : 'text-on-surface-variant hover:bg-surface-variant/50 hover:text-on-surface'}`}>
+          <span className={`material-symbols-outlined text-[20px] transition-transform duration-300 ${showComments ? 'scale-110' : 'group-hover:scale-110'}`} style={{ fontVariationSettings: showComments ? "'FILL' 1" : "'FILL' 0" }}>chat_bubble</span>
+          <span className="font-body-sm font-semibold text-[13px] hidden sm:block">Comment</span>
+          {post.commentCount > 0 && (
+            <span className={`ml-0.5 font-bold text-[13px] ${showComments ? 'text-blue-500' : 'text-on-surface-variant'}`}>{post.commentCount}</span>
+          )}
         </button>
-        <button onClick={handleHelpful} className={`flex items-center gap-1.5 px-3 py-2 rounded-lg transition-all text-sm ${helpful ? 'text-amber-500 bg-amber-500/10' : 'text-on-surface-variant hover:bg-surface-container-high/50 hover:text-on-surface'}`}>
-          <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: helpful ? "'FILL' 1" : "'FILL' 0" }}>handshake</span>
-          <span className="font-label-sm text-[11px] hidden sm:inline">Helpful</span>
+
+        <button className="group flex items-center justify-center flex-1 gap-2 py-2.5 mx-1 rounded-xl text-on-surface-variant hover:bg-surface-variant/50 hover:text-on-surface transition-all duration-300">
+          <span className="material-symbols-outlined text-[20px] group-hover:scale-110 transition-transform duration-300">share</span>
+          <span className="font-body-sm font-semibold text-[13px] hidden sm:block">Share</span>
         </button>
-        <button onClick={() => setSaved(!saved)} className={`flex items-center gap-1.5 px-3 py-2 rounded-lg transition-all text-sm ${saved ? 'text-primary bg-primary/10' : 'text-on-surface-variant hover:bg-surface-container-high/50 hover:text-on-surface'}`}>
-          <span className="material-symbols-outlined text-[18px]" style={{ fontVariationSettings: saved ? "'FILL' 1" : "'FILL' 0" }}>bookmark</span>
-          <span className="font-label-sm text-[11px] hidden sm:inline">Save</span>
-        </button>
-        <button className="flex items-center gap-1.5 px-3 py-2 rounded-lg text-on-surface-variant hover:bg-surface-container-high/50 hover:text-on-surface transition-all text-sm">
-          <span className="material-symbols-outlined text-[18px]">share</span>
-          <span className="font-label-sm text-[11px] hidden sm:inline">Share</span>
-        </button>
+
       </div>
 
-      {/* Comment Section Preview */}
+      {/* YouTube-style Comment Section */}
       {showComments && (
-        <div className="px-5 pb-4 pt-2 border-t border-outline-variant/20">
-          <div className="flex items-start gap-3 mb-3">
-            <img src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF534OOD6MQtE1HdOyBiNkKycRZA0RzZNRRjIZ89YH-Wdh5XAWoyOIuPclMb87uWpT40cd-zm90r-BMMPHlVpidBTddGR9y5aRv5le0pxg0UXBypn_BjvOS5D2KC7OK1U-wL-2h_Dc0HhXpbCNyYkDg9UO4m54pZpfMt8M3V8RFv0PCfh3yRlCFCybiblJhU14fMYB7A7-mwE5PLmTRYzylceFwTAn-3mEuhlGJwSiaw6tRxEYFla544qe8o7EcCWd99T8daL5NQ" alt="You" className="w-8 h-8 rounded-full object-cover border border-outline-variant/30 shrink-0" />
-            <div className="flex-1 relative">
-              <input
-                type="text"
-                placeholder="Write a comment..."
-                className="w-full bg-surface-container-high/50 border border-outline-variant/20 rounded-full px-4 py-2 text-sm text-on-surface placeholder:text-on-surface-variant/50 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all"
-              />
-              <button className="absolute right-2 top-1/2 -translate-y-1/2 text-primary hover:text-primary-fixed transition-colors">
-                <span className="material-symbols-outlined text-[18px]">send</span>
-              </button>
-            </div>
-          </div>
-          {/* Sample comment */}
-          <div className="flex items-start gap-3 ml-0 bg-surface-container-high/30 rounded-xl p-3">
-            <img src={post.author?.avatar} alt="Commenter" className="w-7 h-7 rounded-full object-cover border border-outline-variant/30 shrink-0" />
-            <div>
-              <div className="flex items-center gap-2">
-                <span className="text-on-surface font-body-md text-[12px] font-semibold">Community Member</span>
-                <span className="text-on-surface-variant font-label-sm text-[9px]">1h ago</span>
-              </div>
-              <p className="text-on-surface-variant text-[12px] mt-0.5">Thanks for sharing! Very helpful information.</p>
-            </div>
-          </div>
-        </div>
+        <CommentSection postId={post.id} currentUserId={currentUserId} />
       )}
     </article>
   );

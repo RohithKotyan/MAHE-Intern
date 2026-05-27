@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link, useLocation } from 'react-router-dom';
+import { useAuth } from '../../context/AuthContext';
 
 export default function MobileDrawer({ isOpen, onClose }) {
+  const { user } = useAuth();
   const location = useLocation();
   const currentPath = location.pathname;
 
@@ -72,11 +74,11 @@ export default function MobileDrawer({ isOpen, onClose }) {
 
           <Link to="/dashboard/profile" onClick={onClose} className="flex items-center gap-3 relative z-10 p-2 -ml-2 rounded-xl hover:bg-surface-variant/50 transition-colors pointer-events-auto">
             <div className="w-12 h-12 rounded-full border-2 border-primary/30 overflow-hidden bg-surface-container flex items-center justify-center">
-              <img alt="User profile" className="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAF534OOD6MQtE1HdOyBiNkKycRZA0RzZNRRjIZ89YH-Wdh5XAWoyOIuPclMb87uWpT40cd-zm90r-BMMPHlVpidBTddGR9y5aRv5le0pxg0UXBypn_BjvOS5D2KC7OK1U-wL-2h_Dc0HhXpbCNyYkDg9UO4m54pZpfMt8M3V8RFv0PCfh3yRlCFCybiblJhU14fMYB7A7-mwE5PLmTRYzylceFwTAn-3mEuhlGJwSiaw6tRxEYFla544qe8o7EcCWd99T8daL5NQ" />
+              <img alt="User profile" className="w-full h-full object-cover" src={user?.avatar || 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y'} />
             </div>
             <div>
-              <div className="font-label-sm text-[11px] text-on-surface-variant uppercase tracking-widest">Farmer</div>
-              <div className="font-body-md text-[16px] text-on-surface font-semibold">Rohith Kotyan</div>
+              <div className="font-label-sm text-[11px] text-on-surface-variant uppercase tracking-widest">{user?.role || 'Farmer'}</div>
+              <div className="font-body-md text-[16px] text-on-surface font-semibold">{user?.name || 'AgroCare User'}</div>
             </div>
           </Link>
         </div>

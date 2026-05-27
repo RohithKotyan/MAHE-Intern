@@ -29,8 +29,11 @@ export const communityService = {
   createPost: (formData) => api.post('/community/posts', formData, { headers: { 'Content-Type': 'multipart/form-data' } }),
   toggleLike: (id) => api.post(`/community/posts/${id}/like`),
   getComments: (id) => api.get(`/community/posts/${id}/comments`),
+  getReplies: (postId, commentId) => api.get(`/community/posts/${postId}/comments/${commentId}/replies`),
   addComment: (id, data) => api.post(`/community/posts/${id}/comments`, data),
+  toggleCommentLike: (postId, commentId) => api.post(`/community/posts/${postId}/comments/${commentId}/like`),
   deletePost: (id) => api.delete(`/community/posts/${id}`),
+  deleteComment: (postId, commentId) => api.delete(`/community/posts/${postId}/comments/${commentId}`),
 };
 
 export const notificationService = {

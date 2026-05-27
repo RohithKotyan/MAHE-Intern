@@ -20,7 +20,9 @@ export default function TabSettings() {
   
   const [isSaving, setIsSaving] = useState(false);
   const [isUploading, setIsUploading] = useState(false);
+  const [isChangingPassword, setIsChangingPassword] = useState(false);
   const [message, setMessage] = useState({ type: '', text: '' });
+  const [passwordData, setPasswordData] = useState({ currentPassword: '', newPassword: '', confirmPassword: '' });
   const fileInputRef = useRef(null);
 
   const handleInputChange = (e) => {
@@ -64,6 +66,37 @@ export default function TabSettings() {
     navigate('/login');
   };
 
+  const handlePasswordChange = (e) => {
+    setPasswordData({ ...passwordData, [e.target.name]: e.target.value });
+  };
+
+  const handlePasswordSubmit = async (e) => {
+    e.preventDefault();
+    if (passwordData.newPassword !== passwordData.confirmPassword) {
+      setMessage({ type: 'error', text: 'New passwords do not match' });
+      return;
+    }
+    if (passwordData.newPassword.length < 6) {
+      setMessage({ type: 'error', text: 'Password must be at least 6 characters' });
+      return;
+    }
+
+    try {
+      setIsChangingPassword(true);
+      setMessage({ type: '', text: '' });
+      await userService.changePassword({
+        currentPassword: passwordData.currentPassword,
+        newPassword: passwordData.newPassword
+      });
+      setMessage({ type: 'success', text: 'Password changed successfully!' });
+      setPasswordData({ currentPassword: '', newPassword: '', confirmPassword: '' });
+    } catch (err) {
+      setMessage({ type: 'error', text: err.response?.data?.message || 'Failed to change password' });
+    } finally {
+      setIsChangingPassword(false);
+    }
+  };
+
   return (
     <div className="flex flex-col md:flex-row gap-6">
       
@@ -91,8 +124,15 @@ export default function TabSettings() {
           <span className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: activeMenu === 'notifications' ? "'FILL' 1" : "'FILL' 0" }}>notifications</span>
           Notifications
         </button>
-        <button className="flex items-center gap-3 px-4 py-3 text-on-surface-variant hover:bg-surface-container hover:text-on-surface rounded-xl font-body-md text-sm transition-colors border-l-4 border-transparent">
-          <span className="material-symbols-outlined text-[20px]">security</span>
+        <button 
+          onClick={() => { setActiveMenu('security'); setMessage({ type: '', text: '' }); }}
+          className={`flex items-center gap-3 px-4 py-3 rounded-xl font-body-md text-sm transition-colors border-l-4 ${
+            activeMenu === 'security' 
+              ? 'bg-primary/10 text-primary font-semibold border-l-primary' 
+              : 'text-on-surface-variant hover:bg-surface-container hover:text-on-surface border-transparent'
+          }`}
+        >
+          <span className="material-symbols-outlined text-[20px]" style={{ fontVariationSettings: activeMenu === 'security' ? "'FILL' 1" : "'FILL' 0" }}>security</span>
           Security
         </button>
         <button 
@@ -197,6 +237,84 @@ export default function TabSettings() {
                   Sign Out
                 </button>
               </div>
+            </div>
+          </div>
+        )}
+
+        {activeMenu === 'security' && (
+          <div className="animate-in fade-in duration-300">
+            <div className="flex justify-between items-center border-b border-outline-variant/20 pb-4 mb-6">
+              <h2 className="font-body-md text-xl font-bold text-on-surface">Security Settings</h2>
+              {message.text && (
+                <span className={`text-sm font-semibold px-3 py-1 rounded-full ${message.type === 'success' ? 'bg-primary/20 text-primary' : 'bg-error/20 text-error'}`}>
+                  {message.text}
+                </span>
+              )}
+            </div>
+            
+            <div className="max-w-md">
+              <h3 className="font-body-md text-sm font-semibold text-on-surface mb-2">Change Password</h3>
+              <p className="text-xs text-on-surface-variant mb-6">Update your password to keep your account secure.</p>
+              
+              <form onSubmit={handlePasswordSubmit} className="space-y-4">
+                <div>
+                  <label className="block font-label-sm text-[11px] text-on-surface-variant mb-1 ml-1 uppercase tracking-wider">Current Password</label>
+                  <input 
+                    type="password" 
+                    name="currentPassword" 
+                    value={passwordData.currentPassword} 
+                    onChange={handlePasswordChange} 
+                    required
+                    className="w-full bg-surface-container/50 border border-outline-variant/30 rounded-xl px-4 py-3 text-sm text-on-surface focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all" 
+                  />
+                </div>
+                <div>
+                  <label className="block font-label-sm text-[11px] text-on-surface-variant mb-1 ml-1 uppercase tracking-wider">New Password</label>
+                  <input 
+                    type="password" 
+                    name="newPassword" 
+                    value={passwordData.newPassword} 
+                    onChange={handlePasswordChange} 
+                    required
+                    className="w-full bg-surface-container/50 border border-outline-variant/30 rounded-xl px-4 py-3 text-sm text-on-surface focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all" 
+                  />
+                </div>
+                <div>
+                  <label className="block font-label-sm text-[11px] text-on-surface-variant mb-1 ml-1 uppercase tracking-wider">Confirm New Password</label>
+                  <input 
+                    type="password" 
+                    name="confirmPassword" 
+                    value={passwordData.confirmPassword} 
+                    onChange={handlePasswordChange} 
+                    required
+                    className="w-full bg-surface-container/50 border border-outline-variant/30 rounded-xl px-4 py-3 text-sm text-on-surface focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/30 transition-all" 
+                  />
+                </div>
+
+                <div className="pt-4 flex justify-end gap-3">
+                  <button 
+                    type="button"
+                    onClick={() => { setPasswordData({ currentPassword: '', newPassword: '', confirmPassword: '' }); setMessage({ type: '', text: '' }); }}
+                    className="px-5 py-2 text-on-surface-variant hover:text-on-surface font-semibold text-sm transition-colors"
+                  >
+                    Clear
+                  </button>
+                  <button 
+                    type="submit"
+                    disabled={isChangingPassword || !passwordData.currentPassword || !passwordData.newPassword || !passwordData.confirmPassword}
+                    className="px-5 py-2 bg-primary text-on-primary-fixed hover:scale-[1.02] rounded-xl font-bold text-sm shadow-md transition-all flex items-center justify-center gap-2 disabled:opacity-50 disabled:hover:scale-100 min-w-[150px]"
+                  >
+                    {isChangingPassword ? (
+                      <>
+                        <div className="w-4 h-4 border-2 border-on-primary-fixed/30 border-t-on-primary-fixed rounded-full animate-spin"></div>
+                        Updating...
+                      </>
+                    ) : (
+                      'Update Password'
+                    )}
+                  </button>
+                </div>
+              </form>
             </div>
           </div>
         )}
