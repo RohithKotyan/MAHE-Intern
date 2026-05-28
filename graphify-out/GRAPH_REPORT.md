@@ -1,16 +1,16 @@
-# Graph Report - MAHE internship - 2  (2026-05-27)
+# Graph Report - MAHE internship - 2  (2026-05-28)
 
 ## Corpus Check
-- 120 files · ~39,604 words
+- 121 files · ~40,373 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 392 nodes · 585 edges · 23 communities (21 shown, 2 thin omitted)
+- 396 nodes · 597 edges · 23 communities (21 shown, 2 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS · INFERRED: 1 edges (avg confidence: 0.8)
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `ac1d07b7`
+- Built from commit: `3760e2fd`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
@@ -38,7 +38,7 @@
 
 ## God Nodes (most connected - your core abstractions)
 1. `cn()` - 21 edges
-2. `useAuth()` - 18 edges
+2. `useAuth()` - 19 edges
 3. `useToast()` - 12 edges
 4. `AgroCare AI — Development Setup Guide` - 8 edges
 5. `AgroCare AI - Project Status & Analysis` - 7 edges
@@ -68,7 +68,7 @@ Nodes (23): ProtectedRoute(), Button(), sizes, variants, Input(), icons, ToastCo
 
 ### Community 1 - "Server Core API & Models"
 Cohesion: 0.08
-Nodes (26): createScan, deleteScan, getMyScans, getScanById, changePassword, getProfile, getUsers, updateAvatar (+18 more)
+Nodes (27): createScan, deleteScan, getMyScans, getScanById, changePassword, getProfile, getUserProfile, getUsers (+19 more)
 
 ### Community 2 - "Server Package Config"
 Cohesion: 0.07
@@ -103,8 +103,8 @@ Cohesion: 0.29
 Nodes (7): deleteNotification, getNotifications, markAllRead, markAsRead, Notification, notificationSchema, router
 
 ### Community 10 - "Client API Services"
-Cohesion: 0.1
-Nodes (14): CommentItem(), CATEGORY_CONFIG, rankColors, contributors, TAB_CATEGORY_MAP, api, token, authService (+6 more)
+Cohesion: 0.09
+Nodes (15): CommentItem(), CATEGORY_CONFIG, rankColors, contributors, TAB_CATEGORY_MAP, rankColors, api, token (+7 more)
 
 ### Community 12 - "Server Constants"
 Cohesion: 0.33
@@ -135,7 +135,7 @@ Cohesion: 0.15
 Nodes (7): Logo(), Footer(), footerLinks, Navbar(), navLinks, PublicLayout(), navItems
 
 ## Knowledge Gaps
-- **134 isolated node(s):** `rankColors`, `CATEGORY_CONFIG`, `contributors`, `TAB_CATEGORY_MAP`, `authService` (+129 more)
+- **135 isolated node(s):** `rankColors`, `CATEGORY_CONFIG`, `TAB_CATEGORY_MAP`, `rankColors`, `authService` (+130 more)
   These have ≤1 connection - possible missing edges or undocumented components.
 - **2 thin communities (<3 nodes) omitted from report** — run `graphify query` to explore isolated nodes.
 
@@ -143,11 +143,11 @@ Nodes (7): Logo(), Footer(), footerLinks, Navbar(), navLinks, PublicLayout(), na
 _Questions this graph is uniquely positioned to answer:_
 
 - **Why does `cn()` connect `UI Components & Helpers` to `React UI & Routing Core`, `Client Package Config`?**
-  _High betweenness centrality (0.089) - this node is a cross-community bridge._
-- **Why does `useAuth()` connect `React UI & Routing Core` to `Client API Services`, `Community 23`?**
-  _High betweenness centrality (0.070) - this node is a cross-community bridge._
-- **What connects `rankColors`, `CATEGORY_CONFIG`, `contributors` to the rest of the system?**
-  _134 weakly-connected nodes found - possible documentation gaps or missing edges._
+  _High betweenness centrality (0.088) - this node is a cross-community bridge._
+- **Why does `clsx` connect `Client Package Config` to `UI Components & Helpers`?**
+  _High betweenness centrality (0.065) - this node is a cross-community bridge._
+- **What connects `rankColors`, `CATEGORY_CONFIG`, `TAB_CATEGORY_MAP` to the rest of the system?**
+  _135 weakly-connected nodes found - possible documentation gaps or missing edges._
 - **Should `React UI & Routing Core` be split into smaller, more focused modules?**
   _Cohesion score 0.09 - nodes in this community are weakly interconnected._
 - **Should `Server Core API & Models` be split into smaller, more focused modules?**

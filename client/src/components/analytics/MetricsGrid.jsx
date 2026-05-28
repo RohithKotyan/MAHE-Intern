@@ -2,9 +2,9 @@ import React from 'react';
 
 export default function MetricsGrid() {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
+    <div className="flex overflow-x-auto md:grid md:grid-cols-2 lg:grid-cols-4 gap-4 snap-x snap-mandatory hide-scrollbar pb-2 -mx-container-margin px-container-margin md:mx-0 md:px-0 md:pb-0">
       {/* Metric 1: Total Scans */}
-      <div className="glass-panel p-5 rounded-2xl relative overflow-hidden group">
+      <div className="min-w-[260px] md:min-w-0 flex-1 glass-panel p-5 rounded-2xl relative overflow-hidden group snap-center shrink-0">
         <div className="absolute top-0 right-0 w-32 h-32 bg-primary/10 rounded-full blur-[40px] -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/20 transition-all duration-500"></div>
         <div className="flex items-center gap-3 mb-3">
           <div className="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center border border-outline-variant/30 text-on-surface-variant group-hover:text-primary transition-colors">
@@ -23,7 +23,7 @@ export default function MetricsGrid() {
       </div>
 
       {/* Metric 2: Farm Health Score */}
-      <div className="glass-panel p-5 rounded-2xl relative overflow-hidden group border-primary/20 shadow-[0_0_15px_rgba(16,185,129,0.05)]">
+      <div className="min-w-[260px] md:min-w-0 flex-1 glass-panel p-5 rounded-2xl relative overflow-hidden group border-primary/20 shadow-[0_0_15px_rgba(16,185,129,0.05)] snap-center shrink-0">
         <div className="absolute top-0 right-0 w-32 h-32 bg-primary/20 rounded-full blur-[40px] -translate-y-1/2 translate-x-1/2 group-hover:bg-primary/30 transition-all duration-500"></div>
         <div className="flex items-center gap-3 mb-3">
           <div className="w-10 h-10 rounded-xl bg-primary/10 flex items-center justify-center border border-primary/20 text-primary">
@@ -44,7 +44,7 @@ export default function MetricsGrid() {
       </div>
 
       {/* Metric 3: Disease Cases Detected */}
-      <div className="glass-panel p-5 rounded-2xl relative overflow-hidden group">
+      <div className="min-w-[260px] md:min-w-0 flex-1 glass-panel p-5 rounded-2xl relative overflow-hidden group snap-center shrink-0">
         <div className="absolute top-0 right-0 w-32 h-32 bg-error/10 rounded-full blur-[40px] -translate-y-1/2 translate-x-1/2 group-hover:bg-error/20 transition-all duration-500"></div>
         <div className="flex items-center gap-3 mb-3">
           <div className="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center border border-outline-variant/30 text-error">
@@ -72,7 +72,7 @@ export default function MetricsGrid() {
       </div>
 
       {/* Metric 4: Recovered Plants */}
-      <div className="glass-panel p-5 rounded-2xl relative overflow-hidden group">
+      <div className="min-w-[260px] md:min-w-0 flex-1 glass-panel p-5 rounded-2xl relative overflow-hidden group snap-center shrink-0">
         <div className="absolute top-0 right-0 w-32 h-32 bg-secondary/10 rounded-full blur-[40px] -translate-y-1/2 translate-x-1/2 group-hover:bg-secondary/20 transition-all duration-500"></div>
         <div className="flex items-center gap-3 mb-3">
           <div className="w-10 h-10 rounded-xl bg-surface-container-high flex items-center justify-center border border-outline-variant/30 text-secondary">

@@ -43,9 +43,9 @@ export default function TabOverview({ user, isExpert }) {
             <span className="material-symbols-outlined text-[20px] text-primary">bar_chart</span>
             Activity Overview
           </h2>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div className="flex overflow-x-auto sm:grid sm:grid-cols-2 md:grid-cols-4 gap-4 snap-x snap-mandatory hide-scrollbar pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:pb-0">
             {displayStats.map((stat, i) => (
-              <div key={i} className="bg-surface-container/50 border border-outline-variant/30 rounded-xl p-4 flex flex-col items-center justify-center text-center hover:border-primary/30 transition-colors">
+              <div key={i} className="min-w-[140px] sm:min-w-0 flex-1 bg-surface-container/50 border border-outline-variant/30 rounded-xl p-4 flex flex-col items-center justify-center text-center hover:border-primary/30 transition-colors snap-center shrink-0">
                 <span className={`material-symbols-outlined mb-2 ${stat.color}`}>{stat.icon}</span>
                 <span className="font-headline-lg-mobile text-on-surface mb-1">{stat.value}</span>
                 <span className="font-label-sm text-on-surface-variant text-[10px] uppercase tracking-wider">{stat.label}</span>
@@ -60,9 +60,9 @@ export default function TabOverview({ user, isExpert }) {
             <span className="material-symbols-outlined text-[20px] text-amber-500">workspace_premium</span>
             Achievement Showcase
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
+          <div className="flex overflow-x-auto sm:grid sm:grid-cols-2 sm:grid-cols-4 gap-4 snap-x snap-mandatory hide-scrollbar pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 sm:pb-0">
             {badges.map((badge, i) => (
-              <div key={i} className="bg-gradient-to-b from-surface-container to-surface-container-low border border-outline-variant/30 rounded-xl p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group cursor-pointer hover:border-amber-500/30 transition-all">
+              <div key={i} className="min-w-[140px] sm:min-w-0 flex-1 bg-gradient-to-b from-surface-container to-surface-container-low border border-outline-variant/30 rounded-xl p-4 flex flex-col items-center justify-center text-center relative overflow-hidden group cursor-pointer hover:border-amber-500/30 transition-all snap-center shrink-0">
                 {/* Glow effect */}
                 <div className="absolute inset-0 bg-amber-500/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
                 

@@ -138,18 +138,18 @@ export default function NotificationsContent() {
       </header>
 
       {/* Top Stats */}
-      <div className="grid grid-cols-3 gap-4">
-        <div className="glass-panel p-4 rounded-xl border border-outline-variant/30 flex flex-col items-center justify-center relative overflow-hidden group">
+      <div className="flex overflow-x-auto sm:grid sm:grid-cols-3 gap-3 md:gap-4 snap-x snap-mandatory hide-scrollbar pb-2 -mx-container-margin px-container-margin sm:mx-0 sm:px-0 sm:pb-0">
+        <div className="min-w-[140px] sm:min-w-0 flex-1 glass-panel p-3 sm:p-4 rounded-xl border border-outline-variant/30 flex flex-col items-center justify-center relative overflow-hidden group snap-center shrink-0">
           <div className="absolute inset-0 bg-primary/5 group-hover:bg-primary/10 transition-colors"></div>
           <span className="font-display-md text-3xl font-bold text-on-surface">{unreadCount}</span>
           <span className="font-label-sm text-xs text-on-surface-variant uppercase tracking-widest mt-1">Unread</span>
         </div>
-        <div className="glass-panel p-4 rounded-xl border border-error/20 bg-error/5 flex flex-col items-center justify-center relative overflow-hidden group shadow-[0_0_15px_rgba(239,68,68,0.05)]">
+        <div className="min-w-[140px] sm:min-w-0 flex-1 glass-panel p-3 sm:p-4 rounded-xl border border-error/20 bg-error/5 flex flex-col items-center justify-center relative overflow-hidden group shadow-[0_0_15px_rgba(239,68,68,0.05)] snap-center shrink-0">
           <div className="absolute inset-0 bg-error/5 group-hover:bg-error/10 transition-colors"></div>
           <span className="font-display-md text-3xl font-bold text-error">{criticalCount}</span>
           <span className="font-label-sm text-xs text-error uppercase tracking-widest mt-1">Critical</span>
         </div>
-        <div className="glass-panel p-4 rounded-xl border border-warning/20 bg-warning/5 flex flex-col items-center justify-center relative overflow-hidden group">
+        <div className="min-w-[140px] sm:min-w-0 flex-1 glass-panel p-3 sm:p-4 rounded-xl border border-warning/20 bg-warning/5 flex flex-col items-center justify-center relative overflow-hidden group snap-center shrink-0">
           <div className="absolute inset-0 bg-warning/5 group-hover:bg-warning/10 transition-colors"></div>
           <span className="font-display-md text-3xl font-bold text-warning">{remindersCount}</span>
           <span className="font-label-sm text-xs text-warning uppercase tracking-widest mt-1">Reminders</span>

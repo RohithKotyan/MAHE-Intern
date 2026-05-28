@@ -5,7 +5,7 @@ import ActivityHeatmap from './ActivityHeatmap';
 
 export default function ReportsContent() {
   return (
-    <div className="pt-6 pb-12 px-container-margin max-w-7xl mx-auto flex flex-col gap-8 animate-in fade-in slide-in-from-bottom-4 duration-500 ease-out">
+    <div className="pt-6 pb-12 px-container-margin w-full max-w-7xl mx-auto flex flex-col gap-8 animate-in fade-in slide-in-from-bottom-4 duration-500 ease-out min-w-0">
       
       {/* Page Header */}
       <header className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 relative z-20">
@@ -16,14 +16,14 @@ export default function ReportsContent() {
         
         <div className="flex items-center gap-3 w-full md:w-auto">
           {/* Time Range Selector */}
-          <div className="bg-surface-container border border-outline-variant/50 rounded-lg p-1 flex relative z-30">
-            <button className="px-4 py-1.5 rounded-md text-sm font-medium transition-colors bg-surface-container-high text-on-surface shadow-sm">
+          <div className="bg-surface-container border border-outline-variant/50 rounded-lg p-1 flex overflow-x-auto hide-scrollbar relative z-30 w-full max-w-full">
+            <button className="px-4 py-1.5 rounded-md text-sm font-medium transition-colors bg-surface-container-high text-on-surface shadow-sm whitespace-nowrap">
               30 Days
             </button>
-            <button className="px-4 py-1.5 rounded-md text-sm font-medium transition-colors text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50">
+            <button className="px-4 py-1.5 rounded-md text-sm font-medium transition-colors text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50 whitespace-nowrap">
               Season
             </button>
-            <button className="px-4 py-1.5 rounded-md text-sm font-medium transition-colors text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50">
+            <button className="px-4 py-1.5 rounded-md text-sm font-medium transition-colors text-on-surface-variant hover:text-on-surface hover:bg-surface-container-high/50 whitespace-nowrap">
               All Time
             </button>
           </div>
@@ -40,11 +40,11 @@ export default function ReportsContent() {
       <MetricsGrid />
 
       {/* Main Charts Area */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
-        <div className="lg:col-span-2 space-y-6">
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6 min-w-0 w-full">
+        <div className="lg:col-span-2 space-y-6 min-w-0 w-full">
           <ChartsWidgets type="healthTrend" />
         </div>
-        <div className="lg:col-span-1 space-y-6">
+        <div className="lg:col-span-1 space-y-6 min-w-0 w-full">
           <ChartsWidgets type="diseaseDistribution" />
           <ChartsWidgets type="sectorPerformance" />
         </div>

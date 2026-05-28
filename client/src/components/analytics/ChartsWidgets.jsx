@@ -100,7 +100,7 @@ export default function ChartsWidgets({ type }) {
           </h2>
           <p className="text-sm text-on-surface-variant mt-1">Ratio of healthy to diseased plants over the last 30 days.</p>
         </div>
-        <div ref={containerRef} className="flex-1 w-full relative z-10">
+        <div ref={containerRef} className="flex-1 w-full relative z-10 min-w-0">
           {width > 0 && height > 0 && (
             <AreaChart width={width} height={height} data={healthTrendData} margin={{ top: 10, right: 10, left: -20, bottom: 0 }}>
               <defs>
@@ -135,7 +135,7 @@ export default function ChartsWidgets({ type }) {
             Disease Distribution
           </h2>
         </div>
-        <div ref={containerRef} className="h-[250px] w-full relative">
+        <div ref={containerRef} className="h-[250px] w-full relative min-w-0">
           {width > 0 && height > 0 && (
             <PieChart width={width} height={height}>
               <Pie
@@ -183,7 +183,7 @@ export default function ChartsWidgets({ type }) {
             Sector Vitality
           </h2>
         </div>
-        <div ref={containerRef} className="h-[200px] w-full">
+        <div ref={containerRef} className="h-[200px] w-full min-w-0">
           {width > 0 && height > 0 && (
             <BarChart width={width} height={height} data={sectorPerformanceData} margin={{ top: 0, right: 0, left: -25, bottom: 0 }}>
               <CartesianGrid strokeDasharray="3 3" stroke="var(--md-outline-variant)" opacity={0.3} vertical={false} />
