@@ -4,418 +4,814 @@
   "graph": {},
   "nodes": [
     {
+      "label": "CommentSection.jsx",
+      "file_type": "code",
+      "source_file": "client/src/components/community/CommentSection.jsx",
+      "source_location": "L1",
+      "id": "client_src_components_community_commentsection_jsx",
+      "community": 10,
+      "norm_label": "commentsection.jsx"
+    },
+    {
+      "label": "CommentItem()",
+      "file_type": "code",
+      "source_file": "client/src/components/community/CommentSection.jsx",
+      "source_location": "L13",
+      "id": "community_commentsection_commentitem",
+      "community": 10,
+      "norm_label": "commentitem()"
+    },
+    {
+      "label": "CommentSection()",
+      "file_type": "code",
+      "source_file": "client/src/components/community/CommentSection.jsx",
+      "source_location": "L238",
+      "id": "community_commentsection_commentsection",
+      "community": 10,
+      "norm_label": "commentsection()"
+    },
+    {
+      "label": "CreatePostModal.jsx",
+      "file_type": "code",
+      "source_file": "client/src/components/community/CreatePostModal.jsx",
+      "source_location": "L1",
+      "id": "client_src_components_community_createpostmodal_jsx",
+      "community": 10,
+      "norm_label": "createpostmodal.jsx"
+    },
+    {
+      "label": "CreatePostModal()",
+      "file_type": "code",
+      "source_file": "client/src/components/community/CreatePostModal.jsx",
+      "source_location": "L9",
+      "id": "community_createpostmodal_createpostmodal",
+      "community": 10,
+      "norm_label": "createpostmodal()"
+    },
+    {
+      "label": "PostCard.jsx",
+      "file_type": "code",
+      "source_file": "client/src/components/community/PostCard.jsx",
+      "source_location": "L1",
+      "id": "client_src_components_community_postcard_jsx",
+      "community": 10,
+      "norm_label": "postcard.jsx"
+    },
+    {
+      "label": "rankColors",
+      "file_type": "code",
+      "source_file": "client/src/components/community/PostCard.jsx",
+      "source_location": "L7",
+      "id": "community_postcard_rankcolors",
+      "community": 10,
+      "norm_label": "rankcolors"
+    },
+    {
+      "label": "CATEGORY_CONFIG",
+      "file_type": "code",
+      "source_file": "client/src/components/community/PostCard.jsx",
+      "source_location": "L18",
+      "id": "community_postcard_category_config",
+      "community": 10,
+      "norm_label": "category_config"
+    },
+    {
+      "label": "PostCard()",
+      "file_type": "code",
+      "source_file": "client/src/components/community/PostCard.jsx",
+      "source_location": "L26",
+      "id": "community_postcard_postcard",
+      "community": 10,
+      "norm_label": "postcard()"
+    },
+    {
+      "label": "TopContributors.jsx",
+      "file_type": "code",
+      "source_file": "client/src/components/community/TopContributors.jsx",
+      "source_location": "L1",
+      "id": "client_src_components_community_topcontributors_jsx",
+      "community": 10,
+      "norm_label": "topcontributors.jsx"
+    },
+    {
+      "label": "contributors",
+      "file_type": "code",
+      "source_file": "client/src/components/community/TopContributors.jsx",
+      "source_location": "L3",
+      "id": "community_topcontributors_contributors",
+      "community": 10,
+      "norm_label": "contributors"
+    },
+    {
+      "label": "TopContributors()",
+      "file_type": "code",
+      "source_file": "client/src/components/community/TopContributors.jsx",
+      "source_location": "L9",
+      "id": "community_topcontributors_topcontributors",
+      "community": 10,
+      "norm_label": "topcontributors()"
+    },
+    {
+      "label": "CommunityHubContent.jsx",
+      "file_type": "code",
+      "source_file": "client/src/components/dashboard/CommunityHubContent.jsx",
+      "source_location": "L1",
+      "id": "client_src_components_dashboard_communityhubcontent_jsx",
+      "community": 10,
+      "norm_label": "communityhubcontent.jsx"
+    },
+    {
+      "label": "TAB_CATEGORY_MAP",
+      "file_type": "code",
+      "source_file": "client/src/components/dashboard/CommunityHubContent.jsx",
+      "source_location": "L13",
+      "id": "dashboard_communityhubcontent_tab_category_map",
+      "community": 10,
+      "norm_label": "tab_category_map"
+    },
+    {
+      "label": "CommunityHubContent()",
+      "file_type": "code",
+      "source_file": "client/src/components/dashboard/CommunityHubContent.jsx",
+      "source_location": "L21",
+      "id": "dashboard_communityhubcontent_communityhubcontent",
+      "community": 10,
+      "norm_label": "communityhubcontent()"
+    },
+    {
+      "label": "DashboardShell.jsx",
+      "file_type": "code",
+      "source_file": "client/src/components/dashboard/DashboardShell.jsx",
+      "source_location": "L1",
+      "id": "client_src_components_dashboard_dashboardshell_jsx",
+      "community": 0,
+      "norm_label": "dashboardshell.jsx"
+    },
+    {
+      "label": "DashboardShell()",
+      "file_type": "code",
+      "source_file": "client/src/components/dashboard/DashboardShell.jsx",
+      "source_location": "L9",
+      "id": "dashboard_dashboardshell_dashboardshell",
+      "community": 0,
+      "norm_label": "dashboardshell()"
+    },
+    {
+      "label": "MobileDrawer.jsx",
+      "file_type": "code",
+      "source_file": "client/src/components/dashboard/MobileDrawer.jsx",
+      "source_location": "L1",
+      "id": "client_src_components_dashboard_mobiledrawer_jsx",
+      "community": 0,
+      "norm_label": "mobiledrawer.jsx"
+    },
+    {
+      "label": "MobileDrawer()",
+      "file_type": "code",
+      "source_file": "client/src/components/dashboard/MobileDrawer.jsx",
+      "source_location": "L5",
+      "id": "dashboard_mobiledrawer_mobiledrawer",
+      "community": 0,
+      "norm_label": "mobiledrawer()"
+    },
+    {
+      "label": "TabSettings.jsx",
+      "file_type": "code",
+      "source_file": "client/src/components/profile/TabSettings.jsx",
+      "source_location": "L1",
+      "id": "client_src_components_profile_tabsettings_jsx",
+      "community": 10,
+      "norm_label": "tabsettings.jsx"
+    },
+    {
+      "label": "TabSettings()",
+      "file_type": "code",
+      "source_file": "client/src/components/profile/TabSettings.jsx",
+      "source_location": "L7",
+      "id": "profile_tabsettings_tabsettings",
+      "community": 10,
+      "norm_label": "tabsettings()"
+    },
+    {
+      "label": "services.js",
+      "file_type": "code",
+      "source_file": "client/src/services/services.js",
+      "source_location": "L1",
+      "id": "client_src_services_services_js",
+      "community": 10,
+      "norm_label": "services.js"
+    },
+    {
+      "label": "authService",
+      "file_type": "code",
+      "source_file": "client/src/services/services.js",
+      "source_location": "L3",
+      "id": "services_services_authservice",
+      "community": 10,
+      "norm_label": "authservice"
+    },
+    {
+      "label": "userService",
+      "file_type": "code",
+      "source_file": "client/src/services/services.js",
+      "source_location": "L12",
+      "id": "services_services_userservice",
+      "community": 10,
+      "norm_label": "userservice"
+    },
+    {
+      "label": "scanService",
+      "file_type": "code",
+      "source_file": "client/src/services/services.js",
+      "source_location": "L19",
+      "id": "services_services_scanservice",
+      "community": 10,
+      "norm_label": "scanservice"
+    },
+    {
+      "label": "communityService",
+      "file_type": "code",
+      "source_file": "client/src/services/services.js",
+      "source_location": "L26",
+      "id": "services_services_communityservice",
+      "community": 10,
+      "norm_label": "communityservice"
+    },
+    {
+      "label": "notificationService",
+      "file_type": "code",
+      "source_file": "client/src/services/services.js",
+      "source_location": "L39",
+      "id": "services_services_notificationservice",
+      "community": 10,
+      "norm_label": "notificationservice"
+    },
+    {
+      "label": "formatTimeAgo.js",
+      "file_type": "code",
+      "source_file": "client/src/utils/formatTimeAgo.js",
+      "source_location": "L1",
+      "id": "client_src_utils_formattimeago_js",
+      "community": 10,
+      "norm_label": "formattimeago.js"
+    },
+    {
+      "label": "formatTimeAgo()",
+      "file_type": "code",
+      "source_file": "client/src/utils/formatTimeAgo.js",
+      "source_location": "L1",
+      "id": "utils_formattimeago_formattimeago",
+      "community": 10,
+      "norm_label": "formattimeago()"
+    },
+    {
+      "label": "transformPost.js",
+      "file_type": "code",
+      "source_file": "client/src/utils/transformPost.js",
+      "source_location": "L1",
+      "id": "client_src_utils_transformpost_js",
+      "community": 10,
+      "norm_label": "transformpost.js"
+    },
+    {
+      "label": "transformPost()",
+      "file_type": "code",
+      "source_file": "client/src/utils/transformPost.js",
+      "source_location": "L3",
+      "id": "utils_transformpost_transformpost",
+      "community": 10,
+      "norm_label": "transformpost()"
+    },
+    {
+      "label": "community.controller.js",
+      "file_type": "code",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L1",
+      "id": "server_controllers_community_controller_js",
+      "community": 15,
+      "norm_label": "community.controller.js"
+    },
+    {
+      "label": "createPost",
+      "file_type": "code",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L11",
+      "id": "controllers_community_controller_createpost",
+      "community": 15,
+      "norm_label": "createpost"
+    },
+    {
+      "label": "getPosts",
+      "file_type": "code",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L27",
+      "id": "controllers_community_controller_getposts",
+      "community": 15,
+      "norm_label": "getposts"
+    },
+    {
+      "label": "getPostById",
+      "file_type": "code",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L46",
+      "id": "controllers_community_controller_getpostbyid",
+      "community": 15,
+      "norm_label": "getpostbyid"
+    },
+    {
+      "label": "toggleLike",
+      "file_type": "code",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L52",
+      "id": "controllers_community_controller_togglelike",
+      "community": 15,
+      "norm_label": "togglelike"
+    },
+    {
+      "label": "getComments",
+      "file_type": "code",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L64",
+      "id": "controllers_community_controller_getcomments",
+      "community": 15,
+      "norm_label": "getcomments"
+    },
+    {
+      "label": "getReplies",
+      "file_type": "code",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L85",
+      "id": "controllers_community_controller_getreplies",
+      "community": 15,
+      "norm_label": "getreplies"
+    },
+    {
+      "label": "addComment",
+      "file_type": "code",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L92",
+      "id": "controllers_community_controller_addcomment",
+      "community": 15,
+      "norm_label": "addcomment"
+    },
+    {
+      "label": "toggleCommentLike",
+      "file_type": "code",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L108",
+      "id": "controllers_community_controller_togglecommentlike",
+      "community": 15,
+      "norm_label": "togglecommentlike"
+    },
+    {
+      "label": "deletePost",
+      "file_type": "code",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L119",
+      "id": "controllers_community_controller_deletepost",
+      "community": 15,
+      "norm_label": "deletepost"
+    },
+    {
+      "label": "deleteComment",
+      "file_type": "code",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L128",
+      "id": "controllers_community_controller_deletecomment",
+      "community": 15,
+      "norm_label": "deletecomment"
+    },
+    {
+      "label": "community.routes.js",
+      "file_type": "code",
+      "source_file": "server/routes/community.routes.js",
+      "source_location": "L1",
+      "id": "server_routes_community_routes_js",
+      "community": 15,
+      "norm_label": "community.routes.js"
+    },
+    {
+      "label": "router",
+      "file_type": "code",
+      "source_file": "server/routes/community.routes.js",
+      "source_location": "L7",
+      "id": "routes_community_routes_router",
+      "community": 15,
+      "norm_label": "router"
+    },
+    {
       "label": "App.jsx",
       "file_type": "code",
       "source_file": "App.jsx",
       "source_location": "L1",
-      "id": "app_jsx",
-      "community": 0,
-      "norm_label": "app.jsx"
+      "community": 6,
+      "norm_label": "app.jsx",
+      "id": "app_jsx"
     },
     {
       "label": "App()",
       "file_type": "code",
       "source_file": "App.jsx",
       "source_location": "L16",
-      "id": "src_app_app",
-      "community": 0,
-      "norm_label": "app()"
+      "community": 6,
+      "norm_label": "app()",
+      "id": "src_app_app"
     },
     {
       "label": "Button.jsx",
       "file_type": "code",
       "source_file": "components/common/Button.jsx",
       "source_location": "L1",
-      "id": "components_common_button_jsx",
       "community": 0,
-      "norm_label": "button.jsx"
+      "norm_label": "button.jsx",
+      "id": "components_common_button_jsx"
     },
     {
       "label": "variants",
       "file_type": "code",
       "source_file": "components/common/Button.jsx",
       "source_location": "L3",
-      "id": "common_button_variants",
       "community": 0,
-      "norm_label": "variants"
+      "norm_label": "variants",
+      "id": "common_button_variants"
     },
     {
       "label": "sizes",
       "file_type": "code",
       "source_file": "components/common/Button.jsx",
       "source_location": "L12",
-      "id": "common_button_sizes",
       "community": 0,
-      "norm_label": "sizes"
+      "norm_label": "sizes",
+      "id": "common_button_sizes"
     },
     {
       "label": "Button()",
       "file_type": "code",
       "source_file": "components/common/Button.jsx",
       "source_location": "L19",
-      "id": "common_button_button",
       "community": 0,
-      "norm_label": "button()"
+      "norm_label": "button()",
+      "id": "common_button_button"
     },
     {
       "label": "Card.jsx",
       "file_type": "code",
       "source_file": "components/common/Card.jsx",
       "source_location": "L1",
-      "id": "components_common_card_jsx",
       "community": 3,
-      "norm_label": "card.jsx"
+      "norm_label": "card.jsx",
+      "id": "components_common_card_jsx"
     },
     {
       "label": "Card()",
       "file_type": "code",
       "source_file": "components/common/Card.jsx",
       "source_location": "L3",
-      "id": "common_card_card",
       "community": 3,
-      "norm_label": "card()"
+      "norm_label": "card()",
+      "id": "common_card_card"
     },
     {
       "label": "Input.jsx",
       "file_type": "code",
       "source_file": "components/common/Input.jsx",
       "source_location": "L1",
-      "id": "components_common_input_jsx",
       "community": 0,
-      "norm_label": "input.jsx"
+      "norm_label": "input.jsx",
+      "id": "components_common_input_jsx"
     },
     {
       "label": "Input()",
       "file_type": "code",
       "source_file": "components/common/Input.jsx",
       "source_location": "L5",
-      "id": "common_input_input",
       "community": 0,
-      "norm_label": "input()"
+      "norm_label": "input()",
+      "id": "common_input_input"
     },
     {
       "label": "Logo.jsx",
       "file_type": "code",
       "source_file": "components/common/Logo.jsx",
       "source_location": "L1",
-      "id": "components_common_logo_jsx",
-      "community": 0,
-      "norm_label": "logo.jsx"
+      "community": 23,
+      "norm_label": "logo.jsx",
+      "id": "components_common_logo_jsx"
     },
     {
       "label": "Logo()",
       "file_type": "code",
       "source_file": "components/common/Logo.jsx",
       "source_location": "L3",
-      "id": "common_logo_logo",
-      "community": 0,
-      "norm_label": "logo()"
+      "community": 23,
+      "norm_label": "logo()",
+      "id": "common_logo_logo"
     },
     {
       "label": "ScrollToTop.jsx",
       "file_type": "code",
       "source_file": "components/common/ScrollToTop.jsx",
       "source_location": "L1",
-      "id": "components_common_scrolltotop_jsx",
-      "community": 0,
-      "norm_label": "scrolltotop.jsx"
+      "community": 6,
+      "norm_label": "scrolltotop.jsx",
+      "id": "components_common_scrolltotop_jsx"
     },
     {
       "label": "ScrollToTop()",
       "file_type": "code",
       "source_file": "components/common/ScrollToTop.jsx",
       "source_location": "L4",
-      "id": "common_scrolltotop_scrolltotop",
-      "community": 0,
-      "norm_label": "scrolltotop()"
+      "community": 6,
+      "norm_label": "scrolltotop()",
+      "id": "common_scrolltotop_scrolltotop"
     },
     {
       "label": "ThemeToggle.jsx",
       "file_type": "code",
       "source_file": "components/common/ThemeToggle.jsx",
       "source_location": "L1",
-      "id": "components_common_themetoggle_jsx",
       "community": 16,
-      "norm_label": "themetoggle.jsx"
+      "norm_label": "themetoggle.jsx",
+      "id": "components_common_themetoggle_jsx"
     },
     {
       "label": "ThemeToggle()",
       "file_type": "code",
       "source_file": "components/common/ThemeToggle.jsx",
       "source_location": "L3",
-      "id": "common_themetoggle_themetoggle",
       "community": 16,
-      "norm_label": "themetoggle()"
+      "norm_label": "themetoggle()",
+      "id": "common_themetoggle_themetoggle"
     },
     {
       "label": "Footer.jsx",
       "file_type": "code",
       "source_file": "components/layout/Footer.jsx",
       "source_location": "L1",
-      "id": "components_layout_footer_jsx",
-      "community": 0,
-      "norm_label": "footer.jsx"
+      "community": 23,
+      "norm_label": "footer.jsx",
+      "id": "components_layout_footer_jsx"
     },
     {
       "label": "footerLinks",
       "file_type": "code",
       "source_file": "components/layout/Footer.jsx",
       "source_location": "L4",
-      "id": "layout_footer_footerlinks",
-      "community": 0,
-      "norm_label": "footerlinks"
+      "community": 23,
+      "norm_label": "footerlinks",
+      "id": "layout_footer_footerlinks"
     },
     {
       "label": "Footer()",
       "file_type": "code",
       "source_file": "components/layout/Footer.jsx",
       "source_location": "L25",
-      "id": "layout_footer_footer",
-      "community": 0,
-      "norm_label": "footer()"
+      "community": 23,
+      "norm_label": "footer()",
+      "id": "layout_footer_footer"
     },
     {
       "label": "Navbar.jsx",
       "file_type": "code",
       "source_file": "components/layout/Navbar.jsx",
       "source_location": "L1",
-      "id": "components_layout_navbar_jsx",
-      "community": 0,
-      "norm_label": "navbar.jsx"
+      "community": 23,
+      "norm_label": "navbar.jsx",
+      "id": "components_layout_navbar_jsx"
     },
     {
       "label": "navLinks",
       "file_type": "code",
       "source_file": "components/layout/Navbar.jsx",
       "source_location": "L7",
-      "id": "layout_navbar_navlinks",
-      "community": 0,
-      "norm_label": "navlinks"
+      "community": 23,
+      "norm_label": "navlinks",
+      "id": "layout_navbar_navlinks"
     },
     {
       "label": "Navbar()",
       "file_type": "code",
       "source_file": "components/layout/Navbar.jsx",
       "source_location": "L14",
-      "id": "layout_navbar_navbar",
-      "community": 0,
-      "norm_label": "navbar()"
+      "community": 23,
+      "norm_label": "navbar()",
+      "id": "layout_navbar_navbar"
     },
     {
       "label": "PublicLayout.jsx",
       "file_type": "code",
       "source_file": "components/layout/PublicLayout.jsx",
       "source_location": "L1",
-      "id": "components_layout_publiclayout_jsx",
-      "community": 0,
-      "norm_label": "publiclayout.jsx"
+      "community": 23,
+      "norm_label": "publiclayout.jsx",
+      "id": "components_layout_publiclayout_jsx"
     },
     {
       "label": "PublicLayout()",
       "file_type": "code",
       "source_file": "components/layout/PublicLayout.jsx",
       "source_location": "L5",
-      "id": "layout_publiclayout_publiclayout",
-      "community": 0,
-      "norm_label": "publiclayout()"
+      "community": 23,
+      "norm_label": "publiclayout()",
+      "id": "layout_publiclayout_publiclayout"
     },
     {
       "label": "About.jsx",
       "file_type": "code",
       "source_file": "pages/About.jsx",
       "source_location": "L1",
-      "id": "pages_about_jsx",
       "community": 6,
-      "norm_label": "about.jsx"
+      "norm_label": "about.jsx",
+      "id": "pages_about_jsx"
     },
     {
       "label": "fadeUp",
       "file_type": "code",
       "source_file": "pages/About.jsx",
       "source_location": "L3",
-      "id": "pages_about_fadeup",
       "community": 6,
-      "norm_label": "fadeup"
+      "norm_label": "fadeup",
+      "id": "pages_about_fadeup"
     },
     {
       "label": "values",
       "file_type": "code",
       "source_file": "pages/About.jsx",
       "source_location": "L5",
-      "id": "pages_about_values",
       "community": 6,
-      "norm_label": "values"
+      "norm_label": "values",
+      "id": "pages_about_values"
     },
     {
       "label": "timeline",
       "file_type": "code",
       "source_file": "pages/About.jsx",
       "source_location": "L12",
-      "id": "pages_about_timeline",
       "community": 6,
-      "norm_label": "timeline"
+      "norm_label": "timeline",
+      "id": "pages_about_timeline"
     },
     {
       "label": "team",
       "file_type": "code",
       "source_file": "pages/About.jsx",
       "source_location": "L19",
-      "id": "pages_about_team",
       "community": 6,
-      "norm_label": "team"
+      "norm_label": "team",
+      "id": "pages_about_team"
     },
     {
       "label": "About()",
       "file_type": "code",
       "source_file": "pages/About.jsx",
       "source_location": "L26",
-      "id": "pages_about_about",
       "community": 6,
-      "norm_label": "about()"
+      "norm_label": "about()",
+      "id": "pages_about_about"
     },
     {
       "label": "Community.jsx",
       "file_type": "code",
       "source_file": "pages/Community.jsx",
       "source_location": "L1",
-      "id": "pages_community_jsx",
-      "community": 0,
-      "norm_label": "community.jsx"
+      "community": 6,
+      "norm_label": "community.jsx",
+      "id": "pages_community_jsx"
     },
     {
       "label": "Community()",
       "file_type": "code",
       "source_file": "pages/Community.jsx",
       "source_location": "L4",
-      "id": "pages_community_community",
-      "community": 0,
-      "norm_label": "community()"
+      "community": 6,
+      "norm_label": "community()",
+      "id": "pages_community_community"
     },
     {
       "label": "Contact.jsx",
       "file_type": "code",
       "source_file": "pages/Contact.jsx",
       "source_location": "L1",
-      "id": "pages_contact_jsx",
       "community": 0,
-      "norm_label": "contact.jsx"
+      "norm_label": "contact.jsx",
+      "id": "pages_contact_jsx"
     },
     {
       "label": "fadeUp",
       "file_type": "code",
       "source_file": "pages/Contact.jsx",
       "source_location": "L8",
-      "id": "pages_contact_fadeup",
       "community": 0,
-      "norm_label": "fadeup"
+      "norm_label": "fadeup",
+      "id": "pages_contact_fadeup"
     },
     {
       "label": "contactInfo",
       "file_type": "code",
       "source_file": "pages/Contact.jsx",
       "source_location": "L10",
-      "id": "pages_contact_contactinfo",
       "community": 0,
-      "norm_label": "contactinfo"
+      "norm_label": "contactinfo",
+      "id": "pages_contact_contactinfo"
     },
     {
       "label": "Contact()",
       "file_type": "code",
       "source_file": "pages/Contact.jsx",
       "source_location": "L17",
-      "id": "pages_contact_contact",
       "community": 0,
-      "norm_label": "contact()"
+      "norm_label": "contact()",
+      "id": "pages_contact_contact"
     },
     {
       "label": "Features.jsx",
       "file_type": "code",
       "source_file": "pages/Features.jsx",
       "source_location": "L1",
-      "id": "pages_features_jsx",
-      "community": 22,
-      "norm_label": "features.jsx"
+      "community": 6,
+      "norm_label": "features.jsx",
+      "id": "pages_features_jsx"
     },
     {
       "label": "fadeUp",
       "file_type": "code",
       "source_file": "pages/Features.jsx",
       "source_location": "L4",
-      "id": "pages_features_fadeup",
-      "community": 22,
-      "norm_label": "fadeup"
+      "community": 6,
+      "norm_label": "fadeup",
+      "id": "pages_features_fadeup"
     },
     {
       "label": "features",
       "file_type": "code",
       "source_file": "pages/Features.jsx",
       "source_location": "L6",
-      "id": "pages_features_features",
-      "community": 22,
-      "norm_label": "features"
+      "community": 6,
+      "norm_label": "features",
+      "id": "pages_features_features"
     },
     {
       "label": "workflow",
       "file_type": "code",
       "source_file": "pages/Features.jsx",
       "source_location": "L17",
-      "id": "pages_features_workflow",
-      "community": 22,
-      "norm_label": "workflow"
+      "community": 6,
+      "norm_label": "workflow",
+      "id": "pages_features_workflow"
     },
     {
       "label": "Home.jsx",
       "file_type": "code",
       "source_file": "pages/Home.jsx",
       "source_location": "L1",
-      "id": "pages_home_jsx",
-      "community": 15,
-      "norm_label": "home.jsx"
+      "community": 6,
+      "norm_label": "home.jsx",
+      "id": "pages_home_jsx"
     },
     {
       "label": "Home()",
       "file_type": "code",
       "source_file": "pages/Home.jsx",
       "source_location": "L4",
-      "id": "pages_home_home",
-      "community": 15,
-      "norm_label": "home()"
+      "community": 6,
+      "norm_label": "home()",
+      "id": "pages_home_home"
     },
     {
       "label": "Login.jsx",
       "file_type": "code",
       "source_file": "pages/Login.jsx",
       "source_location": "L1",
-      "id": "pages_login_jsx",
       "community": 0,
-      "norm_label": "login.jsx"
+      "norm_label": "login.jsx",
+      "id": "pages_login_jsx"
     },
     {
       "label": "Login()",
       "file_type": "code",
       "source_file": "pages/Login.jsx",
       "source_location": "L10",
-      "id": "pages_login_login",
       "community": 0,
-      "norm_label": "login()"
+      "norm_label": "login()",
+      "id": "pages_login_login"
     },
     {
       "label": "Signup.jsx",
       "file_type": "code",
       "source_file": "pages/Signup.jsx",
       "source_location": "L1",
-      "id": "pages_signup_jsx",
       "community": 0,
-      "norm_label": "signup.jsx"
+      "norm_label": "signup.jsx",
+      "id": "pages_signup_jsx"
     },
     {
       "label": "Signup()",
       "file_type": "code",
       "source_file": "pages/Signup.jsx",
       "source_location": "L10",
-      "id": "pages_signup_signup",
       "community": 0,
-      "norm_label": "signup()"
+      "norm_label": "signup()",
+      "id": "pages_signup_signup"
     },
     {
       "label": "PROJECT_STATUS.md",
@@ -1277,7 +1673,7 @@
       "file_type": "code",
       "source_file": "client/src/context/AuthContext.jsx",
       "source_location": "L8",
-      "community": 16,
+      "community": 0,
       "norm_label": "authprovider()",
       "id": "context_authcontext_authprovider"
     },
@@ -1385,7 +1781,7 @@
       "file_type": "code",
       "source_file": "server/models/User.js",
       "source_location": "L1",
-      "community": 4,
+      "community": 1,
       "norm_label": "user.js",
       "id": "server_models_user_js"
     },
@@ -1394,7 +1790,7 @@
       "file_type": "code",
       "source_file": "server/models/User.js",
       "source_location": "L10",
-      "community": 4,
+      "community": 1,
       "norm_label": "userschema",
       "id": "models_user_userschema"
     },
@@ -1403,7 +1799,7 @@
       "file_type": "code",
       "source_file": "server/models/User.js",
       "source_location": "L115",
-      "community": 4,
+      "community": 1,
       "norm_label": "resettoken",
       "id": "models_user_resettoken"
     },
@@ -1412,7 +1808,7 @@
       "file_type": "code",
       "source_file": "server/models/User.js",
       "source_location": "L123",
-      "community": 4,
+      "community": 1,
       "norm_label": "user",
       "id": "models_user_user"
     },
@@ -1502,7 +1898,7 @@
       "file_type": "code",
       "source_file": "client/src/main.jsx",
       "source_location": "L1",
-      "community": 16,
+      "community": 0,
       "norm_label": "main.jsx",
       "id": "client_src_main_jsx"
     },
@@ -1619,7 +2015,7 @@
       "file_type": "code",
       "source_file": "client/src/components/common/Logo.jsx",
       "source_location": "L1",
-      "community": 0,
+      "community": 23,
       "norm_label": "logo.jsx",
       "id": "client_src_components_common_logo_jsx"
     },
@@ -1745,7 +2141,7 @@
       "file_type": "code",
       "source_file": "client/src/components/layout/Footer.jsx",
       "source_location": "L1",
-      "community": 0,
+      "community": 23,
       "norm_label": "footer.jsx",
       "id": "client_src_components_layout_footer_jsx"
     },
@@ -1754,7 +2150,7 @@
       "file_type": "code",
       "source_file": "client/src/components/layout/Navbar.jsx",
       "source_location": "L1",
-      "community": 0,
+      "community": 23,
       "norm_label": "navbar.jsx",
       "id": "client_src_components_layout_navbar_jsx"
     },
@@ -1763,7 +2159,7 @@
       "file_type": "code",
       "source_file": "client/src/components/layout/PublicLayout.jsx",
       "source_location": "L1",
-      "community": 0,
+      "community": 23,
       "norm_label": "publiclayout.jsx",
       "id": "client_src_components_layout_publiclayout_jsx"
     },
@@ -1826,7 +2222,7 @@
       "file_type": "code",
       "source_file": "client/src/context/ToastContext.jsx",
       "source_location": "L7",
-      "community": 16,
+      "community": 0,
       "norm_label": "toastprovider()",
       "id": "context_toastcontext_toastprovider"
     },
@@ -1880,7 +2276,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/Features.jsx",
       "source_location": "L1",
-      "community": 22,
+      "community": 6,
       "norm_label": "features.jsx",
       "id": "client_src_pages_features_jsx"
     },
@@ -1889,7 +2285,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/Features.jsx",
       "source_location": "L18",
-      "community": 22,
+      "community": 6,
       "norm_label": "plans",
       "id": "pages_features_plans"
     },
@@ -1898,7 +2294,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/Home.jsx",
       "source_location": "L1",
-      "community": 15,
+      "community": 6,
       "norm_label": "home.jsx",
       "id": "client_src_pages_home_jsx"
     },
@@ -1907,7 +2303,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/Home.jsx",
       "source_location": "L6",
-      "community": 15,
+      "community": 6,
       "norm_label": "fadeup",
       "id": "pages_home_fadeup"
     },
@@ -1916,7 +2312,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/Home.jsx",
       "source_location": "L8",
-      "community": 15,
+      "community": 6,
       "norm_label": "features",
       "id": "pages_home_features"
     },
@@ -1925,7 +2321,7 @@
       "file_type": "code",
       "source_file": "client/src/pages/Home.jsx",
       "source_location": "L15",
-      "community": 15,
+      "community": 6,
       "norm_label": "stats",
       "id": "pages_home_stats"
     },
@@ -1973,60 +2369,6 @@
       "community": 10,
       "norm_label": "token",
       "id": "services_api_token"
-    },
-    {
-      "label": "services.js",
-      "file_type": "code",
-      "source_file": "client/src/services/services.js",
-      "source_location": "L1",
-      "community": 10,
-      "norm_label": "services.js",
-      "id": "client_src_services_services_js"
-    },
-    {
-      "label": "authService",
-      "file_type": "code",
-      "source_file": "client/src/services/services.js",
-      "source_location": "L3",
-      "community": 10,
-      "norm_label": "authservice",
-      "id": "services_services_authservice"
-    },
-    {
-      "label": "userService",
-      "file_type": "code",
-      "source_file": "client/src/services/services.js",
-      "source_location": "L12",
-      "community": 10,
-      "norm_label": "userservice",
-      "id": "services_services_userservice"
-    },
-    {
-      "label": "scanService",
-      "file_type": "code",
-      "source_file": "client/src/services/services.js",
-      "source_location": "L19",
-      "community": 10,
-      "norm_label": "scanservice",
-      "id": "services_services_scanservice"
-    },
-    {
-      "label": "communityService",
-      "file_type": "code",
-      "source_file": "client/src/services/services.js",
-      "source_location": "L26",
-      "community": 10,
-      "norm_label": "communityservice",
-      "id": "services_services_communityservice"
-    },
-    {
-      "label": "notificationService",
-      "file_type": "code",
-      "source_file": "client/src/services/services.js",
-      "source_location": "L36",
-      "community": 10,
-      "norm_label": "notificationservice",
-      "id": "services_services_notificationservice"
     },
     {
       "label": "helpers.js",
@@ -2443,78 +2785,6 @@
       "id": "config_env_validateenv"
     },
     {
-      "label": "community.controller.js",
-      "file_type": "code",
-      "source_file": "server/controllers/community.controller.js",
-      "source_location": "L1",
-      "community": 1,
-      "norm_label": "community.controller.js",
-      "id": "server_controllers_community_controller_js"
-    },
-    {
-      "label": "createPost",
-      "file_type": "code",
-      "source_file": "server/controllers/community.controller.js",
-      "source_location": "L11",
-      "community": 1,
-      "norm_label": "createpost",
-      "id": "controllers_community_controller_createpost"
-    },
-    {
-      "label": "getPosts",
-      "file_type": "code",
-      "source_file": "server/controllers/community.controller.js",
-      "source_location": "L27",
-      "community": 1,
-      "norm_label": "getposts",
-      "id": "controllers_community_controller_getposts"
-    },
-    {
-      "label": "getPostById",
-      "file_type": "code",
-      "source_file": "server/controllers/community.controller.js",
-      "source_location": "L46",
-      "community": 1,
-      "norm_label": "getpostbyid",
-      "id": "controllers_community_controller_getpostbyid"
-    },
-    {
-      "label": "toggleLike",
-      "file_type": "code",
-      "source_file": "server/controllers/community.controller.js",
-      "source_location": "L52",
-      "community": 1,
-      "norm_label": "togglelike",
-      "id": "controllers_community_controller_togglelike"
-    },
-    {
-      "label": "addComment",
-      "file_type": "code",
-      "source_file": "server/controllers/community.controller.js",
-      "source_location": "L63",
-      "community": 1,
-      "norm_label": "addcomment",
-      "id": "controllers_community_controller_addcomment"
-    },
-    {
-      "label": "getComments",
-      "file_type": "code",
-      "source_file": "server/controllers/community.controller.js",
-      "source_location": "L73",
-      "community": 1,
-      "norm_label": "getcomments",
-      "id": "controllers_community_controller_getcomments"
-    },
-    {
-      "label": "deletePost",
-      "file_type": "code",
-      "source_file": "server/controllers/community.controller.js",
-      "source_location": "L78",
-      "community": 1,
-      "norm_label": "deletepost",
-      "id": "controllers_community_controller_deletepost"
-    },
-    {
       "label": "notification.controller.js",
       "file_type": "code",
       "source_file": "server/controllers/notification.controller.js",
@@ -2807,7 +3077,7 @@
       "file_type": "code",
       "source_file": "server/models/Comment.js",
       "source_location": "L1",
-      "community": 1,
+      "community": 15,
       "norm_label": "comment.js",
       "id": "server_models_comment_js"
     },
@@ -2816,7 +3086,7 @@
       "file_type": "code",
       "source_file": "server/models/Comment.js",
       "source_location": "L7",
-      "community": 1,
+      "community": 15,
       "norm_label": "commentschema",
       "id": "models_comment_commentschema"
     },
@@ -2825,7 +3095,7 @@
       "file_type": "code",
       "source_file": "server/models/Comment.js",
       "source_location": "L52",
-      "community": 1,
+      "community": 15,
       "norm_label": "comment",
       "id": "models_comment_comment"
     },
@@ -2834,7 +3104,7 @@
       "file_type": "code",
       "source_file": "server/models/CommunityPost.js",
       "source_location": "L1",
-      "community": 1,
+      "community": 15,
       "norm_label": "communitypost.js",
       "id": "server_models_communitypost_js"
     },
@@ -2843,7 +3113,7 @@
       "file_type": "code",
       "source_file": "server/models/CommunityPost.js",
       "source_location": "L7",
-      "community": 1,
+      "community": 15,
       "norm_label": "communitypostschema",
       "id": "models_communitypost_communitypostschema"
     },
@@ -2852,7 +3122,7 @@
       "file_type": "code",
       "source_file": "server/models/CommunityPost.js",
       "source_location": "L77",
-      "community": 1,
+      "community": 15,
       "norm_label": "communitypost",
       "id": "models_communitypost_communitypost"
     },
@@ -2909,24 +3179,6 @@
       "community": 1,
       "norm_label": "plantscan",
       "id": "models_plantscan_plantscan"
-    },
-    {
-      "label": "community.routes.js",
-      "file_type": "code",
-      "source_file": "server/routes/community.routes.js",
-      "source_location": "L1",
-      "community": 1,
-      "norm_label": "community.routes.js",
-      "id": "server_routes_community_routes_js"
-    },
-    {
-      "label": "router",
-      "file_type": "code",
-      "source_file": "server/routes/community.routes.js",
-      "source_location": "L7",
-      "community": 1,
-      "norm_label": "router",
-      "id": "routes_community_routes_router"
     },
     {
       "label": "notification.routes.js",
@@ -3285,12 +3537,916 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
+      "source_file": "client/src/components/community/CommentSection.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "client_src_components_community_commentsection_jsx",
+      "target": "client_src_services_services_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/community/CommentSection.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "client_src_components_community_commentsection_jsx",
+      "target": "services_services_communityservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/community/CommentSection.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "client_src_components_community_commentsection_jsx",
+      "target": "client_src_utils_formattimeago_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/community/CommentSection.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "client_src_components_community_commentsection_jsx",
+      "target": "utils_formattimeago_formattimeago",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/community/CommentSection.jsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "client_src_components_community_commentsection_jsx",
+      "target": "community_commentsection_commentitem",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/community/CommentSection.jsx",
+      "source_location": "L238",
+      "weight": 1.0,
+      "source": "client_src_components_community_commentsection_jsx",
+      "target": "community_commentsection_commentsection",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/community/PostCard.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "client_src_components_community_postcard_jsx",
+      "target": "client_src_components_community_commentsection_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "client/src/components/community/CommentSection.jsx",
+      "source_location": "L125",
+      "weight": 1.0,
+      "source": "community_commentsection_commentitem",
+      "target": "utils_formattimeago_formattimeago"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/community/CreatePostModal.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "client_src_components_community_createpostmodal_jsx",
+      "target": "client_src_services_services_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/community/CreatePostModal.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "client_src_components_community_createpostmodal_jsx",
+      "target": "services_services_communityservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/community/CreatePostModal.jsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "client_src_components_community_createpostmodal_jsx",
+      "target": "community_createpostmodal_createpostmodal",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/dashboard/CommunityHubContent.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "client_src_components_dashboard_communityhubcontent_jsx",
+      "target": "client_src_components_community_createpostmodal_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/community/PostCard.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "client_src_components_community_postcard_jsx",
+      "target": "client_src_services_services_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/community/PostCard.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "client_src_components_community_postcard_jsx",
+      "target": "services_services_communityservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/community/PostCard.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "client_src_components_community_postcard_jsx",
+      "target": "community_postcard_rankcolors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/community/PostCard.jsx",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "client_src_components_community_postcard_jsx",
+      "target": "community_postcard_category_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/community/PostCard.jsx",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "client_src_components_community_postcard_jsx",
+      "target": "community_postcard_postcard",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/dashboard/CommunityHubContent.jsx",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "client_src_components_dashboard_communityhubcontent_jsx",
+      "target": "client_src_components_community_postcard_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/community/TopContributors.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "client_src_components_community_topcontributors_jsx",
+      "target": "community_topcontributors_contributors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/community/TopContributors.jsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "client_src_components_community_topcontributors_jsx",
+      "target": "community_topcontributors_topcontributors",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/dashboard/CommunityHubContent.jsx",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "client_src_components_dashboard_communityhubcontent_jsx",
+      "target": "client_src_components_community_topcontributors_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/dashboard/CommunityHubContent.jsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "client_src_components_dashboard_communityhubcontent_jsx",
+      "target": "client_src_services_services_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/dashboard/CommunityHubContent.jsx",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "client_src_components_dashboard_communityhubcontent_jsx",
+      "target": "services_services_communityservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/dashboard/CommunityHubContent.jsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "client_src_components_dashboard_communityhubcontent_jsx",
+      "target": "context_authcontext_useauth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/dashboard/CommunityHubContent.jsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "client_src_components_dashboard_communityhubcontent_jsx",
+      "target": "client_src_utils_transformpost_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/dashboard/CommunityHubContent.jsx",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "client_src_components_dashboard_communityhubcontent_jsx",
+      "target": "utils_transformpost_transformpost",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/dashboard/CommunityHubContent.jsx",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "client_src_components_dashboard_communityhubcontent_jsx",
+      "target": "dashboard_communityhubcontent_tab_category_map",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/dashboard/CommunityHubContent.jsx",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "client_src_components_dashboard_communityhubcontent_jsx",
+      "target": "dashboard_communityhubcontent_communityhubcontent",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/dashboard/DashboardShell.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "client_src_components_dashboard_dashboardshell_jsx",
+      "target": "context_authcontext_useauth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/dashboard/DashboardShell.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "client_src_components_dashboard_dashboardshell_jsx",
+      "target": "client_src_components_dashboard_mobiledrawer_jsx",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/dashboard/DashboardShell.jsx",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "client_src_components_dashboard_dashboardshell_jsx",
+      "target": "dashboard_dashboardshell_dashboardshell",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/dashboard/MobileDrawer.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "client_src_components_dashboard_mobiledrawer_jsx",
+      "target": "context_authcontext_useauth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/dashboard/MobileDrawer.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "client_src_components_dashboard_mobiledrawer_jsx",
+      "target": "dashboard_mobiledrawer_mobiledrawer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/profile/TabSettings.jsx",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "client_src_components_profile_tabsettings_jsx",
+      "target": "context_authcontext_useauth",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/profile/TabSettings.jsx",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "client_src_components_profile_tabsettings_jsx",
+      "target": "context_themecontext_usetheme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/profile/TabSettings.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "client_src_components_profile_tabsettings_jsx",
+      "target": "client_src_services_services_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/profile/TabSettings.jsx",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "client_src_components_profile_tabsettings_jsx",
+      "target": "services_services_userservice",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/components/profile/TabSettings.jsx",
+      "source_location": "L7",
+      "weight": 1.0,
+      "source": "client_src_components_profile_tabsettings_jsx",
+      "target": "profile_tabsettings_tabsettings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/services/services.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_src_services_services_js",
+      "target": "services_services_authservice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/services/services.js",
+      "source_location": "L12",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_src_services_services_js",
+      "target": "services_services_userservice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/services/services.js",
+      "source_location": "L19",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_src_services_services_js",
+      "target": "services_services_scanservice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/services/services.js",
+      "source_location": "L26",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_src_services_services_js",
+      "target": "services_services_communityservice"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/services/services.js",
+      "source_location": "L36",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_src_services_services_js",
+      "target": "services_services_notificationservice"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/services/services.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "client_src_services_services_js",
+      "target": "client_src_services_api_js"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/utils/formatTimeAgo.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "client_src_utils_formattimeago_js",
+      "target": "utils_formattimeago_formattimeago",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/utils/transformPost.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "client_src_utils_transformpost_js",
+      "target": "client_src_utils_formattimeago_js",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/utils/transformPost.js",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "client_src_utils_transformpost_js",
+      "target": "utils_formattimeago_formattimeago",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "client/src/utils/transformPost.js",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "utils_transformpost_transformpost",
+      "target": "utils_formattimeago_formattimeago"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "client/src/utils/transformPost.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "client_src_utils_transformpost_js",
+      "target": "utils_transformpost_transformpost",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_controllers_community_controller_js",
+      "target": "services_cloudinary_service_uploadmultipletocloudinary"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L11",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_controllers_community_controller_js",
+      "target": "controllers_community_controller_createpost"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L27",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_controllers_community_controller_js",
+      "target": "controllers_community_controller_getposts"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L46",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_controllers_community_controller_js",
+      "target": "controllers_community_controller_getpostbyid"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L52",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_controllers_community_controller_js",
+      "target": "controllers_community_controller_togglelike"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L73",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_controllers_community_controller_js",
+      "target": "controllers_community_controller_getcomments"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L85",
+      "weight": 1.0,
+      "source": "server_controllers_community_controller_js",
+      "target": "controllers_community_controller_getreplies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L63",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_controllers_community_controller_js",
+      "target": "controllers_community_controller_addcomment"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L108",
+      "weight": 1.0,
+      "source": "server_controllers_community_controller_js",
+      "target": "controllers_community_controller_togglecommentlike",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L78",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_controllers_community_controller_js",
+      "target": "controllers_community_controller_deletepost"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L128",
+      "weight": 1.0,
+      "source": "server_controllers_community_controller_js",
+      "target": "controllers_community_controller_deletecomment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/community.routes.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_community_routes_js",
+      "target": "server_controllers_community_controller_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_controllers_community_controller_js",
+      "target": "server_models_communitypost_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L6",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_controllers_community_controller_js",
+      "target": "server_models_comment_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_controllers_community_controller_js",
+      "target": "server_utils_apierror_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L8",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_controllers_community_controller_js",
+      "target": "server_utils_asynchandler_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/controllers/community.controller.js",
+      "source_location": "L9",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_controllers_community_controller_js",
+      "target": "server_services_cloudinary_service_js"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/community.routes.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_community_routes_js",
+      "target": "controllers_community_controller_createpost"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/community.routes.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_community_routes_js",
+      "target": "controllers_community_controller_getposts"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/community.routes.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_community_routes_js",
+      "target": "controllers_community_controller_getpostbyid"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/community.routes.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_community_routes_js",
+      "target": "controllers_community_controller_togglelike"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/community.routes.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_community_routes_js",
+      "target": "controllers_community_controller_getcomments"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/community.routes.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "server_routes_community_routes_js",
+      "target": "controllers_community_controller_getreplies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/community.routes.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_community_routes_js",
+      "target": "controllers_community_controller_addcomment"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/community.routes.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "server_routes_community_routes_js",
+      "target": "controllers_community_controller_togglecommentlike",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/community.routes.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_community_routes_js",
+      "target": "controllers_community_controller_deletepost"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/community.routes.js",
+      "source_location": "L2",
+      "weight": 1.0,
+      "source": "server_routes_community_routes_js",
+      "target": "controllers_community_controller_deletecomment",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/community.routes.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_community_routes_js",
+      "target": "middleware_auth_middleware_protect"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/community.routes.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_community_routes_js",
+      "target": "middleware_upload_middleware_uploadmultiple"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/community.routes.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_community_routes_js",
+      "target": "middleware_validate_middleware_validate"
+    },
+    {
+      "relation": "imports",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/community.routes.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_community_routes_js",
+      "target": "middleware_validate_middleware_postvalidation"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/community.routes.js",
+      "source_location": "L7",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_community_routes_js",
+      "target": "routes_community_routes_router"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/app.js",
+      "source_location": "L15",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_app_js",
+      "target": "server_routes_community_routes_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/community.routes.js",
+      "source_location": "L3",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_community_routes_js",
+      "target": "server_middleware_auth_middleware_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/community.routes.js",
+      "source_location": "L4",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_community_routes_js",
+      "target": "server_middleware_upload_middleware_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "server/routes/community.routes.js",
+      "source_location": "L5",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "server_routes_community_routes_js",
+      "target": "server_middleware_validate_middleware_js"
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
       "source_file": "App.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_jsx",
-      "target": "components_common_scrolltotop_jsx",
-      "confidence_score": 1.0
+      "target": "components_common_scrolltotop_jsx"
     },
     {
       "relation": "imports_from",
@@ -3299,9 +4455,9 @@
       "source_file": "App.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_jsx",
-      "target": "components_layout_publiclayout_jsx",
-      "confidence_score": 1.0
+      "target": "components_layout_publiclayout_jsx"
     },
     {
       "relation": "imports_from",
@@ -3310,9 +4466,9 @@
       "source_file": "App.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_jsx",
-      "target": "pages_home_jsx",
-      "confidence_score": 1.0
+      "target": "pages_home_jsx"
     },
     {
       "relation": "imports_from",
@@ -3321,9 +4477,9 @@
       "source_file": "App.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_jsx",
-      "target": "pages_about_jsx",
-      "confidence_score": 1.0
+      "target": "pages_about_jsx"
     },
     {
       "relation": "imports_from",
@@ -3332,9 +4488,9 @@
       "source_file": "App.jsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_jsx",
-      "target": "pages_features_jsx",
-      "confidence_score": 1.0
+      "target": "pages_features_jsx"
     },
     {
       "relation": "imports_from",
@@ -3343,9 +4499,9 @@
       "source_file": "App.jsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_jsx",
-      "target": "pages_contact_jsx",
-      "confidence_score": 1.0
+      "target": "pages_contact_jsx"
     },
     {
       "relation": "imports_from",
@@ -3354,9 +4510,9 @@
       "source_file": "App.jsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_jsx",
-      "target": "pages_community_jsx",
-      "confidence_score": 1.0
+      "target": "pages_community_jsx"
     },
     {
       "relation": "imports_from",
@@ -3365,9 +4521,9 @@
       "source_file": "App.jsx",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_jsx",
-      "target": "pages_login_jsx",
-      "confidence_score": 1.0
+      "target": "pages_login_jsx"
     },
     {
       "relation": "imports_from",
@@ -3376,9 +4532,9 @@
       "source_file": "App.jsx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_jsx",
-      "target": "pages_signup_jsx",
-      "confidence_score": 1.0
+      "target": "pages_signup_jsx"
     },
     {
       "relation": "contains",
@@ -3386,9 +4542,9 @@
       "source_file": "App.jsx",
       "source_location": "L16",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "app_jsx",
-      "target": "src_app_app",
-      "confidence_score": 1.0
+      "target": "src_app_app"
     },
     {
       "relation": "contains",
@@ -3407,9 +4563,9 @@
       "source_file": "components/common/Button.jsx",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_common_button_jsx",
-      "target": "utils_helpers_cn",
-      "confidence_score": 1.0
+      "target": "utils_helpers_cn"
     },
     {
       "relation": "contains",
@@ -3417,9 +4573,9 @@
       "source_file": "components/common/Button.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_common_button_jsx",
-      "target": "common_button_variants",
-      "confidence_score": 1.0
+      "target": "common_button_variants"
     },
     {
       "relation": "contains",
@@ -3427,9 +4583,9 @@
       "source_file": "components/common/Button.jsx",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_common_button_jsx",
-      "target": "common_button_sizes",
-      "confidence_score": 1.0
+      "target": "common_button_sizes"
     },
     {
       "relation": "contains",
@@ -3437,9 +4593,9 @@
       "source_file": "components/common/Button.jsx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_common_button_jsx",
-      "target": "common_button_button",
-      "confidence_score": 1.0
+      "target": "common_button_button"
     },
     {
       "relation": "imports_from",
@@ -3448,9 +4604,9 @@
       "source_file": "pages/Contact.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_contact_jsx",
-      "target": "components_common_button_jsx",
-      "confidence_score": 1.0
+      "target": "components_common_button_jsx"
     },
     {
       "relation": "imports_from",
@@ -3459,9 +4615,9 @@
       "source_file": "pages/Login.jsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_login_jsx",
-      "target": "components_common_button_jsx",
-      "confidence_score": 1.0
+      "target": "components_common_button_jsx"
     },
     {
       "relation": "imports_from",
@@ -3470,9 +4626,9 @@
       "source_file": "pages/Signup.jsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_signup_jsx",
-      "target": "components_common_button_jsx",
-      "confidence_score": 1.0
+      "target": "components_common_button_jsx"
     },
     {
       "relation": "contains",
@@ -3522,9 +4678,9 @@
       "source_file": "components/common/Card.jsx",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_common_card_jsx",
-      "target": "utils_helpers_cn",
-      "confidence_score": 1.0
+      "target": "utils_helpers_cn"
     },
     {
       "relation": "contains",
@@ -3532,9 +4688,9 @@
       "source_file": "components/common/Card.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_common_card_jsx",
-      "target": "common_card_card",
-      "confidence_score": 1.0
+      "target": "common_card_card"
     },
     {
       "relation": "contains",
@@ -3564,9 +4720,9 @@
       "source_file": "components/common/Input.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_common_input_jsx",
-      "target": "utils_helpers_cn",
-      "confidence_score": 1.0
+      "target": "utils_helpers_cn"
     },
     {
       "relation": "contains",
@@ -3574,9 +4730,9 @@
       "source_file": "components/common/Input.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_common_input_jsx",
-      "target": "common_input_input",
-      "confidence_score": 1.0
+      "target": "common_input_input"
     },
     {
       "relation": "imports_from",
@@ -3585,9 +4741,9 @@
       "source_file": "pages/Contact.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_contact_jsx",
-      "target": "components_common_input_jsx",
-      "confidence_score": 1.0
+      "target": "components_common_input_jsx"
     },
     {
       "relation": "imports_from",
@@ -3596,9 +4752,9 @@
       "source_file": "pages/Login.jsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_login_jsx",
-      "target": "components_common_input_jsx",
-      "confidence_score": 1.0
+      "target": "components_common_input_jsx"
     },
     {
       "relation": "imports_from",
@@ -3607,9 +4763,9 @@
       "source_file": "pages/Signup.jsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_signup_jsx",
-      "target": "components_common_input_jsx",
-      "confidence_score": 1.0
+      "target": "components_common_input_jsx"
     },
     {
       "relation": "contains",
@@ -3638,9 +4794,9 @@
       "source_file": "components/common/Logo.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_common_logo_jsx",
-      "target": "common_logo_logo",
-      "confidence_score": 1.0
+      "target": "common_logo_logo"
     },
     {
       "relation": "imports_from",
@@ -3649,9 +4805,9 @@
       "source_file": "components/layout/Footer.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout_footer_jsx",
-      "target": "components_common_logo_jsx",
-      "confidence_score": 1.0
+      "target": "components_common_logo_jsx"
     },
     {
       "relation": "imports_from",
@@ -3660,9 +4816,9 @@
       "source_file": "components/layout/Navbar.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout_navbar_jsx",
-      "target": "components_common_logo_jsx",
-      "confidence_score": 1.0
+      "target": "components_common_logo_jsx"
     },
     {
       "relation": "imports_from",
@@ -3671,9 +4827,9 @@
       "source_file": "pages/Signup.jsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_signup_jsx",
-      "target": "components_common_logo_jsx",
-      "confidence_score": 1.0
+      "target": "components_common_logo_jsx"
     },
     {
       "relation": "contains",
@@ -3691,9 +4847,9 @@
       "source_file": "components/common/ScrollToTop.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_common_scrolltotop_jsx",
-      "target": "common_scrolltotop_scrolltotop",
-      "confidence_score": 1.0
+      "target": "common_scrolltotop_scrolltotop"
     },
     {
       "relation": "imports",
@@ -3702,9 +4858,9 @@
       "source_file": "components/common/ThemeToggle.jsx",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_common_themetoggle_jsx",
-      "target": "context_themecontext_usetheme",
-      "confidence_score": 1.0
+      "target": "context_themecontext_usetheme"
     },
     {
       "relation": "contains",
@@ -3712,9 +4868,9 @@
       "source_file": "components/common/ThemeToggle.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_common_themetoggle_jsx",
-      "target": "common_themetoggle_themetoggle",
-      "confidence_score": 1.0
+      "target": "common_themetoggle_themetoggle"
     },
     {
       "relation": "calls",
@@ -3743,9 +4899,9 @@
       "source_file": "components/layout/Footer.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout_footer_jsx",
-      "target": "layout_footer_footerlinks",
-      "confidence_score": 1.0
+      "target": "layout_footer_footerlinks"
     },
     {
       "relation": "contains",
@@ -3753,9 +4909,9 @@
       "source_file": "components/layout/Footer.jsx",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout_footer_jsx",
-      "target": "layout_footer_footer",
-      "confidence_score": 1.0
+      "target": "layout_footer_footer"
     },
     {
       "relation": "imports_from",
@@ -3764,9 +4920,9 @@
       "source_file": "components/layout/PublicLayout.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout_publiclayout_jsx",
-      "target": "components_layout_footer_jsx",
-      "confidence_score": 1.0
+      "target": "components_layout_footer_jsx"
     },
     {
       "relation": "contains",
@@ -3795,9 +4951,9 @@
       "source_file": "components/layout/Navbar.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout_navbar_jsx",
-      "target": "context_authcontext_useauth",
-      "confidence_score": 1.0
+      "target": "context_authcontext_useauth"
     },
     {
       "relation": "contains",
@@ -3805,9 +4961,9 @@
       "source_file": "components/layout/Navbar.jsx",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout_navbar_jsx",
-      "target": "layout_navbar_navlinks",
-      "confidence_score": 1.0
+      "target": "layout_navbar_navlinks"
     },
     {
       "relation": "contains",
@@ -3815,9 +4971,9 @@
       "source_file": "components/layout/Navbar.jsx",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout_navbar_jsx",
-      "target": "layout_navbar_navbar",
-      "confidence_score": 1.0
+      "target": "layout_navbar_navbar"
     },
     {
       "relation": "imports_from",
@@ -3826,9 +4982,9 @@
       "source_file": "components/layout/PublicLayout.jsx",
       "source_location": "L2",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout_publiclayout_jsx",
-      "target": "components_layout_navbar_jsx",
-      "confidence_score": 1.0
+      "target": "components_layout_navbar_jsx"
     },
     {
       "relation": "calls",
@@ -3857,9 +5013,9 @@
       "source_file": "components/layout/PublicLayout.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "components_layout_publiclayout_jsx",
-      "target": "layout_publiclayout_publiclayout",
-      "confidence_score": 1.0
+      "target": "layout_publiclayout_publiclayout"
     },
     {
       "relation": "contains",
@@ -3877,9 +5033,9 @@
       "source_file": "pages/About.jsx",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_about_jsx",
-      "target": "pages_about_fadeup",
-      "confidence_score": 1.0
+      "target": "pages_about_fadeup"
     },
     {
       "relation": "contains",
@@ -3887,9 +5043,9 @@
       "source_file": "pages/About.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_about_jsx",
-      "target": "pages_about_values",
-      "confidence_score": 1.0
+      "target": "pages_about_values"
     },
     {
       "relation": "contains",
@@ -3897,9 +5053,9 @@
       "source_file": "pages/About.jsx",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_about_jsx",
-      "target": "pages_about_timeline",
-      "confidence_score": 1.0
+      "target": "pages_about_timeline"
     },
     {
       "relation": "contains",
@@ -3907,9 +5063,9 @@
       "source_file": "pages/About.jsx",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_about_jsx",
-      "target": "pages_about_team",
-      "confidence_score": 1.0
+      "target": "pages_about_team"
     },
     {
       "relation": "contains",
@@ -3917,9 +5073,9 @@
       "source_file": "pages/About.jsx",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_about_jsx",
-      "target": "pages_about_about",
-      "confidence_score": 1.0
+      "target": "pages_about_about"
     },
     {
       "relation": "contains",
@@ -3967,9 +5123,9 @@
       "source_file": "pages/Community.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_community_jsx",
-      "target": "pages_community_community",
-      "confidence_score": 1.0
+      "target": "pages_community_community"
     },
     {
       "relation": "imports",
@@ -3978,9 +5134,9 @@
       "source_file": "pages/Contact.jsx",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_contact_jsx",
-      "target": "context_toastcontext_usetoast",
-      "confidence_score": 1.0
+      "target": "context_toastcontext_usetoast"
     },
     {
       "relation": "contains",
@@ -3988,9 +5144,9 @@
       "source_file": "pages/Contact.jsx",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_contact_jsx",
-      "target": "pages_contact_fadeup",
-      "confidence_score": 1.0
+      "target": "pages_contact_fadeup"
     },
     {
       "relation": "contains",
@@ -3998,9 +5154,9 @@
       "source_file": "pages/Contact.jsx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_contact_jsx",
-      "target": "pages_contact_contactinfo",
-      "confidence_score": 1.0
+      "target": "pages_contact_contactinfo"
     },
     {
       "relation": "contains",
@@ -4008,9 +5164,9 @@
       "source_file": "pages/Contact.jsx",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_contact_jsx",
-      "target": "pages_contact_contact",
-      "confidence_score": 1.0
+      "target": "pages_contact_contact"
     },
     {
       "relation": "contains",
@@ -4059,9 +5215,9 @@
       "source_file": "pages/Features.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_features_jsx",
-      "target": "pages_features_fadeup",
-      "confidence_score": 1.0
+      "target": "pages_features_fadeup"
     },
     {
       "relation": "contains",
@@ -4069,9 +5225,9 @@
       "source_file": "pages/Features.jsx",
       "source_location": "L25",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_features_jsx",
-      "target": "pages_features_features",
-      "confidence_score": 1.0
+      "target": "pages_features_features"
     },
     {
       "relation": "contains",
@@ -4079,9 +5235,9 @@
       "source_file": "pages/Features.jsx",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_features_jsx",
-      "target": "pages_features_workflow",
-      "confidence_score": 1.0
+      "target": "pages_features_workflow"
     },
     {
       "relation": "contains",
@@ -4109,9 +5265,9 @@
       "source_file": "pages/Home.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_home_jsx",
-      "target": "pages_home_home",
-      "confidence_score": 1.0
+      "target": "pages_home_home"
     },
     {
       "relation": "contains",
@@ -4130,9 +5286,9 @@
       "source_file": "pages/Login.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_login_jsx",
-      "target": "context_authcontext_useauth",
-      "confidence_score": 1.0
+      "target": "context_authcontext_useauth"
     },
     {
       "relation": "imports",
@@ -4141,9 +5297,9 @@
       "source_file": "pages/Login.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_login_jsx",
-      "target": "context_toastcontext_usetoast",
-      "confidence_score": 1.0
+      "target": "context_toastcontext_usetoast"
     },
     {
       "relation": "contains",
@@ -4151,9 +5307,9 @@
       "source_file": "pages/Login.jsx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_login_jsx",
-      "target": "pages_login_login",
-      "confidence_score": 1.0
+      "target": "pages_login_login"
     },
     {
       "relation": "calls",
@@ -4194,9 +5350,9 @@
       "source_file": "pages/Signup.jsx",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_signup_jsx",
-      "target": "context_authcontext_useauth",
-      "confidence_score": 1.0
+      "target": "context_authcontext_useauth"
     },
     {
       "relation": "imports",
@@ -4205,9 +5361,9 @@
       "source_file": "pages/Signup.jsx",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_signup_jsx",
-      "target": "context_toastcontext_usetoast",
-      "confidence_score": 1.0
+      "target": "context_toastcontext_usetoast"
     },
     {
       "relation": "contains",
@@ -4215,9 +5371,9 @@
       "source_file": "pages/Signup.jsx",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "pages_signup_jsx",
-      "target": "pages_signup_signup",
-      "confidence_score": 1.0
+      "target": "pages_signup_signup"
     },
     {
       "relation": "calls",
@@ -6836,67 +7992,6 @@
       "target": "services_api_token"
     },
     {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "client/src/services/services.js",
-      "source_location": "L1",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_src_services_services_js",
-      "target": "client_src_services_api_js"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/src/services/services.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_src_services_services_js",
-      "target": "services_services_authservice"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/src/services/services.js",
-      "source_location": "L12",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_src_services_services_js",
-      "target": "services_services_userservice"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/src/services/services.js",
-      "source_location": "L19",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_src_services_services_js",
-      "target": "services_services_scanservice"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/src/services/services.js",
-      "source_location": "L26",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_src_services_services_js",
-      "target": "services_services_communityservice"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "client/src/services/services.js",
-      "source_location": "L36",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "client_src_services_services_js",
-      "target": "services_services_notificationservice"
-    },
-    {
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "client/src/utils/helpers.js",
@@ -6978,17 +8073,6 @@
       "confidence_score": 1.0,
       "source": "server_app_js",
       "target": "server_routes_scan_routes_js"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/app.js",
-      "source_location": "L15",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_app_js",
-      "target": "server_routes_community_routes_js"
     },
     {
       "relation": "imports_from",
@@ -7417,230 +8501,6 @@
       "confidence_score": 1.0,
       "source": "server_config_env_js",
       "target": "config_env_validateenv"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/controllers/community.controller.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_controllers_community_controller_js",
-      "target": "server_models_communitypost_js"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/controllers/community.controller.js",
-      "source_location": "L6",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_controllers_community_controller_js",
-      "target": "server_models_comment_js"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/controllers/community.controller.js",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_controllers_community_controller_js",
-      "target": "server_utils_apierror_js"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/controllers/community.controller.js",
-      "source_location": "L8",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_controllers_community_controller_js",
-      "target": "server_utils_asynchandler_js"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/controllers/community.controller.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_controllers_community_controller_js",
-      "target": "server_services_cloudinary_service_js"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/controllers/community.controller.js",
-      "source_location": "L9",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_controllers_community_controller_js",
-      "target": "services_cloudinary_service_uploadmultipletocloudinary"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/controllers/community.controller.js",
-      "source_location": "L11",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_controllers_community_controller_js",
-      "target": "controllers_community_controller_createpost"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/controllers/community.controller.js",
-      "source_location": "L27",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_controllers_community_controller_js",
-      "target": "controllers_community_controller_getposts"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/controllers/community.controller.js",
-      "source_location": "L46",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_controllers_community_controller_js",
-      "target": "controllers_community_controller_getpostbyid"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/controllers/community.controller.js",
-      "source_location": "L52",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_controllers_community_controller_js",
-      "target": "controllers_community_controller_togglelike"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/controllers/community.controller.js",
-      "source_location": "L63",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_controllers_community_controller_js",
-      "target": "controllers_community_controller_addcomment"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/controllers/community.controller.js",
-      "source_location": "L73",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_controllers_community_controller_js",
-      "target": "controllers_community_controller_getcomments"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/controllers/community.controller.js",
-      "source_location": "L78",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_controllers_community_controller_js",
-      "target": "controllers_community_controller_deletepost"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/community.routes.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_community_routes_js",
-      "target": "server_controllers_community_controller_js"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/community.routes.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_community_routes_js",
-      "target": "controllers_community_controller_createpost"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/community.routes.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_community_routes_js",
-      "target": "controllers_community_controller_getposts"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/community.routes.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_community_routes_js",
-      "target": "controllers_community_controller_getpostbyid"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/community.routes.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_community_routes_js",
-      "target": "controllers_community_controller_togglelike"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/community.routes.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_community_routes_js",
-      "target": "controllers_community_controller_addcomment"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/community.routes.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_community_routes_js",
-      "target": "controllers_community_controller_getcomments"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/community.routes.js",
-      "source_location": "L2",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_community_routes_js",
-      "target": "controllers_community_controller_deletepost"
     },
     {
       "relation": "imports_from",
@@ -8137,17 +8997,6 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "server/routes/community.routes.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_community_routes_js",
-      "target": "server_middleware_auth_middleware_js"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "server/routes/notification.routes.js",
       "source_location": "L3",
       "weight": 1.0,
@@ -8176,17 +9025,6 @@
       "confidence_score": 1.0,
       "source": "server_routes_user_routes_js",
       "target": "server_middleware_auth_middleware_js"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/community.routes.js",
-      "source_location": "L3",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_community_routes_js",
-      "target": "middleware_auth_middleware_protect"
     },
     {
       "relation": "imports",
@@ -8318,17 +9156,6 @@
       "relation": "imports_from",
       "context": "import",
       "confidence": "EXTRACTED",
-      "source_file": "server/routes/community.routes.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_community_routes_js",
-      "target": "server_middleware_upload_middleware_js"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
       "source_file": "server/routes/scan.routes.js",
       "source_location": "L4",
       "weight": 1.0,
@@ -8368,17 +9195,6 @@
       "confidence_score": 1.0,
       "source": "server_routes_user_routes_js",
       "target": "middleware_upload_middleware_uploadsingle"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/community.routes.js",
-      "source_location": "L4",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_community_routes_js",
-      "target": "middleware_upload_middleware_uploadmultiple"
     },
     {
       "relation": "imports_from",
@@ -8429,39 +9245,6 @@
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "server_middleware_validate_middleware_js",
-      "target": "middleware_validate_middleware_postvalidation"
-    },
-    {
-      "relation": "imports_from",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/community.routes.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_community_routes_js",
-      "target": "server_middleware_validate_middleware_js"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/community.routes.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_community_routes_js",
-      "target": "middleware_validate_middleware_validate"
-    },
-    {
-      "relation": "imports",
-      "context": "import",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/community.routes.js",
-      "source_location": "L5",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_community_routes_js",
       "target": "middleware_validate_middleware_postvalidation"
     },
     {
@@ -8543,16 +9326,6 @@
       "confidence_score": 1.0,
       "source": "server_models_plantscan_js",
       "target": "models_plantscan_plantscan"
-    },
-    {
-      "relation": "contains",
-      "confidence": "EXTRACTED",
-      "source_file": "server/routes/community.routes.js",
-      "source_location": "L7",
-      "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "server_routes_community_routes_js",
-      "target": "routes_community_routes_router"
     },
     {
       "relation": "contains",
@@ -8879,5 +9652,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "ba68a863e392bd7e24c565caaae3c52a7955f28f"
+  "built_at_commit": "ac1d07b71e8e0f14bb3500abbc7a8076b8fcee5b"
 }

@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getProfile, updateProfile, updateAvatar, changePassword, getUsers } from '../controllers/user.controller.js';
+import { getProfile, updateProfile, updateAvatar, changePassword, getUsers, getUserProfile } from '../controllers/user.controller.js';
 import { protect, authorize } from '../middleware/auth.middleware.js';
 import { uploadSingle } from '../middleware/upload.middleware.js';
 
@@ -7,6 +7,7 @@ const router = Router();
 
 router.use(protect); // All user routes require authentication
 router.get('/profile', getProfile);
+router.get('/:id/profile', getUserProfile);
 router.put('/profile', updateProfile);
 router.put('/avatar', uploadSingle, updateAvatar);
 router.put('/change-password', changePassword);

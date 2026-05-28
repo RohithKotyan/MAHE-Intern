@@ -23,7 +23,7 @@ const CATEGORY_CONFIG = {
   alert:      { label: 'Alert',       color: 'bg-error/10 text-error border-error/20',       icon: 'warning' },
 };
 
-export default function PostCard({ post, currentUserId, onDeleted }) {
+export default function PostCard({ post, currentUserId, onDeleted, onProfileClick }) {
   // Optimistic like state
   const isLikedByMe = post.likes.includes(currentUserId);
   const [optimisticLiked, setOptimisticLiked] = useState(null);
@@ -71,6 +71,12 @@ export default function PostCard({ post, currentUserId, onDeleted }) {
     }
   };
 
+  const handleProfileClick = () => {
+    if (onProfileClick && post.author?.id) {
+      onProfileClick(post.author.id);
+    }
+  };
+
   return (
     <article className={`glass-card rounded-2xl overflow-hidden transition-all duration-300 ${
       isExpert ? 'border-l-[3px] border-l-primary atmospheric-glow' : ''
@@ -79,7 +85,7 @@ export default function PostCard({ post, currentUserId, onDeleted }) {
       <div className="p-5 pb-0">
         <div className="flex items-start justify-between mb-3">
           <div className="flex items-center gap-3">
-            <div className="relative shrink-0">
+            <div className="relative shrink-0 cursor-pointer hover:opacity-80 transition-opacity" onClick={handleProfileClick}>
               <img
                 src={post.author?.avatar}
                 alt={post.author?.name}
@@ -91,7 +97,12 @@ export default function PostCard({ post, currentUserId, onDeleted }) {
             </div>
             <div>
               <div className="flex items-center gap-2 flex-wrap">
-                <span className="text-on-surface font-body-md text-sm font-semibold">{post.author?.name}</span>
+                <span 
+                  className="text-on-surface font-body-md text-sm font-semibold cursor-pointer hover:text-primary transition-colors hover:underline"
+                  onClick={handleProfileClick}
+                >
+                  {post.author?.name}
+                </span>
                 <span className={`px-2 py-0.5 rounded-full text-[9px] font-bold border ${isExpert ? 'bg-primary/10 text-primary border-primary/30' : rankStyle}`}>
                   {isExpert ? '✓ Verified Expert' : post.author?.rank || 'Farmer'}
                 </span>
@@ -201,7 +212,7 @@ export default function PostCard({ post, currentUserId, onDeleted }) {
 
       {/* YouTube-style Comment Section */}
       {showComments && (
-        <CommentSection postId={post.id} currentUserId={currentUserId} />
+        <CommentSection postId={post.id} currentUserId={currentUserId} onProfileClick={onProfileClick} />
       )}
     </article>
   );

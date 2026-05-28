@@ -7,7 +7,7 @@ import ApiError from '../utils/ApiError.js';
 import asyncHandler from '../utils/asyncHandler.js';
 import { uploadToCloudinary, deleteFromCloudinary } from '../services/cloudinary.service.js';
 
-// ─── Get user profile ────────────────────────────────────────────
+// ─── Get user profile (Own) ────────────────────────────────────────────
 // GET /api/users/profile
 export const getProfile = asyncHandler(async (req, res) => {
   const user = await User.findById(req.user.id);
@@ -15,6 +15,26 @@ export const getProfile = asyncHandler(async (req, res) => {
   res.status(200).json({
     success: true,
     data: { user },
+  });
+});
+
+// ─── Get public user profile ────────────────────────────────────────────
+// GET /api/users/:id/profile
+export const getUserProfile = asyncHandler(async (req, res) => {
+  const user = await User.findById(req.params.id).select('name avatar bio location role rank createdAt stats specialization');
+  if (!user) throw ApiError.notFound('User not found');
+  
+  // Also fetch their recent posts
+  const mongoose = await import('mongoose');
+  const CommunityPost = mongoose.model('CommunityPost');
+  const recentPosts = await CommunityPost.find({ author: user._id })
+    .sort('-createdAt')
+    .limit(5)
+    .populate('author', 'name avatar role rank');
+
+  res.status(200).json({
+    success: true,
+    data: { user, recentPosts },
   });
 });
 

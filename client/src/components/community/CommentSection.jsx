@@ -10,7 +10,7 @@ import toast from 'react-hot-toast';
  *        👍 count 👎   Reply   [Delete]
  *        🗨 N replies ▼  (toggle drawer)
  */
-function CommentItem({ comment, postId, currentUserId, onDelete, onReplyAdded, depth = 0 }) {
+function CommentItem({ comment, postId, currentUserId, onDelete, onReplyAdded, depth = 0, onProfileClick }) {
   const [liked, setLiked] = useState(comment.likes?.includes(currentUserId));
   const [likeCount, setLikeCount] = useState(comment.likeCount || 0);
   const [showReplyInput, setShowReplyInput] = useState(false);
@@ -104,20 +104,32 @@ function CommentItem({ comment, postId, currentUserId, onDelete, onReplyAdded, d
     setReplyCount(prev => Math.max(0, prev - 1));
   };
 
+  const handleProfileClick = () => {
+    if (onProfileClick && comment.author?._id) {
+      onProfileClick(comment.author._id);
+    }
+  };
+
   return (
     <div className={`flex gap-3 ${depth > 0 ? 'ml-12 mt-3' : 'mt-5'}`}>
       {/* Avatar */}
       <img
         src={comment.author?.avatar || 'https://www.gravatar.com/avatar/00000000000000000000000000000000?d=mp&f=y'}
         alt={comment.author?.name}
-        className={`rounded-full object-cover shrink-0 ${depth > 0 ? 'w-6 h-6' : 'w-9 h-9'}`}
+        className={`rounded-full object-cover shrink-0 cursor-pointer hover:opacity-80 transition-opacity ${depth > 0 ? 'w-6 h-6' : 'w-9 h-9'}`}
+        onClick={handleProfileClick}
       />
 
       {/* Body */}
       <div className="flex-1 min-w-0">
         {/* Header: @handle · time */}
         <div className="flex items-center gap-1.5 flex-wrap">
-          <span className="text-on-surface text-[13px] font-semibold leading-none">{handle}</span>
+          <span 
+            className="text-on-surface text-[13px] font-semibold leading-none cursor-pointer hover:text-primary transition-colors hover:underline"
+            onClick={handleProfileClick}
+          >
+            {handle}
+          </span>
           {isExpert && (
             <span className="material-symbols-outlined text-primary text-[14px]" style={{ fontVariationSettings: "'FILL' 1" }}>verified</span>
           )}
@@ -222,6 +234,7 @@ function CommentItem({ comment, postId, currentUserId, onDelete, onReplyAdded, d
                 currentUserId={currentUserId}
                 onDelete={handleReplyDelete}
                 depth={1}
+                onProfileClick={onProfileClick}
               />
             ))}
           </div>
@@ -235,7 +248,7 @@ function CommentItem({ comment, postId, currentUserId, onDelete, onReplyAdded, d
  * CommentSection — the full comments area for a post.
  * Includes the top-level input + scrollable comment list.
  */
-export default function CommentSection({ postId, currentUserId }) {
+export default function CommentSection({ postId, currentUserId, onProfileClick }) {
   const [comments, setComments] = useState([]);
   const [loaded, setLoaded] = useState(false);
   const [loading, setLoading] = useState(true);
@@ -348,6 +361,7 @@ export default function CommentSection({ postId, currentUserId }) {
               postId={postId}
               currentUserId={currentUserId}
               onDelete={handleDelete}
+              onProfileClick={onProfileClick}
             />
           ))
         )}

@@ -23,6 +23,7 @@ import NotFound from './pages/NotFound';
 import ProtectedRoute from './components/auth/ProtectedRoute';
 import DashboardShell from './components/dashboard/DashboardShell';
 import ToastContainer from './components/common/Toast';
+import PublicProfile from './pages/PublicProfile';
 
 function App() {
   const location = useLocation();
@@ -54,6 +55,7 @@ function App() {
             <Route path="/dashboard/notifications" element={<NotificationsHub />} />
             <Route path="/dashboard/settings" element={<SettingsHub />} />
             <Route path="/dashboard/chat" element={<AIChatHub />} />
+            <Route path="/dashboard/user/:id" element={<PublicProfile />} />
           </Route>
 
           {/* 404 */}

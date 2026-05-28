@@ -8,6 +8,7 @@ import CreatePostModal from '../community/CreatePostModal';
 import { communityService } from '../../services/services';
 import { useAuth } from '../../context/AuthContext';
 import { transformPost } from '../../utils/transformPost';
+import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
 
 const TAB_CATEGORY_MAP = {
@@ -20,6 +21,7 @@ const TAB_CATEGORY_MAP = {
 
 export default function CommunityHubContent() {
   const { user } = useAuth();
+  const navigate = useNavigate();
   const [activeTab, setActiveTab] = useState('All');
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -68,10 +70,10 @@ export default function CommunityHubContent() {
   };
 
   return (
-    <div className="pt-6 pb-12 px-container-margin max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 lg:gap-8">
+    <div className="w-full pt-6 pb-12 px-container-margin max-w-7xl mx-auto flex flex-col lg:flex-row gap-6 lg:gap-8">
       
       {/* Main Feed Column */}
-      <div className="flex-1 w-full max-w-3xl mx-auto lg:mx-0 flex flex-col gap-6">
+      <div className="flex-1 min-w-0 w-full max-w-3xl mx-auto lg:mx-0 flex flex-col gap-6">
         
         {/* Header / Title (Mobile only) */}
         <div className="lg:hidden mb-2">
@@ -118,13 +120,13 @@ export default function CommunityHubContent() {
         </div>
 
         {/* Post Feed */}
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 min-h-[50vh]">
           {isLoading ? (
-            <div className="flex justify-center p-8">
+            <div className="flex justify-center p-8 w-full h-full items-center min-h-[300px]">
               <div className="w-8 h-8 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
             </div>
           ) : posts.length === 0 ? (
-            <div className="text-center p-8 glass-card rounded-2xl">
+            <div className="text-center p-8 glass-card rounded-2xl w-full min-h-[300px] flex flex-col items-center justify-center">
               <span className="material-symbols-outlined text-4xl text-on-surface-variant/50 mb-3">forum</span>
               <h3 className="font-headline-sm text-on-surface mb-1">
                 {activeTab === 'All' ? 'No posts yet.' : `No ${activeTab.toLowerCase()} yet.`}
@@ -139,6 +141,7 @@ export default function CommunityHubContent() {
                 post={post} 
                 currentUserId={user?._id} 
                 onDeleted={handlePostDeleted} 
+                onProfileClick={(id) => navigate(`/dashboard/user/${id}`)}
               />
             ))
           )}

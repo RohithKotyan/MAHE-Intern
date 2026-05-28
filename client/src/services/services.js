@@ -11,6 +11,7 @@ export const authService = {
 
 export const userService = {
   getProfile: () => api.get('/users/profile'),
+  getUserProfile: (id) => api.get(`/users/${id}/profile`),
   updateProfile: (data) => api.put('/users/profile', data),
   updateAvatar: (formData) => api.put('/users/avatar', formData, { headers: { 'Content-Type': 'multipart/form-data' } }),
   changePassword: (data) => api.put('/users/change-password', data),
