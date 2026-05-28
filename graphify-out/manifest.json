@@ -20,9 +20,9 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\main.jsx": {
-    "mtime": 1778690569.9688306,
-    "ast_hash": "af7070e915db7366eb1eaa4ee791ae4f",
-    "semantic_hash": "af7070e915db7366eb1eaa4ee791ae4f"
+    "mtime": 1779985673.9042118,
+    "ast_hash": "1c89d067e80f52dbca94162703d794a6",
+    "semantic_hash": ""
   },
   "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\analytics\\ActivityHeatmap.jsx": {
     "mtime": 1779441122.750198,
@@ -30,18 +30,18 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\analytics\\ChartsWidgets.jsx": {
-    "mtime": 1779448006.1723251,
-    "ast_hash": "90169571e887e743208f3216b47e4293",
+    "mtime": 1779978236.401616,
+    "ast_hash": "334ba6f9219a81183168dce1f416d730",
     "semantic_hash": ""
   },
   "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\analytics\\MetricsGrid.jsx": {
-    "mtime": 1779441084.0158455,
-    "ast_hash": "77786ced461721b36b4c524d0ca9b359",
+    "mtime": 1779976134.0578215,
+    "ast_hash": "8d382b55e55c15be45763e833c0e013b",
     "semantic_hash": ""
   },
   "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\analytics\\ReportsContent.jsx": {
-    "mtime": 1779558371.5330057,
-    "ast_hash": "bc4a649d209614b4c29d94af5f62e329",
+    "mtime": 1779978264.7308044,
+    "ast_hash": "1ec611f8ca63a8bf8aeb338d12fc6154",
     "semantic_hash": ""
   },
   "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\auth\\ProtectedRoute.jsx": {
@@ -195,7 +195,7 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\dashboard\\DashboardShell.jsx": {
-    "mtime": 1779900435.4925747,
+    "mtime": 1779976097.502241,
     "ast_hash": "5fde2ba0691f4b5b5e234c82b4ed32a0",
     "semantic_hash": ""
   },
@@ -235,13 +235,13 @@
     "semantic_hash": "c259685d24d5882e432ab98481128f05"
   },
   "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\notifications\\NotificationCard.jsx": {
-    "mtime": 1779442503.7811015,
-    "ast_hash": "653ac7b3cc529e5197e18f7bde778a37",
+    "mtime": 1779985714.5607812,
+    "ast_hash": "77e740e8ab8142b4479ef6c2003b9da7",
     "semantic_hash": ""
   },
   "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\notifications\\NotificationsContent.jsx": {
-    "mtime": 1779558385.5229871,
-    "ast_hash": "42b5728c420b7958a54c8fc929d110c2",
+    "mtime": 1779986721.0712702,
+    "ast_hash": "4129693d17250e4fe3bdf4a027fa567c",
     "semantic_hash": ""
   },
   "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\profile\\ProfileContent.jsx": {
@@ -265,8 +265,8 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\profile\\TabOverview.jsx": {
-    "mtime": 1779438212.3413274,
-    "ast_hash": "4d30bdd6bf013567bdb5c578b22e5efc",
+    "mtime": 1779976143.9186747,
+    "ast_hash": "6917922335c509fc21714c1e9afed01b",
     "semantic_hash": ""
   },
   "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\components\\profile\\TabSettings.jsx": {
@@ -282,6 +282,11 @@
   "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\context\\AuthContext.jsx": {
     "mtime": 1779093914.5626905,
     "ast_hash": "73473d9a862f577c38da63b81cc48e42",
+    "semantic_hash": ""
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\context\\NotificationContext.jsx": {
+    "mtime": 1779985660.7794375,
+    "ast_hash": "e9f8b019b68b807ec9384c10b779c343",
     "semantic_hash": ""
   },
   "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\context\\ThemeContext.jsx": {
@@ -390,8 +395,8 @@
     "semantic_hash": "e72ce319efeb78dd7f1a82e464de7118"
   },
   "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\services\\services.js": {
-    "mtime": 1779950843.931987,
-    "ast_hash": "48f826a646f15b441bbc4923747a8587",
+    "mtime": 1779985635.7090309,
+    "ast_hash": "d53f2d461e8e4ed5a38603cec51b9b75",
     "semantic_hash": ""
   },
   "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\client\\src\\utils\\formatTimeAgo.js": {
@@ -445,14 +450,14 @@
     "semantic_hash": ""
   },
   "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\controllers\\community.controller.js": {
-    "mtime": 1779901883.5574367,
-    "ast_hash": "0030c286b2c60dad1584cfcf102abd0a",
+    "mtime": 1779984260.342496,
+    "ast_hash": "3282bc1a459b2969cd8131663abad20f",
     "semantic_hash": ""
   },
   "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\controllers\\notification.controller.js": {
-    "mtime": 1778656888.0963361,
-    "ast_hash": "4c32b44bc373bb24cef80c3db9740a75",
-    "semantic_hash": "4c32b44bc373bb24cef80c3db9740a75"
+    "mtime": 1779984222.3035433,
+    "ast_hash": "21bd28056091a2657b05881bb900e830",
+    "semantic_hash": ""
   },
   "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\controllers\\scan.controller.js": {
     "mtime": 1778656813.0517845,
@@ -495,9 +500,9 @@
     "semantic_hash": "972930c1ce959270dc4fffbbe72e3682"
   },
   "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\models\\Notification.js": {
-    "mtime": 1778656654.389469,
-    "ast_hash": "69bb5eda6b3c84eb0459e7aa980b31f4",
-    "semantic_hash": "69bb5eda6b3c84eb0459e7aa980b31f4"
+    "mtime": 1779984209.8777928,
+    "ast_hash": "516be10df4fb10050cff5b0f28b8197b",
+    "semantic_hash": ""
   },
   "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\models\\PlantScan.js": {
     "mtime": 1778656643.688547,
@@ -548,6 +553,11 @@
     "mtime": 1778656774.195669,
     "ast_hash": "1b7d28f596a3fcce2f129a755cf88604",
     "semantic_hash": "1b7d28f596a3fcce2f129a755cf88604"
+  },
+  "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\services\\notification.service.js": {
+    "mtime": 1779984230.6134303,
+    "ast_hash": "15fe7994a392430e4df084d657665a23",
+    "semantic_hash": ""
   },
   "C:\\Users\\Rohith\\OneDrive\\Desktop\\MAHE internship - 2\\server\\utils\\ApiError.js": {
     "mtime": 1778656680.7140884,

@@ -38,7 +38,12 @@ export const communityService = {
 };
 
 export const notificationService = {
-  getAll: () => api.get('/notifications'),
-  markRead: (id) => api.put(`/notifications/${id}/read`),
+  // Get notifications with pagination
+  getNotifications: (page = 1, limit = 20) => api.get(`/notifications?page=${page}&limit=${limit}`),
+  // Mark a specific notification as read
+  markAsRead: (id) => api.put(`/notifications/${id}/read`),
+  // Mark all unread notifications as read
   markAllRead: () => api.put('/notifications/read-all'),
+  // Delete (soft-delete) a notification
+  deleteNotification: (id) => api.delete(`/notifications/${id}`)
 };

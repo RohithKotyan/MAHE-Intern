@@ -7,6 +7,7 @@ import Comment from '../models/Comment.js';
 import ApiError from '../utils/ApiError.js';
 import asyncHandler from '../utils/asyncHandler.js';
 import { uploadMultipleToCloudinary } from '../services/cloudinary.service.js';
+import { createNotification } from '../services/notification.service.js';
 
 export const createPost = asyncHandler(async (req, res) => {
   const { title, content, tags, category } = req.body;
@@ -54,8 +55,23 @@ export const toggleLike = asyncHandler(async (req, res) => {
   if (!post) throw ApiError.notFound('Post not found');
   const userId = req.user.id;
   const isLiked = post.likes.includes(userId);
-  if (isLiked) { post.likes.pull(userId); post.likeCount = Math.max(0, post.likeCount - 1); }
-  else { post.likes.push(userId); post.likeCount += 1; }
+  if (isLiked) { 
+    post.likes.pull(userId); 
+    post.likeCount = Math.max(0, post.likeCount - 1); 
+  } else { 
+    post.likes.push(userId); 
+    post.likeCount += 1; 
+
+    // Create Notification
+    await createNotification({
+      recipient: post.author,
+      sender: userId,
+      type: 'like',
+      entityType: 'post',
+      entityId: post._id,
+      groupKey: `like:post:${post._id}`
+    });
+  }
   await post.save();
   res.status(200).json({ success: true, data: { liked: !isLiked, likeCount: post.likeCount } });
 });
@@ -101,6 +117,35 @@ export const addComment = asyncHandler(async (req, res) => {
   post.commentCount += 1;
   await post.save();
   await comment.populate('author', 'name avatar role');
+
+  // Notification Logic
+  if (req.body.parentComment) {
+    // It's a reply, notify the parent comment author
+    const parent = await Comment.findById(req.body.parentComment);
+    if (parent) {
+      await createNotification({
+        recipient: parent.author,
+        sender: req.user.id,
+        type: 'reply',
+        entityType: 'comment',
+        entityId: comment._id,
+        groupKey: `reply:comment:${parent._id}`,
+        metadata: { snippet: req.body.content.substring(0, 50) }
+      });
+    }
+  } else {
+    // Top-level comment, notify the post author
+    await createNotification({
+      recipient: post.author,
+      sender: req.user.id,
+      type: 'comment',
+      entityType: 'post',
+      entityId: comment._id,
+      groupKey: `comment:post:${post._id}`,
+      metadata: { snippet: req.body.content.substring(0, 50) }
+    });
+  }
+
   res.status(201).json({ success: true, data: { comment } });
 });
 
@@ -110,8 +155,23 @@ export const toggleCommentLike = asyncHandler(async (req, res) => {
   if (!comment) throw ApiError.notFound('Comment not found');
   const userId = req.user.id;
   const isLiked = comment.likes.includes(userId);
-  if (isLiked) { comment.likes.pull(userId); comment.likeCount = Math.max(0, comment.likeCount - 1); }
-  else { comment.likes.push(userId); comment.likeCount += 1; }
+  if (isLiked) { 
+    comment.likes.pull(userId); 
+    comment.likeCount = Math.max(0, comment.likeCount - 1); 
+  } else { 
+    comment.likes.push(userId); 
+    comment.likeCount += 1; 
+
+    // Create Notification
+    await createNotification({
+      recipient: comment.author,
+      sender: userId,
+      type: 'like',
+      entityType: 'comment',
+      entityId: comment._id,
+      groupKey: `like:comment:${comment._id}`
+    });
+  }
   await comment.save();
   res.status(200).json({ success: true, data: { liked: !isLiked, likeCount: comment.likeCount } });
 });
