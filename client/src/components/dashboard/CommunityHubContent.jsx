@@ -1,6 +1,5 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import PostCard from '../community/PostCard';
-import ExpertCard from '../community/ExpertCard';
 import TrendingWidget from '../community/TrendingWidget';
 import SeasonalAlerts from '../community/SeasonalAlerts';
 import TopContributors from '../community/TopContributors';
@@ -10,6 +9,7 @@ import { useAuth } from '../../context/AuthContext';
 import { transformPost } from '../../utils/transformPost';
 import { useNavigate } from 'react-router-dom';
 import toast from 'react-hot-toast';
+import { PostSkeleton } from '../common/Skeletons';
 
 const TAB_CATEGORY_MAP = {
   'All': null,
@@ -25,16 +25,13 @@ export default function CommunityHubContent() {
   const [activeTab, setActiveTab] = useState('All');
   const [posts, setPosts] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
-  const [page, setPage] = useState(1);
-  const [hasMore, setHasMore] = useState(true);
   const [showCreateModal, setShowCreateModal] = useState(false);
   const tabs = Object.keys(TAB_CATEGORY_MAP);
 
   useEffect(() => {
     let mounted = true;
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setIsLoading(true);
-    setPage(1);
-    setHasMore(true);
 
     const category = TAB_CATEGORY_MAP[activeTab];
     const params = { page: 1, limit: 10 };
@@ -45,9 +42,8 @@ export default function CommunityHubContent() {
         if (!mounted) return;
         const fetchedPosts = res.data.data.posts.map(transformPost);
         setPosts(fetchedPosts);
-        setHasMore(res.data.data.pagination.page < res.data.data.pagination.pages);
       })
-      .catch((err) => {
+      .catch(() => {
         if (mounted) {
           setPosts([]);
           toast.error('Failed to load posts');
@@ -122,8 +118,10 @@ export default function CommunityHubContent() {
         {/* Post Feed */}
         <div className="flex flex-col gap-5 min-h-[50vh]">
           {isLoading ? (
-            <div className="flex justify-center p-8 w-full h-full items-center min-h-[300px]">
-              <div className="w-8 h-8 border-4 border-primary/30 border-t-primary rounded-full animate-spin"></div>
+            <div className="flex flex-col gap-5 w-full h-full min-h-[300px]">
+              {[1, 2, 3].map(i => (
+                <PostSkeleton key={i} />
+              ))}
             </div>
           ) : posts.length === 0 ? (
             <div className="text-center p-8 glass-card rounded-2xl w-full min-h-[300px] flex flex-col items-center justify-center">

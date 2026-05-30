@@ -29,6 +29,6 @@ yarn-error.log*
 Thumbs.db
 
 # Internal Project Documents
-PROJECT_STATUS.md
-SETUP.md
-TODO.md
+# PROJECT_STATUS.md
+# SETUP.md
+# TODO.md

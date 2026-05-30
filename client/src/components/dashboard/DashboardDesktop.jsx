@@ -1,6 +1,22 @@
-import React from 'react';
+import { useEffect } from 'react';
+import { useCropStats } from '../../services/cropQueries';
+import { DashboardSkeleton } from '../common/Skeletons';
 
 export default function DashboardDesktop() {
+  const { stats, loading, fetchStats } = useCropStats();
+
+  useEffect(() => {
+    fetchStats();
+  }, [fetchStats]);
+
+  if (loading && stats.totalCrops === 0) {
+    return (
+      <div className="pt-24 pb-12 px-container-margin max-w-7xl mx-auto space-y-6 flex flex-col gap-gutter md:gap-container-margin h-full">
+        <DashboardSkeleton />
+      </div>
+    );
+  }
+
   return (
     <div className="pt-24 pb-12 px-container-margin max-w-7xl mx-auto space-y-6 flex flex-col gap-gutter md:gap-container-margin h-full">
           {/* Page Header */}
@@ -33,10 +49,12 @@ export default function DashboardDesktop() {
                     <span className="w-2 h-2 rounded-full bg-primary animate-pulse shadow-[0_0_8px_theme(colors.primary.DEFAULT)]"></span>
                     System Status
                   </h2>
-                  <h3 className="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface">Optimal Health</h3>
+                  <h3 className="font-headline-lg-mobile text-headline-lg-mobile md:font-headline-lg md:text-headline-lg text-on-surface">
+                    {stats.averageHealth >= 80 ? 'Optimal Health' : stats.averageHealth >= 50 ? 'Stable' : 'Needs Attention'}
+                  </h3>
                 </div>
                 <div className="bg-surface-container-high border border-outline-variant rounded-xl p-3 flex flex-col items-center justify-center min-w-[80px]">
-                  <span className="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">98%</span>
+                  <span className="font-headline-lg-mobile text-headline-lg-mobile text-primary font-bold">{stats.averageHealth}%</span>
                   <span className="font-label-sm text-label-sm text-on-surface-variant">VITALITY</span>
                 </div>
               </div>

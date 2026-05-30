@@ -23,7 +23,7 @@ const CATEGORY_CONFIG = {
   alert:      { label: 'Alert',       color: 'bg-error/10 text-error border-error/20',       icon: 'warning' },
 };
 
-export default function PostCard({ post, currentUserId, onDeleted, onProfileClick }) {
+function PostCard({ post, currentUserId, onDeleted, onProfileClick }) {
   // Optimistic like state
   const isLikedByMe = post.likes.includes(currentUserId);
   const [optimisticLiked, setOptimisticLiked] = useState(null);
@@ -208,8 +208,6 @@ export default function PostCard({ post, currentUserId, onDeleted, onProfileClic
           <span className="font-body-sm font-semibold text-[13px] hidden sm:block">Share</span>
         </button>
 
-      </div>
-
       {/* YouTube-style Comment Section */}
       {showComments && (
         <CommentSection postId={post.id} currentUserId={currentUserId} onProfileClick={onProfileClick} />
@@ -217,3 +215,5 @@ export default function PostCard({ post, currentUserId, onDeleted, onProfileClic
     </article>
   );
 }
+
+export default React.memo(PostCard);

@@ -1,7 +1,8 @@
-import React, { useState, useEffect } from 'react';
+import { useState } from 'react';
 import { AnimatePresence, motion } from 'motion/react';
 import NotificationCard from './NotificationCard';
 import { useNotification } from '../../context/NotificationContext';
+import { NotificationSkeleton } from '../common/Skeletons';
 
 export default function NotificationsContent() {
   const { notifications, unreadCount, loading, markAllRead, loadMore, pagination } = useNotification();
@@ -88,7 +89,7 @@ export default function NotificationsContent() {
         <div className="flex flex-col gap-3">
           {loading && notifications.length === 0 ? (
             [...Array(3)].map((_, i) => (
-              <div key={i} className="glass-panel p-4 rounded-2xl border border-outline-variant/30 animate-pulse flex gap-4 h-24"></div>
+              <NotificationSkeleton key={i} />
             ))
           ) : filteredNotifications.length > 0 ? (
             <>
@@ -201,7 +202,7 @@ export default function NotificationsContent() {
           <div className="flex-1 flex flex-col gap-4 min-w-0">
             {loading && notifications.length === 0 ? (
               [...Array(4)].map((_, i) => (
-                <div key={i} className="glass-panel p-6 rounded-3xl border border-outline-variant/30 animate-pulse flex gap-6 h-32"></div>
+                <NotificationSkeleton key={i} />
               ))
             ) : filteredNotifications.length > 0 ? (
               <>
