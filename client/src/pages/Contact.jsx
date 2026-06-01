@@ -34,10 +34,10 @@ export default function Contact() {
         {/* ═══ HERO ═══════════════════════════════════════ */}
         <motion.div {...fadeUp} className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary-500 text-xs font-medium uppercase tracking-widest block mb-4">Contact</span>
-          <h1 className="text-4xl lg:text-6xl font-bold text-[var(--text-primary)] mb-6 leading-tight">
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Get in <span className="text-primary-500">Touch</span>
           </h1>
-          <p className="text-base text-[var(--text-secondary)]">
+          <p className="text-base text-gray-300">
             Have a question, partnership inquiry, or feedback? We'd love to hear from you.
           </p>
         </motion.div>
@@ -61,19 +61,24 @@ export default function Contact() {
                     </span>
                   </div>
                   <div>
-                    <p className="text-xs text-[var(--text-muted)] uppercase tracking-wider">{info.label}</p>
-                    <p className="text-sm font-medium text-[var(--text-primary)]">{info.value}</p>
+                    <p className="text-xs text-gray-400 uppercase tracking-wider">{info.label}</p>
+                    <p className="text-sm font-medium text-white">{info.value}</p>
                   </div>
                 </div>
               </motion.a>
             ))}
 
-            {/* Map Placeholder */}
-            <motion.div {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.4 }} className="glass-card rounded-xl p-6 group">
-              <div className="h-48 bg-eo-surface-container-high rounded-lg flex items-center justify-center group-hover:bg-eo-surface-container-highest transition-colors">
-                <span className="material-symbols-outlined text-4xl text-primary-500 animate-pulse">map</span>
+            {/* Map Image */}
+            <motion.div {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.4 }} className="glass-card rounded-xl overflow-hidden aspect-square md:aspect-video lg:aspect-square relative group">
+              <img 
+                alt="Location Map" 
+                className="w-full h-full object-cover grayscale brightness-50 group-hover:grayscale-0 group-hover:brightness-100 transition-all duration-700" 
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRJh8Rjdpzf6CV7FUvw5iTJ_1iZralKGTjhbJwE_UKUSeg8t9Bb1FbPLI5LYUavy3on1bJVm_xK87Xiny21M3FrUFvB3bfDJoknjlQAPTGEuR-2sOZ4vIsBYe3Cs6gx9lIXSslP8v5Dzkdozfx5LLewREWEIotJmZVJCs-J5nD76pH97wnVosKkD9_WjTNucuRW7mJxPl2Sac2FjLHtUfqzw1WWni4Do1viau3R1B_gyYZnDEGSai3XxydldwBW8xv-fR5tRWR6Q"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-[var(--md-background)] via-transparent to-transparent"></div>
+              <div className="absolute bottom-4 left-4">
+                <span className="bg-primary-500 px-3 py-1 rounded-full text-[10px] font-bold text-white uppercase tracking-tighter">Global HQ</span>
               </div>
-              <p className="text-xs text-[var(--text-muted)] mt-4 text-center">📍 Manipal, Karnataka, India</p>
             </motion.div>
           </div>
 
@@ -85,8 +90,8 @@ export default function Contact() {
             className="lg:col-span-8 glass-card rounded-xl p-8 md:p-10 space-y-6"
           >
             <div className="mb-6">
-              <h2 className="text-2xl font-bold text-[var(--text-primary)] mb-2">Send us a message</h2>
-              <p className="text-sm text-[var(--text-muted)]">Fill out the form below and we'll respond within 24 hours.</p>
+              <h2 className="text-2xl font-bold text-white mb-2">Send us a message</h2>
+              <p className="text-sm text-gray-400">Fill out the form below and we'll respond within 24 hours.</p>
             </div>
 
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
@@ -117,7 +122,7 @@ export default function Contact() {
               required
             />
             <div className="space-y-2">
-              <label className="block text-xs font-medium text-[var(--text-secondary)] uppercase tracking-wider ml-1">
+              <label className="block text-xs font-medium text-gray-300 uppercase tracking-wider ml-1">
                 Message
               </label>
               <textarea
@@ -126,7 +131,7 @@ export default function Contact() {
                 value={form.message}
                 onChange={(e) => setForm({ ...form, message: e.target.value })}
                 required
-                className="w-full rounded-xl border border-eo-outline-variant/30 bg-eo-surface-container-low px-4 py-3 text-sm text-[var(--text-primary)] placeholder:text-[var(--text-muted)]/50 outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500/20 resize-none transition-all"
+                className="w-full rounded-xl border border-outline-variant/30 bg-surface-container-low px-4 py-3 text-sm text-white placeholder:text-gray-400/50 outline-none focus:border-primary-500 focus:ring-1 focus:ring-primary-500/20 resize-none transition-all"
               />
             </div>
             <Button type="submit" loading={loading} variant="glow" size="lg" icon={Send} className="w-full sm:w-auto rounded-full">

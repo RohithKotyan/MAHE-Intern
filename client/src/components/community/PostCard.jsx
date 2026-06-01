@@ -208,6 +208,8 @@ function PostCard({ post, currentUserId, onDeleted, onProfileClick }) {
           <span className="font-body-sm font-semibold text-[13px] hidden sm:block">Share</span>
         </button>
 
+      </div>
+
       {/* YouTube-style Comment Section */}
       {showComments && (
         <CommentSection postId={post.id} currentUserId={currentUserId} onProfileClick={onProfileClick} />

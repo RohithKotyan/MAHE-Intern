@@ -126,6 +126,9 @@
     --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
     --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.1);
     --shadow-glow: 0 0 30px rgba(22, 163, 74, 0.15);
+    --text-primary: #191c1a;
+    --text-secondary: #404944;
+    --text-muted: #707973;
 
     /* Light Theme - Soft Agricultural Tones */
     --md-surface-dim: #e4e7e4;
@@ -161,6 +164,9 @@
     --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.4);
     --shadow-lg: 0 10px 15px -3px rgba(0,0,0,0.5);
     --shadow-glow: 0 0 30px rgba(16, 185, 129, 0.15);
+    --text-primary: #dde4dd;
+    --text-secondary: #bbcabf;
+    --text-muted: #86948a;
 
     /* Premium Dark Theme */
     --md-surface-dim: #0e1511;

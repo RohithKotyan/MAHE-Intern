@@ -42,9 +42,9 @@ export default function Navbar() {
 
   return (
     <>
-      <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-full px-6 py-3 border border-eo-outline-variant/30 backdrop-blur-xl bg-eo-surface/80 shadow-2xl shadow-primary-500/10 flex justify-between items-center z-50">
+      <nav className="fixed top-4 left-1/2 -translate-x-1/2 w-[95%] max-w-7xl rounded-full px-6 py-3 border border-white/10 backdrop-blur-xl bg-black/40 shadow-2xl shadow-primary-500/20 flex justify-between items-center z-50">
         {/* Logo */}
-        <Logo size="md" linkTo="/" />
+        <Logo size="md" linkTo="/" textColor="text-white" />
 
         {/* Desktop Nav Links */}
         <div className="hidden md:flex items-center gap-8">
@@ -55,7 +55,7 @@ export default function Navbar() {
               className={`text-xs font-medium uppercase tracking-wider transition-colors ${
                 isActive(link.to)
                   ? 'text-primary-500 font-bold border-b-2 border-primary-500 pb-1'
-                  : 'text-[var(--text-secondary)] hover:text-primary-500'
+                  : 'text-gray-300 hover:text-primary-500'
               }`}
             >
               {link.label}
@@ -69,27 +69,27 @@ export default function Navbar() {
             <div className="relative" ref={dropdownRef}>
               <button
                 onClick={() => setDropdownOpen(!dropdownOpen)}
-                className="flex items-center gap-2 p-1.5 rounded-full hover:bg-eo-surface-container-high transition-colors cursor-pointer"
+                className="flex items-center gap-2 p-1.5 rounded-full hover:bg-white/10 transition-colors cursor-pointer"
               >
                 <Avatar name={user?.name} src={user?.avatar} size="sm" />
-                <span className="hidden sm:block text-sm font-medium text-[var(--text-primary)]">
+                <span className="hidden sm:block text-sm font-medium text-white">
                   {user?.name?.split(' ')[0]}
                 </span>
-                <span className={`material-symbols-outlined text-[var(--text-muted)] text-base transition-transform ${dropdownOpen ? 'rotate-180' : ''}`}>
+                <span className={`material-symbols-outlined text-gray-400 text-base transition-transform ${dropdownOpen ? 'rotate-180' : ''}`}>
                   expand_more
                 </span>
               </button>
 
               {dropdownOpen && (
-                <div className="absolute right-0 mt-2 w-56 rounded-xl border border-eo-outline-variant/30 bg-eo-surface-container shadow-lg py-1 glass-panel">
-                  <div className="px-4 py-3 border-b border-eo-outline-variant/20">
-                    <p className="text-sm font-medium text-[var(--text-primary)]">{user?.name}</p>
-                    <p className="text-xs text-[var(--text-muted)]">{user?.email}</p>
+                <div className="absolute right-0 mt-2 w-56 rounded-xl border border-outline-variant/30 bg-surface-container shadow-lg py-1 glass-panel">
+                  <div className="px-4 py-3 border-b border-outline-variant/20">
+                    <p className="text-sm font-medium text-on-surface">{user?.name}</p>
+                    <p className="text-xs text-outline">{user?.email}</p>
                   </div>
                   <Link
                     to="/dashboard"
                     onClick={() => setDropdownOpen(false)}
-                    className="flex items-center gap-3 px-4 py-2.5 text-sm text-[var(--text-secondary)] hover:bg-eo-surface-container-high transition-colors"
+                    className="flex items-center gap-3 px-4 py-2.5 text-sm text-on-surface-variant hover:bg-surface-container-high transition-colors"
                   >
                     <span className="material-symbols-outlined text-lg">dashboard</span>
                     Dashboard
@@ -97,12 +97,12 @@ export default function Navbar() {
                   <Link
                     to="/dashboard/profile"
                     onClick={() => setDropdownOpen(false)}
-                    className="flex items-center gap-3 px-4 py-2.5 text-sm text-[var(--text-secondary)] hover:bg-eo-surface-container-high transition-colors"
+                    className="flex items-center gap-3 px-4 py-2.5 text-sm text-on-surface-variant hover:bg-surface-container-high transition-colors"
                   >
                     <span className="material-symbols-outlined text-lg">person</span>
                     Profile
                   </Link>
-                  <div className="border-t border-eo-outline-variant/20 mt-1 pt-1">
+                  <div className="border-t border-outline-variant/20 mt-1 pt-1">
                     <button
                       onClick={handleLogout}
                       className="flex items-center gap-3 w-full px-4 py-2.5 text-sm text-red-400 hover:bg-red-500/5 transition-colors cursor-pointer"
@@ -118,7 +118,7 @@ export default function Navbar() {
             <div className="flex items-center gap-3">
               <Link
                 to="/login"
-                className="hidden sm:block text-xs font-medium uppercase tracking-wider text-[var(--text-secondary)] hover:text-primary-500 transition-colors"
+                className="hidden sm:block text-xs font-medium uppercase tracking-wider text-gray-300 hover:text-primary-500 transition-colors"
               >
                 Login
               </Link>
@@ -134,9 +134,9 @@ export default function Navbar() {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="md:hidden p-2 rounded-xl hover:bg-eo-surface-container-high transition-colors cursor-pointer"
+            className="md:hidden p-2 rounded-xl hover:bg-white/10 transition-colors cursor-pointer"
           >
-            <span className="material-symbols-outlined text-[var(--text-secondary)]">
+            <span className="material-symbols-outlined text-gray-300">
               {mobileOpen ? 'close' : 'menu'}
             </span>
           </button>

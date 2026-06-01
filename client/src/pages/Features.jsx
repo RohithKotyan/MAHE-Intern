@@ -29,10 +29,10 @@ export default function Features() {
         {/* ═══ HERO ═══════════════════════════════════════ */}
         <motion.div {...fadeUp} className="text-center max-w-3xl mx-auto mb-16">
           <span className="text-primary-500 text-xs font-medium uppercase tracking-widest block mb-4">Features</span>
-          <h1 className="text-4xl lg:text-6xl font-bold text-[var(--text-primary)] mb-6 leading-tight">
+          <h1 className="text-4xl lg:text-6xl font-bold text-white mb-6 leading-tight">
             Powerful Tools for <span className="text-primary-500">Smart Farming</span>
           </h1>
-          <p className="text-base text-[var(--text-secondary)]">
+          <p className="text-base text-gray-300">
             Everything you need to detect, prevent, and manage plant diseases — all in one platform driven by state-of-the-art AI.
           </p>
         </motion.div>
@@ -44,8 +44,8 @@ export default function Features() {
             <div className="w-12 h-12 rounded-lg bg-primary-500/10 border border-primary-500/20 flex items-center justify-center mb-6">
               <span className="material-symbols-outlined text-primary-500">center_focus_strong</span>
             </div>
-            <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-4">Instant AI Scanning</h3>
-            <p className="text-[var(--text-secondary)] leading-relaxed mb-6">{features[0].desc}</p>
+            <h3 className="text-2xl font-bold text-white mb-4">Instant AI Scanning</h3>
+            <p className="text-gray-300 leading-relaxed mb-6">{features[0].desc}</p>
             <div className="flex flex-wrap gap-3">
               {features[0].badges.map((badge) => (
                 <span key={badge} className="flex items-center gap-2 text-xs font-medium text-primary-500">
@@ -61,29 +61,29 @@ export default function Features() {
             <div className="w-12 h-12 rounded-lg bg-primary-500/10 border border-primary-500/20 flex items-center justify-center mb-6">
               <span className="material-symbols-outlined text-primary-500">satellite_alt</span>
             </div>
-            <h3 className="text-xl font-bold text-[var(--text-primary)] mb-4">Field Monitoring</h3>
-            <p className="text-[var(--text-secondary)] leading-relaxed mb-6">{features[1].desc}</p>
-            <div className="p-4 bg-eo-surface-container-low rounded-lg border border-eo-outline-variant/30 flex items-center gap-4">
+            <h3 className="text-xl font-bold text-white mb-4">Field Monitoring</h3>
+            <p className="text-gray-300 leading-relaxed mb-6">{features[1].desc}</p>
+            <div className="p-4 bg-surface-container-low rounded-lg border border-outline-variant/30 flex items-center gap-4">
               <div className="flex-1">
-                <div className="h-2 bg-eo-surface-container-highest rounded-full overflow-hidden">
+                <div className="h-2 bg-surface-container-highest rounded-full overflow-hidden">
                   <div className="h-full bg-primary-500 w-3/4 rounded-full" />
                 </div>
                 <span className="text-[10px] uppercase font-bold text-primary-500 mt-2 block">Optimal Soil Health</span>
               </div>
-              <span className="text-xl font-bold text-[var(--text-primary)]">78%</span>
+              <span className="text-xl font-bold text-white">78%</span>
             </div>
           </motion.section>
 
           {/* Advanced Analytics */}
           <motion.section {...fadeUp} transition={{ ...fadeUp.transition, delay: 0.15 }} className="md:col-span-4 glass-card rounded-xl p-8 group">
-            <div className="w-12 h-12 rounded-lg bg-eo-tertiary/10 border border-eo-tertiary/20 flex items-center justify-center mb-6">
-              <span className="material-symbols-outlined text-eo-tertiary">insights</span>
+            <div className="w-12 h-12 rounded-lg bg-tertiary/10 border border-tertiary/20 flex items-center justify-center mb-6">
+              <span className="material-symbols-outlined text-tertiary">insights</span>
             </div>
-            <h3 className="text-xl font-bold text-[var(--text-primary)] mb-4">Advanced Analytics</h3>
-            <p className="text-[var(--text-secondary)] leading-relaxed">{features[2].desc}</p>
+            <h3 className="text-xl font-bold text-white mb-4">Advanced Analytics</h3>
+            <p className="text-gray-300 leading-relaxed">{features[2].desc}</p>
             <div className="mt-8 flex items-end gap-1 h-24">
               {[40, 60, 30, 70, 50].map((h, i) => (
-                <div key={i} className={`w-full bg-eo-tertiary/${i === 4 ? '60' : '20'} rounded-t transition-all duration-500 group-hover:h-[${h + 20}%]`} style={{ height: `${h}%` }} />
+                <div key={i} className={`w-full bg-tertiary/${i === 4 ? '60' : '20'} rounded-t transition-all duration-500 group-hover:h-[${h + 20}%]`} style={{ height: `${h}%` }} />
               ))}
             </div>
           </motion.section>
@@ -93,11 +93,11 @@ export default function Features() {
             <div className="w-12 h-12 rounded-lg bg-primary-500/10 border border-primary-500/20 flex items-center justify-center mb-6">
               <span className="material-symbols-outlined text-primary-500">groups</span>
             </div>
-            <h3 className="text-2xl font-bold text-[var(--text-primary)] mb-4">Expert Collaboration</h3>
-            <p className="text-[var(--text-secondary)] leading-relaxed mb-6">{features[3].desc}</p>
+            <h3 className="text-2xl font-bold text-white mb-4">Expert Collaboration</h3>
+            <p className="text-gray-300 leading-relaxed mb-6">{features[3].desc}</p>
             <div className="flex -space-x-3">
               {['🧑‍🔬', '👩‍🌾', '👨‍💻'].map((emoji, i) => (
-                <div key={i} className="w-10 h-10 rounded-full bg-eo-surface-container border-2 border-eo-bg flex items-center justify-center text-lg">
+                <div key={i} className="w-10 h-10 rounded-full bg-surface-container border-2 border-eo-bg flex items-center justify-center text-lg">
                   {emoji}
                 </div>
               ))}
@@ -110,7 +110,7 @@ export default function Features() {
 
         {/* ═══ AI WORKFLOW ═════════════════════════════════ */}
         <section className="py-20 text-center">
-          <motion.h2 {...fadeUp} className="text-2xl lg:text-3xl font-bold text-[var(--text-primary)] mb-12">
+          <motion.h2 {...fadeUp} className="text-2xl lg:text-3xl font-bold text-white mb-12">
             The AI Decision Engine
           </motion.h2>
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 relative">
@@ -120,13 +120,13 @@ export default function Features() {
                 <div className={`w-16 h-16 rounded-full flex items-center justify-center mb-4 transition-transform hover:scale-110 ${
                   step.active
                     ? 'bg-primary-500 animate-pulse-slow emerald-glow'
-                    : 'bg-eo-surface-container border border-eo-outline-variant emerald-glow'
+                    : 'bg-surface-container border border-outline-variant emerald-glow'
                 }`}>
                   <span className={`material-symbols-outlined ${step.active ? 'text-white' : 'text-primary-500'}`}>
                     {step.icon}
                   </span>
                 </div>
-                <span className={`text-xs uppercase tracking-tighter font-medium ${step.active ? 'text-primary-500 font-bold' : 'text-[var(--text-muted)]'}`}>
+                <span className={`text-xs uppercase tracking-tighter font-medium ${step.active ? 'text-primary-500 font-bold' : 'text-gray-400'}`}>
                   {step.label}
                 </span>
               </motion.div>

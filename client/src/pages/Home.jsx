@@ -44,10 +44,10 @@ export default function Home() {
           <span className="inline-block px-4 py-1.5 rounded-full bg-primary-500/10 border border-primary-500/20 text-primary-500 text-xs font-medium uppercase tracking-widest mb-6 emerald-glow">
             INTRODUCING THE NEXT GENERATION
           </span>
-          <h1 className="text-4xl md:text-[64px] font-bold leading-tight mb-8 max-w-4xl mx-auto text-[var(--text-primary)]">
+          <h1 className="text-4xl md:text-[64px] font-bold leading-tight mb-8 max-w-4xl mx-auto text-white">
             The Future of Farming is <span className="text-primary-500">Intelligent</span>
           </h1>
-          <p className="text-[var(--text-secondary)] text-base md:text-lg max-w-2xl mx-auto mb-12">
+          <p className="text-gray-300 text-base md:text-lg max-w-2xl mx-auto mb-12">
             Empower your fields with AgroCare AI. Real-time disease detection, precision analytics, and autonomous health monitoring delivered through a cinematic data interface.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
@@ -57,7 +57,7 @@ export default function Home() {
               </button>
             </Link>
             <Link to="/features">
-              <button className="glass-card text-[var(--text-primary)] px-8 py-4 rounded-full text-lg font-bold flex items-center gap-2 hover:bg-white/10 transition-all cursor-pointer">
+              <button className="glass-card text-white px-8 py-4 rounded-full text-lg font-bold flex items-center gap-2 hover:bg-white/10 transition-all cursor-pointer">
                 <span className="material-symbols-outlined">play_circle</span> Watch Demo
               </button>
             </Link>
@@ -71,17 +71,17 @@ export default function Home() {
               <span className="material-symbols-outlined">monitoring</span>
             </div>
             <div>
-              <div className="text-xs text-[var(--text-muted)] uppercase tracking-wider">Health Index</div>
-              <div className="text-xl font-bold text-[var(--text-primary)]">98.4% Optimal</div>
+              <div className="text-xs text-gray-400 uppercase tracking-wider">Health Index</div>
+              <div className="text-xl font-bold text-white">98.4% Optimal</div>
             </div>
           </div>
-          <div className="h-2 bg-eo-surface-container-highest rounded-full overflow-hidden">
+          <div className="h-2 bg-surface-container-highest rounded-full overflow-hidden">
             <div className="w-[98%] h-full bg-primary-500"></div>
           </div>
         </div>
         
         <div className="hidden lg:block absolute top-1/2 right-24 w-64 glass-card tilt-effect rounded-2xl p-4 emerald-glow">
-          <div className="text-xs text-[var(--text-muted)] mb-2">Live AI Feed</div>
+          <div className="text-xs text-gray-400 mb-2">Live AI Feed</div>
           <img 
             className="w-full h-32 object-cover rounded-lg mb-3" 
             alt="AI Scanning leaf" 
@@ -89,37 +89,37 @@ export default function Home() {
           />
           <div className="flex justify-between items-center">
             <span className="text-sm font-bold text-primary-500">SCANNING...</span>
-            <span className="text-xs text-[var(--text-muted)]">0.4s lat.</span>
+            <span className="text-xs text-gray-400">0.4s lat.</span>
           </div>
         </div>
       </section>
 
       {/* Trust Metrics */}
-      <section className="py-20 bg-eo-surface-container-lowest border-y border-eo-outline-variant/20">
+      <section className="py-20 bg-surface-container-lowest border-y border-outline-variant/20">
         <div className="max-w-7xl mx-auto px-6 grid grid-cols-2 md:grid-cols-4 gap-12 text-center">
           <div>
             <div className="text-primary-500 text-4xl md:text-5xl font-bold mb-2">
               <AnimatedStat value={12} suffix="k+" />
             </div>
-            <div className="text-[var(--text-muted)] text-xs uppercase tracking-widest font-medium">Active Farmers</div>
+            <div className="text-gray-400 text-xs uppercase tracking-widest font-medium">Active Farmers</div>
           </div>
           <div>
             <div className="text-primary-500 text-4xl md:text-5xl font-bold mb-2">
               <AnimatedStat value={99.8} suffix="%" decimals={1} />
             </div>
-            <div className="text-[var(--text-muted)] text-xs uppercase tracking-widest font-medium">Accuracy Rate</div>
+            <div className="text-gray-400 text-xs uppercase tracking-widest font-medium">Accuracy Rate</div>
           </div>
           <div>
             <div className="text-primary-500 text-4xl md:text-5xl font-bold mb-2">
               <AnimatedStat value={50} suffix="m+" />
             </div>
-            <div className="text-[var(--text-muted)] text-xs uppercase tracking-widest font-medium">Crops Scanned</div>
+            <div className="text-gray-400 text-xs uppercase tracking-widest font-medium">Crops Scanned</div>
           </div>
           <div>
             <div className="text-primary-500 text-4xl md:text-5xl font-bold mb-2">
               <AnimatedStat value="24/7" />
             </div>
-            <div className="text-[var(--text-muted)] text-xs uppercase tracking-widest font-medium">Expert Support</div>
+            <div className="text-gray-400 text-xs uppercase tracking-widest font-medium">Expert Support</div>
           </div>
         </div>
       </section>
@@ -127,8 +127,8 @@ export default function Home() {
       {/* Features Bento Grid */}
       <section className="py-24 px-6 max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-[48px] font-bold mb-4 text-[var(--text-primary)]">Precision Tools for Modern Yield</h2>
-          <p className="text-[var(--text-secondary)] max-w-2xl mx-auto text-lg">Advanced neural networks meet traditional expertise to revolutionize your harvest cycle.</p>
+          <h2 className="text-3xl md:text-[48px] font-bold mb-4 text-white">Precision Tools for Modern Yield</h2>
+          <p className="text-gray-300 max-w-2xl mx-auto text-lg">Advanced neural networks meet traditional expertise to revolutionize your harvest cycle.</p>
         </div>
         
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 auto-rows-min md:auto-rows-[250px]">
@@ -143,8 +143,8 @@ export default function Home() {
               <div className="w-12 h-12 rounded-xl bg-primary-500 flex items-center justify-center text-white mb-6">
                 <span className="material-symbols-outlined" style={{ fontVariationSettings: "'FILL' 1" }}>biotech</span>
               </div>
-              <h3 className="text-3xl font-bold mb-3 text-[var(--text-primary)]">Instant Disease Diagnosis</h3>
-              <p className="text-[var(--text-secondary)] mb-6 text-base">Identify over 150+ plant pathogens in seconds using our proprietary deep learning models trained on 50 million images.</p>
+              <h3 className="text-3xl font-bold mb-3 text-white">Instant Disease Diagnosis</h3>
+              <p className="text-gray-300 mb-6 text-base">Identify over 150+ plant pathogens in seconds using our proprietary deep learning models trained on 50 million images.</p>
               <Link to="/features" className="text-primary-500 flex items-center gap-2 font-bold hover:gap-3 transition-all cursor-pointer inline-flex">
                 Learn More <span className="material-symbols-outlined">arrow_forward</span>
               </Link>
@@ -153,8 +153,8 @@ export default function Home() {
           
           {/* Dashboard Preview */}
           <div className="md:col-span-2 glass-card tilt-effect rounded-3xl p-8 flex flex-col justify-center border-l-4 border-primary-500 min-h-[200px]">
-            <h4 className="text-2xl font-bold mb-2 text-[var(--text-primary)]">Central Analytics</h4>
-            <p className="text-[var(--text-secondary)] mb-4 text-sm md:text-base">A unified command center for your entire agricultural operation. Monitor moisture, soil health, and pest pressure in one glass interface.</p>
+            <h4 className="text-2xl font-bold mb-2 text-white">Central Analytics</h4>
+            <p className="text-gray-300 mb-4 text-sm md:text-base">A unified command center for your entire agricultural operation. Monitor moisture, soil health, and pest pressure in one glass interface.</p>
             <div className="flex gap-2">
               <div className="h-1.5 flex-1 bg-primary-500/40 rounded-full"></div>
               <div className="h-1.5 flex-1 bg-primary-500/20 rounded-full"></div>
@@ -164,20 +164,20 @@ export default function Home() {
           
           {/* Mini Feature 1 */}
           <div className="glass-card tilt-effect rounded-3xl p-6 flex flex-col items-center justify-center text-center min-h-[200px]">
-            <div className="w-12 h-12 rounded-full bg-eo-surface-container flex items-center justify-center text-primary-500 mb-4 border border-eo-outline-variant/30">
+            <div className="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary-500 mb-4 border border-outline-variant/30">
               <span className="material-symbols-outlined">notifications_active</span>
             </div>
-            <h5 className="font-bold mb-2 text-lg text-[var(--text-primary)]">Smart Alerts</h5>
-            <p className="text-sm text-[var(--text-secondary)]">Instant notifications for localized pest outbreaks.</p>
+            <h5 className="font-bold mb-2 text-lg text-white">Smart Alerts</h5>
+            <p className="text-sm text-gray-300">Instant notifications for localized pest outbreaks.</p>
           </div>
           
           {/* Mini Feature 2 */}
           <div className="glass-card tilt-effect rounded-3xl p-6 flex flex-col items-center justify-center text-center min-h-[200px]">
-            <div className="w-12 h-12 rounded-full bg-eo-surface-container flex items-center justify-center text-primary-500 mb-4 border border-eo-outline-variant/30">
+            <div className="w-12 h-12 rounded-full bg-surface-container flex items-center justify-center text-primary-500 mb-4 border border-outline-variant/30">
               <span className="material-symbols-outlined">forum</span>
             </div>
-            <h5 className="font-bold mb-2 text-lg text-[var(--text-primary)]">Expert Network</h5>
-            <p className="text-sm text-[var(--text-secondary)]">Connect directly with certified agronomists.</p>
+            <h5 className="font-bold mb-2 text-lg text-white">Expert Network</h5>
+            <p className="text-sm text-gray-300">Connect directly with certified agronomists.</p>
           </div>
         </div>
       </section>

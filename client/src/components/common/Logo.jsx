@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 
-export default function Logo({ size = 'md', linkTo = '/' }) {
+export default function Logo({ size = 'md', linkTo = '/', textColor = 'text-[var(--md-on-surface)]' }) {
   const sizes = {
     sm: 'text-lg',
     md: 'text-xl',
@@ -24,7 +24,7 @@ export default function Logo({ size = 'md', linkTo = '/' }) {
       >
         eco
       </span>
-      <span className="text-[var(--text-primary)] tracking-tight">
+      <span className={`${textColor} tracking-tight`}>
         AgroCare <span className="text-primary-500">AI</span>
       </span>
     </div>
